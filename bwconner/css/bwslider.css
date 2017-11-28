@@ -1,0 +1,22 @@
+.bwslider {
+	width: 100%;
+}
+
+.bwslider .bwslider-stack {
+	padding: 0px;
+	margin: 0px;
+}
+
+.bwslider .bwslider-slide {
+	display: none;
+	list-style-type: none;
+	width: 100%;
+}
+
+.bwslider .bwslider-slide .bwslider-active-slide {
+	display: block;
+}
+
+.bwslider .bwslider-slide img {
+	width: 100%;
+}

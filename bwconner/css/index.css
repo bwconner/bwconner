@@ -1,0 +1,35 @@
+.site-body {
+	background: transparent;
+	border: 0px;
+	color: #00264d;
+	margin: 30px auto;
+	width: 90%;
+}
+
+.site-body-section {
+	display: table;
+	width: 10%;
+	box-shadow: 0px 0px 60px 5px;
+	background: #ffffff;
+	border: 10px solid #0059b3;
+	margin: 0px auto;
+}
+	.site-body-section .bio-block {
+		display: inline-block;
+		float: left;
+		margin: 5px 10px;
+		font-size: 25px;
+		text-align: center;
+	}
+	.site-body-section .bio-image {
+		width: 40%;
+		display: inline-block;
+		min-width: 300px;
+		max-width: 500px;
+		float: right;
+	}
+
+.footer {
+	position: fixed;
+	bottom: 0px;
+}
