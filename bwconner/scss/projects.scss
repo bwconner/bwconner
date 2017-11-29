@@ -7,8 +7,8 @@
 	max-width: 1000px;
 	margin: 25px auto;
 	min-width: 300px;
-	letter-spacing: 0.6px
-}
+	letter-spacing: 0.6px;
+
 	.bwconner {
 		background: #0059b3;
 		color: #ffffff;
@@ -31,18 +31,6 @@
 		background: #0059b3;
 	}
 
-	.project-section-header {
-		color: #ffffff;
-		font-family: 'Oswald', sans-serif;
-		text-align: center;
-		font-size: 18px;
-		width: 50%;
-		max-width: 1000px;
-		margin: 25px auto;
-		min-width: 300px;
-		background: #0059b3;
-		padding: 3px 0px;
-	}
 	.project-details {
 		float: right;
 		max-width: 780px;
@@ -59,6 +47,20 @@
 		}
 	}
 }
+
+.project-section-header {
+	color: #ffffff;
+	font-family: 'Oswald', sans-serif;
+	text-align: center;
+	font-size: 18px;
+	width: 50%;
+	max-width: 1000px;
+	margin: 25px auto;
+	min-width: 300px;
+	background: #0059b3;
+	padding: 3px 0px;
+}
+
 @media only screen and (max-width: 600px) {
 	.project-section {
 		width: 320px;
