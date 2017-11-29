@@ -1,16 +1,18 @@
 .site-body-section {
-	color: #0059b3; /*#0066cc;*/
-	background: #ffffff;
-	padding: 10px;
-	text-align: center;
-}
-	.site-body-section a {
-		color: #0059b3; /*#0066cc;*/
-		background: #ffffff;
-		text-decoration: underline;
-	}
+  color: #0059b3;
+  /*#0066cc;*/
+  background: #ffffff;
+  padding: 10px;
+  text-align: center; }
+
+.site-body-section a {
+  color: #0059b3;
+  /*#0066cc;*/
+  background: #ffffff;
+  text-decoration: underline; }
 
 .footer {
-	position: fixed;
-	bottom: 0px;
-}
+  position: fixed;
+  bottom: 0px; }
+
+/*# sourceMappingURL=contact.css.map */

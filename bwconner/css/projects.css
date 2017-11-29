@@ -1,69 +1,36 @@
-.project-section {
-	color: #0059b3;
-	font-family: 'Oswald', sans-serif;
-	background: #ffffff;
-	border: 5px solid #0059b3;
-	width: 90%;
-	max-width: 1000px;
-	margin: 25px auto;
-	min-width: 300px;
-	letter-spacing: 0.6px
-}
-	.project-section .bwconner {
-		background: #0059b3;
-		color: #ffffff;
-		font-family: 'Amatica SC', cursive;
-		font-size: 75px;
-		height: 100%;
-		max-height: 245px;
-		max-width: 320px;
-		text-align: center;
-		width: 100%;
-		display: inline-block;
-		border-right: 5px solid #0059b3;
-	}
+/*
+Error: Invalid CSS after "	}": expected selector or at-rule, was "}"
+        on line 61 of bwconner/scss/projects.scss
 
-	.project-section img {
-		max-width: 320px;
-		width: 100%;
-		display: inline-block;
-		border-right: 5px solid #0059b3;
-		background: #0059b3;
-	}
+56: 
+57: 		.project-desc {
+58: 			padding: 5px;
+59: 		}
+60: 	}
+61: }
+62: @media only screen and (max-width: 600px) {
+63: 	.project-section {
+64: 		width: 320px;
+65: 	}
+66: 	.project-details {
 
-.project-section-header {
-	color: #ffffff;
-	font-family: 'Oswald', sans-serif;
-	text-align: center;
-	font-size: 18px;
-	width: 50%;
-	max-width: 1000px;
-	margin: 25px auto;
-	min-width: 300px;
-	background: #0059b3;
-	padding: 3px 0px;
-}
-.project-details {
-	float: right;
-	max-width: 780px;
-	width: calc(100% - 325px);
-}
-	.project-details .project-title {
-		background: #0059b3;
-		color: #ffffff;
-		padding: 5px;
-	}
-	.project-details .project-desc {
-		padding: 5px;
-	}
-
-@media only screen and (max-width: 600px) {
-	.project-section {
-		width: 320px;
-	}
-	.project-details {
-		display: block;
-		float: none;
-		width: 320;
-	}
-}
+Backtrace:
+bwconner/scss/projects.scss:61
+B:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/scss/parser.rb:1278:in `expected'
+B:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/scss/parser.rb:1208:in `expected'
+B:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/scss/parser.rb:42:in `parse'
+B:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/engine.rb:414:in `_to_tree'
+B:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+B:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/engine.rb:307:in `render_with_sourcemap'
+B:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/exec/sass_scss.rb:391:in `run'
+B:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/exec/sass_scss.rb:63:in `process_result'
+B:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/exec/base.rb:52:in `parse'
+B:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/exec/base.rb:19:in `parse!'
+B:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/bin/sass:13:in `<top (required)>'
+B:/Ruby24-x64/bin/sass:23:in `load'
+B:/Ruby24-x64/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"	}\": expected selector or at-rule, was \"}\"\A         on line 61 of bwconner/scss/projects.scss\A \A 56: \A 57: 		.project-desc {\A 58: 			padding: 5px;\A 59: 		}\A 60: 	}\A 61: }\A 62: @media only screen and (max-width: 600px) {\A 63: 	.project-section {\A 64: 		width: 320px;\A 65: 	}\A 66: 	.project-details {"; }
