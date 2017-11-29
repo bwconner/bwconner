@@ -2,3 +2,9 @@
 node_modules/*
 Ruby/*
 .sass-cache/*
+node.exe
+*.bat
+npm
+*.cmd
+npx
+*.man

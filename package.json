@@ -1,0 +1,24 @@
+{
+  "name": "bwconner",
+  "version": "1.0.0",
+  "description": "bwconner.com",
+  "main": "index.js",
+  "dependencies": {
+    "npm": "^5.5.1"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bwconner/bwconner.git"
+  },
+  "author": "Bruce Conner",
+  "license": "ISC",
+  "homepage": "bwconner.com"
+}
