@@ -1,1 +1,4 @@
-bwconner/css/marvel.css
+*marvel.*
+node_modules/*
+Ruby/*
+.sass-cache/*
