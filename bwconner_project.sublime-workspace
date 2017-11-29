@@ -1,0 +1,787 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"font",
+				"font-weight"
+			],
+			[
+				"tota",
+				"totalPages"
+			],
+			[
+				"resul",
+				"resultsList"
+			],
+			[
+				"total",
+				"totalResults"
+			],
+			[
+				"resu",
+				"resultLimit"
+			],
+			[
+				"tot",
+				"totalResults"
+			],
+			[
+				"player",
+				"playerTurn"
+			],
+			[
+				"pla",
+				"playerTurn"
+			],
+			[
+				"border",
+				"border-collapse"
+			],
+			[
+				"text-",
+				"text-align"
+			],
+			[
+				"slide",
+				"slidePadding"
+			],
+			[
+				"add",
+				"addClass"
+			],
+			[
+				"k",
+				"kCode"
+			],
+			[
+				"cu",
+				"current-slide-stack"
+			],
+			[
+				"remove",
+				"removeClass"
+			],
+			[
+				"infi",
+				"infitineScroll"
+			],
+			[
+				"sl",
+				"sliderHeight"
+			],
+			[
+				"ta",
+				"table-row"
+			],
+			[
+				"margi",
+				"margin-left"
+			],
+			[
+				"ac",
+				"activeCount"
+			],
+			[
+				"acti",
+				"activeSlideNumber"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"poop",
+				"poopPay"
+			],
+			[
+				"cookie",
+				"cookieValue"
+			],
+			[
+				"back",
+				"background-image"
+			],
+			[
+				"star",
+				"startTime"
+			],
+			[
+				"border-",
+				"border-radius"
+			],
+			[
+				"random",
+				"randomSpeed"
+			],
+			[
+				"inline",
+				"inline-block"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/C/Users/Bruce/Desktop/websites/bruceconner/bwconner/pages/marvel.html",
+			"settings":
+			{
+				"buffer_size": 2589,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/Bruce/Desktop/websites/bruceconner/bwconner/scripts/marvel.js",
+			"settings":
+			{
+				"buffer_size": 4338,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/Bruce/Desktop/websites/bruceconner/bwconner/css/marvel.css",
+			"settings":
+			{
+				"buffer_size": 1275,
+				"encoding": "UTF-8",
+				"line_ending": "Windows",
+				"name": "marvel.css"
+			}
+		},
+		{
+			"file": "package.json",
+			"settings":
+			{
+				"buffer_size": 526,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Gruntfile.js",
+			"settings":
+			{
+				"buffer_size": 733,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "bwconner/scss/projects.scss",
+			"settings":
+			{
+				"buffer_size": 1222,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "Package Control: ",
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"rever",
+				"Permute Lines: Reverse"
+			]
+		],
+		"width": 412.0
+	},
+	"console":
+	{
+		"height": 164.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/B/Users/Bruce/Documents/GitHub/bwconner"
+	],
+	"file_history":
+	[
+		"/B/Users/Bruce/Documents/GitHub/bwconner/bwconner/scss/media.scss",
+		"/B/Users/Bruce/Documents/GitHub/bwconner/home.html",
+		"/B/Users/Bruce/Documents/GitHub/bwconner/bwconner/css/base.css",
+		"/B/Users/Bruce/Documents/GitHub/bwconner/bwconner/scss/base.scss",
+		"/C/Users/Bruce/Desktop/websites/bruceconner/bwconner/css/index.css",
+		"/B/Users/Bruce/Documents/GitHub/bwconner/bwconner/scss/index.scss",
+		"/B/Users/Bruce/Documents/GitHub/bwconner/bwconner/css/index.css",
+		"/B/Users/Bruce/Documents/GitHub/bwconner/bwconner/scss/base.css",
+		"/B/Users/Bruce/Documents/GitHub/bwconner/bwconner/scss/projects.scss",
+		"/B/Users/Bruce/Documents/GitHub/bwconner/bwconner/scss/media.css",
+		"/B/Users/Bruce/Documents/GitHub/bwconner/bwconner/scss/contact.css",
+		"/B/Users/Bruce/Documents/GitHub/bwconner/bwconner/scss/contact.scss",
+		"/B/Users/Bruce/Documents/GitHub/bwconner/bwconner/scss/index.css",
+		"/B/Users/Bruce/Documents/GitHub/bwconner/bwconner/scss/projects.css",
+		"/C/Users/Bruce/Desktop/websites/bruceconner/home.html",
+		"/C/Users/Bruce/Desktop/websites/bruceconner/bwconner/scripts/main.js",
+		"/B/Users/Bruce/Documents/GitHub/bwconner/bwconner/css/style.scss",
+		"/B/Users/Bruce/Documents/GitHub/bwconner/bwconner/scss/media.sass",
+		"/B/Users/Bruce/Documents/GitHub/bwconner/bwconner/scss/projects.scss.css",
+		"/B/Users/Bruce/Documents/GitHub/bwconner/node_modules/npm/package.json",
+		"/B/Users/Bruce/Documents/GitHub/bwconner/node_modules/npm/bin/npm-cli.js",
+		"/B/Users/Bruce/Documents/GitHub/bwconner/node_modules/npm/bin/npx-cli.js",
+		"/B/Users/Bruce/Documents/GitHub/bwconner/node_modules/npm/Makefile",
+		"/B/Users/Bruce/Documents/GitHub/bwconner/node_modules/npm/make.bat",
+		"/B/Users/Bruce/Documents/GitHub/bwconner/node_modules/npm/configure",
+		"/B/Users/Bruce/Documents/GitHub/bwconner/package-lock.json",
+		"/C/Users/Bruce/Desktop/websites/bruceconner/bwconner/pages/media.html",
+		"/C/Users/Bruce/Desktop/websites/bruceconner/bwconner/pages/marveldbtest.html",
+		"/C/Users/Bruce/Desktop/GitHub/tictactoe/tictactoe.css",
+		"/C/Users/Bruce/Desktop/GitHub/tictactoe/tictactoe.html",
+		"/C/Users/Bruce/Desktop/GitHub/tictactoe/tictactoe.js",
+		"/C/Users/Bruce/Desktop/TicTacToe/tictactoe.js",
+		"/C/Users/Bruce/Desktop/TicTacToe/tictactoe.css",
+		"/C/Users/Bruce/Desktop/TicTacToe/tictactoe.html",
+		"/C/Users/Bruce/Desktop/tictactoe.js",
+		"/C/Users/Bruce/Desktop/tictactoe.html",
+		"/C/Users/Bruce/Desktop/websites/bruceconner/bwconner/scripts/bwslider.js",
+		"/C/Users/Bruce/Desktop/tictactoe.css",
+		"/C/Users/Bruce/Desktop/websites/theleague/pages/secret/password.html",
+		"/C/Users/Bruce/Desktop/websites/theleague/scripts/main.js",
+		"/C/Users/Bruce/Desktop/websites/theleague/css/secret.css",
+		"/C/Users/Bruce/Desktop/websites/theleague/pages/secret/triznasty.html",
+		"/C/Users/Bruce/Desktop/websites/theleague/pages/secret/jordy.html",
+		"/C/Users/Bruce/Desktop/websites/theleague/pages/secret/iwanttobelieve.html",
+		"/C/Users/Bruce/Desktop/websites/theleague/css/base.css",
+		"/C/Users/Bruce/Desktop/websites/Misc Old Projects/h3h3Soundboard/scripts/main.js",
+		"/C/Users/Bruce/Desktop/websites/theleague/pages/secret/secret_sauce.html",
+		"/C/Users/Bruce/Desktop/websites/theleague/css/xfiles.css",
+		"/C/Users/Bruce/Desktop/websites/theleague/css/triz.css",
+		"/C/Users/Bruce/Desktop/websites/theleague/pages/league_roster.html",
+		"/C/Users/Bruce/Desktop/websites/theleague/pages/league_roster/shaun_w.html",
+		"/C/Users/Bruce/Desktop/websites/theleague/pages/league_roster/shaun_k.html",
+		"/C/Users/Bruce/Desktop/websites/theleague/pages/league_roster/reed.html",
+		"/C/Users/Bruce/Desktop/websites/theleague/pages/league_roster/mike.html",
+		"/C/Users/Bruce/Desktop/websites/theleague/pages/league_roster/joe.html",
+		"/C/Users/Bruce/Desktop/websites/theleague/pages/league_roster/gary.html",
+		"/C/Users/Bruce/Desktop/websites/theleague/pages/league_roster/dave.html",
+		"/C/Users/Bruce/Desktop/websites/theleague/pages/league_roster/dana.html",
+		"/C/Users/Bruce/Desktop/websites/theleague/pages/league_roster/bruce.html",
+		"/C/Users/Bruce/Desktop/websites/theleague/pages/league_roster/andrew.html",
+		"/C/Users/Bruce/Desktop/websites/theleague/pages/seasons/season_2014.html",
+		"/C/Users/Bruce/Desktop/websites/theleague/pages/league_roster/triznasty.html",
+		"/C/Users/Bruce/Desktop/tews",
+		"/C/Users/Bruce/Desktop/tarpit charities",
+		"/B/Users/Bruce/Documents/mazeTest.html",
+		"/C/Users/Bruce/Desktop/GitHub/bwslider/bwslider.css",
+		"/C/Users/Bruce/Desktop/GitHub/konamiCode/konamiCode.js",
+		"/C/Users/Bruce/Desktop/konamiCode.js",
+		"/C/Users/Bruce/Desktop/theleague/css/base.css",
+		"/C/Users/Bruce/Desktop/theleague/pages/league_roster.html",
+		"/C/Users/Bruce/Desktop/theleague/pages/secret/secret_sauce.html",
+		"/C/Users/Bruce/Desktop/theleague/pages/secret/triznasty.html",
+		"/C/Users/Bruce/Desktop/theleague/css/triz.css",
+		"/C/Users/Bruce/Desktop/bwslider/bwslider.html",
+		"/C/Users/Bruce/Desktop/bwslider/bwslider.js",
+		"/C/Users/Bruce/Desktop/theleague/pages/seasons/season_2017.html",
+		"/C/Users/Bruce/Desktop/theleague/pages/seasons/season_2016.html",
+		"/C/Users/Bruce/Desktop/theleague/pages/seasons/season_2015.html",
+		"/C/Users/Bruce/Desktop/theleague/pages/seasons/season_2014.html",
+		"/C/Users/Bruce/Desktop/theleague/pages/seasons/season_2013.html",
+		"/C/Users/Bruce/Desktop/theleague/pages/hall_of_champions.html",
+		"/C/Users/Bruce/Desktop/theleague/index.html",
+		"/C/Users/Bruce/Desktop/theleague/pages/triznasty.html",
+		"/C/Users/Bruce/Desktop/theleague/scripts/main.js",
+		"/C/Users/Bruce/Desktop/theleague/pages/season_recaps.html",
+		"/C/Users/Bruce/Desktop/theleague/css/hall.css",
+		"/C/Users/Bruce/Desktop/websites/bruceconner/bwconner/libs/jquery-3.1.0.min.js",
+		"/C/Users/Bruce/Desktop/TarpitDev/assets/theme.js.liquid",
+		"/C/Users/Bruce/Desktop/bwslider/bwslider2.js",
+		"/C/Users/Bruce/Desktop/bwslider/wip readme",
+		"/C/Users/Bruce/Desktop/bwslider/readme",
+		"/C/Users/Bruce/Desktop/bruceconner/bwconner/scripts/bwslider.js",
+		"/C/Users/Bruce/Desktop/bruceconner/bwconner/scripts/main.js",
+		"/C/Users/Bruce/Desktop/bwSlider/readme",
+		"/C/Users/Bruce/Desktop/websites/my ig.html",
+		"/C/Users/Bruce/Desktop/websites/bruceconner/bwconner/pages/projects.html",
+		"/C/Users/Bruce/Desktop/websites/bruceconner/bwconner/css/base.css",
+		"/C/Users/Bruce/Desktop/websites/bruceconner/bwconner/pages/contact.html",
+		"/C/Users/Bruce/Desktop/websites/bruceconner/cloudhome.html",
+		"/C/Users/Bruce/Desktop/websites/bruceconner/bwconner/css/projects.css",
+		"/C/Users/Bruce/Desktop/websites/bruceconner/newhome.html",
+		"/C/Users/Bruce/Desktop/websites/bruceconner/bwconner/css/media.css",
+		"/C/Users/Bruce/Desktop/websites/bruceconner/bwconner/css/contact.css",
+		"/C/Users/Bruce/Desktop/TarpitMisc/tarpitIG.html",
+		"/C/Users/Bruce/Desktop/websites/h3h3Soundboard/scripts/main.js",
+		"/C/Users/Bruce/Desktop/tarpitIG.html",
+		"/C/Users/Bruce/Desktop/TarpitDev/landing page tests",
+		"/C/Users/Bruce/Desktop/TarpitDev/custom slider settings",
+		"/C/Users/Bruce/Desktop/TarpitDev/config.yml",
+		"/C/Users/Bruce/Desktop/theme setup file",
+		"/C/Users/Bruce/Desktop/wl",
+		"/C/Users/Bruce/Desktop/chuck/scripts/test.php",
+		"/C/Users/Bruce/Desktop/chuckPDPOld",
+		"/C/Users/Bruce/Desktop/my explosion logic",
+		"/C/Users/Bruce/Desktop/tarpitStyles/instagram styles",
+		"/C/Users/Bruce/Desktop/chuck test site/css/chuck.css",
+		"/C/Users/Bruce/Desktop/chuck/chuck.php",
+		"/C/Users/Bruce/Desktop/my ig.html",
+		"/C/Users/Bruce/Desktop/chuck test site/scripts/test.php",
+		"/C/Users/Bruce/Desktop/chuck test site/chuck.php",
+		"/C/Users/Bruce/Desktop/chuck test site/admin/tools/penguin/admin_console13.php",
+		"/C/Users/Bruce/Desktop/websites/minified sites/bruceconner/bwconner/pages/contact.html",
+		"/C/Users/Bruce/Desktop/.htaccess",
+		"/C/Users/Bruce/Desktop/chuck test site/css/chuck.php",
+		"/C/Users/Bruce/Desktop/chuck test site/css/admin_console13.php",
+		"/C/Users/Bruce/Desktop/chuck test site/chuck.html",
+		"/C/Users/Bruce/Desktop/websites/minified sites/bruceconner/bwconner/pages/media.html",
+		"/C/Users/Bruce/Desktop/chuck test site/chuck.css"
+	],
+	"find":
+	{
+		"height": 42.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			"*.*",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"base",
+			"MSYS_NO_PATHCONV",
+			"MSYS_NO_PATHCONV=1",
+			"MSYS_NO_PATHCONV",
+			"MSYS_NO_PATHCONV=1",
+			"C:",
+			"text-",
+			".join",
+			"resultData[0].images[0].path",
+			"click",
+			"beginComputerTurn()",
+			"beginComputerTurn",
+			"'",
+			"\"",
+			"click",
+			"rotateBackground",
+			"tictactoe",
+			"alert",
+			"black",
+			"white",
+			"black",
+			"<a href",
+			"<a href=\"\">",
+			"\n\t\t",
+			"https://",
+			"<div class=\"philanthropy-wrapper\"></div>",
+			"</p>",
+			"<p>",
+			"infitineScroll",
+			"infiniteOffset",
+			"bwslider-active-slide",
+			"console",
+			"\"scroll\"",
+			"\"slide\"",
+			"slide\"",
+			"slide",
+			"displayInitialSlides",
+			"scroll",
+			"songs",
+			"prev-sl",
+			"data-slide-index",
+			"2016",
+			"2015",
+			"console",
+			"currentStack",
+			"current-slide-st",
+			"nextClick",
+			"clonedNextStack",
+			"'",
+			"clonedNextStack",
+			"clonedPrevStack",
+			"current-slide-stack",
+			"current",
+			"numberOfTotalSlides",
+			"console",
+			"infinite",
+			"consol",
+			"displayInitialInifiniteSlides",
+			"displayInitialInifiniteSlides ",
+			"infinite",
+			"infiniteS",
+			"numberofslide",
+			"numbersofslides",
+			"numberofslides",
+			"displayInitialSlides",
+			"infinite",
+			"'",
+			"infitineScroll",
+			"'",
+			"transitionSpeed",
+			"bwslider-next-slide",
+			"bwslider-prev-slide",
+			"\t\t\t$(",
+			"bwslider-prev-slide",
+			"//$(\".",
+			"2",
+			"}\n",
+			"bwslider-prev-slide",
+			"height",
+			"alert",
+			" parseInt",
+			"alert",
+			"slideWidth",
+			"next-slide",
+			"$(\".bwslider-slide\")",
+			"bwslider-next-slide",
+			"bwslider-prev-slide",
+			".bwslider-prev-slide",
+			"bwslider-next-slide",
+			"\t$(\".bwslider-slide\").removeClass(\"bwslider-prev-slide\");\n\t$(\".bwslider-slide\").removeClass(\"bwslider-next-slide\");",
+			"alert",
+			"1",
+			"bwslider-active-slide",
+			"left",
+			"console",
+			"}",
+			"{\n",
+			"product-first-image-wrapper",
+			"<div class=\"grid__item grid-product one-whole medium--one-half large--one-half\">\n  <div class=\"grid-product__wrapper\">\n    <div class=\"grid-product__image-wrapper\">\n      <a class=\"grid-product__image-link\" href=\"{{product.url}}\">\n         <img class=\"grid-product__image\" src=\"{{ image.src | img_url: 'grande' }}\" alt=\"{{ image.alt | escape }}\" data-image-id=\"{{ image.id }}\">\n      </a>\n    </div>\n\n    <a href=\"{{product.url}}\" class=\"grid-product__meta\">\n      <span class=\"grid-product__title\">{{product.title}}</span>\n      <span class=\"grid-product__price-wrap\">\n        <span class=\"long-dash\">—</span>\n        <span class=\"grid-product__price\">\n            <span class=\"visually-hidden\">Regular price</span>\n            ${{product.price}}\n        </span>\n      </span>\n    </a>\n  </div>\n</div>",
+			"charity",
+			"emailSend.",
+			"myform",
+			">\n",
+			"}\n",
+			"main.min",
+			"math.ro",
+			"$</",
+			"math",
+			" + \" \"",
+			"text",
+			"output",
+			"display: no",
+			"}\n",
+			"cloud",
+			"class=\"home-header\"",
+			"cloud",
+			"footer",
+			"project-thumbnail",
+			"\">\n",
+			"seconds/",
+			"seconds",
+			"data",
+			"css",
+			">\n",
+			" alt=\"Demo image\" ",
+			"alt=\"Demo image\" ",
+			">\n",
+			"soundLibrary"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 5,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/C/Users/Bruce/Desktop/websites/bruceconner/bwconner/pages/marvel.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2589,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2187,
+								2181
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1100.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/C/Users/Bruce/Desktop/websites/bruceconner/bwconner/scripts/marvel.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4338,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3055,
+								3055
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1478.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/C/Users/Bruce/Desktop/websites/bruceconner/bwconner/css/marvel.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1275,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								1275
+							]
+						],
+						"settings":
+						{
+							"auto_name": "marvel.css",
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "package.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 526,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								526,
+								526
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "Gruntfile.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 733,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								501,
+								501
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "bwconner/scss/projects.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1222,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1065,
+								833
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 619.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 30.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "bwconner_project.sublime-project",
+	"replace":
+	{
+		"height": 56.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
