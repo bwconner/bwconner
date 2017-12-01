@@ -144,6 +144,32 @@ a {
   border: 1px solid #000;
   box-shadow: 0px 0px 4px #000; }
 
+/* STANDARD SPINNER STYLES */
+.spinner {
+  border: 16px solid #f78f3f;
+  border-top: 16px solid #518cca;
+  border-bottom: 16px solid #518cca;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 2s linear infinite;
+  margin: 0px auto;
+  background-image: url("../images/collectorPixelArt.png");
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+/*STANDARD SHOW AND HIDE CLASSES*/
+.show {
+  display: block; }
+
+.hide {
+  display: none; }
+
 /*MQ OVERRIDES*/
 @media only screen and (min-width: 448px) {
   .header h1 {

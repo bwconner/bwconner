@@ -180,12 +180,17 @@ a {
 
 /* STANDARD SPINNER STYLES */
 .spinner {
-	border: 16px solid #504a4a; /* Light grey */
-	border-top: 16px dotted #e23636; /* Blue */
+	border: 16px solid #f78f3f;
+	border-top: 16px solid #518cca;
+	border-bottom: 16px solid #518cca;
 	border-radius: 50%;
-	width: 120px;
-	height: 120px;
+	width: 80px;
+	height: 80px;
 	animation: spin 2s linear infinite;
+	margin: 0px auto;
+	background-image: url("../images/collectorPixelArt.png");
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 
 @keyframes spin {

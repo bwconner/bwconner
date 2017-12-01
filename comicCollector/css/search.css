@@ -48,8 +48,12 @@
     vertical-align: top; }
     .search-result .result-information div {
       padding: 5px 0px; }
-  .search-result .creator {
-    display: block; }
+    .search-result .result-information .creator {
+      display: block;
+      padding: 0px 0px; }
+
+.spinner {
+  margin: 100px auto; }
 
 .pagination {
   margin: 5px auto;

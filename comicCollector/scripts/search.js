@@ -2,6 +2,7 @@ var resultLimit = 25;
 var currentFormat = "";
 var currentOffset = 0;
 var currentPage = 1;
+var totalPages;
 var currentSearch;
 
 function getResults(searchTerm) {
@@ -26,7 +27,7 @@ function reloadResults() {
 function processResults(data) {
 	var totalResults = data.data.total;
 	var resultsList = data.data.results;
-	var totalPages = Math.ceil(totalResults/resultLimit);
+	totalPages = Math.ceil(totalResults/resultLimit);
 
 	console.log(totalResults);
 	console.log(resultsList);
@@ -65,6 +66,10 @@ function processResults(data) {
 
 		$(".results").append(markup);
 	});
+
+	if (totalPages > 1) {
+		$(".pagination").removeClass("hide");
+	}
 }
 
 function outputResults(resultsList) {
@@ -116,7 +121,7 @@ function buildResultMarkup(resultTitle, resultImage, resultSeries, resultIssueNu
 }
 
 function gotoPage(newPage) {
-	currentOffset = newPage * resultLimit
+	currentOffset = newPage * resultLimit;
 	reloadResults();
 }
 
@@ -136,11 +141,25 @@ $(document).ready(function() {
 	});
 
 	$('.prev').on('click', function() {
-		gotoPage(currentPage - 1);
+		currentPage = currentPage - 1;
+
+		if (currentPage === 1) {
+			//Do Nothing, this button should be hidden
+		} else {
+			gotoPage(currentPage - 1);
+		}
+
 	});
 
 	$('.next').on('click', function() {
-		gotoPage(currentPage + 1);
+		currentPage = currentPage + 1;
+
+		if (currentPage === totalPages) {
+			//Do Nothing, this button should be hidden
+		} else {
+			gotoPage(currentPage + 1);
+		}
+
 	});
 
 	$('.search').on('click', function() {
