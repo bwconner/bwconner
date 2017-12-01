@@ -9,4 +9,5 @@ npm
 npx
 *.man
 package-lock.json
-comicCollector/scripts/main.js
+comicCollector/scripts/apiUrlBuilderService.js
+comicCollector.zip
