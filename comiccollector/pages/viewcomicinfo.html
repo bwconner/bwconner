@@ -15,7 +15,7 @@
 	<body lang="en">
 		<header>
 			<div class="header">
-				<a class="home-header" href="home.html"><h1 class="header-logo">Comic Collector</h1></a>
+				<a class="home-header" href="/comiccollector/pages/home"><h1 class="header-logo">Comic Collector</h1></a>
 				<div class="main-nav">
 					<div class="link">
 						<a href="/comiccollector/pages/search">Login</a>
@@ -44,59 +44,11 @@
 			</div>
 		</header>
 		<div class="site-body-wrapper">
-			<div class="search-body-wrapper">
-				<div class="search-form">
-					<input type="text" name="search-text" class="search-text" placeholder="Enter a Search Term"/>
-					<button class="search">Search</button>
-					<div class="advanced-search-options-show"> Show Advanced Search Options </div>
-					<div class="advanced-search-options-wrapper"/>
-						<div class="advanced-search-option">
-							<div class="dropdown-label">
-								Show:
-							</div>
-							<select name="Search Limit" class="search-limit">
-								<option value="25">25</option>
-								<option value="50">50</option>
-								<option value="75">75</option>
-								<option value="100">100</option>
-							</select>
-						</div>
-						<div class="advanced-search-option">
-							<div class="dropdown-label">
-								Format:
-							</div>
-							<select name="Format" class="format">
-								<option value="comic">Comic</option>
-								<option value="digital Comic">Digital Comic</option>
-								<option value="trade Paperback">Trade Paperback</option>
-							</select>
-						</div>
-						<div class="advanced-search-option">
-							<div class="dropdown-label">
-								Sort By:
-							</div>
-							<select name="Format" class="format">
-								<option value="comic">Comic</option>
-								<option value="digital Comic">Digital Comic</option>
-								<option value="trade Paperback">Trade Paperback</option>
-							</select>
-						</div>
-					</div>
-				</div>
-				<div class="spinner hide"></div>
-				<div class="results">
-
-				</div>
-				<div class="pagination">
-					<div class="prev button">
-						< Previous
-					</div>
-					<div class="pages">
-					</div>
-					<div class="next button">
-						Next >
-					</div>
-				</div>
+			<div class="comic-body-wrapper">
+				<img class="comic-img" src=""/>
+				<div class="comic-title"></div>
+				<div class="comic-creators"></div>
+				<div class="comic-characters"></div>
 			</div>
 		</div>
 	</body>
