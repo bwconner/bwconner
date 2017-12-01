@@ -9,7 +9,7 @@ function getResults(searchTerm) {
 	$(".results").html(""); //empty results section
 	$(".spinner").removeClass("hide"); //add spinner
 	currentSearch = searchTerm;
-	var apiUrl = marvelApi.buildApiUrl(searchTerm, resultLimit, currentOffset);
+	var apiUrl = marvelApi.buildSearchApiUrl(searchTerm, resultLimit, currentOffset);
 	$.get(apiUrl, function( data ) {
 		processResults(data);
 	});
@@ -18,7 +18,7 @@ function getResults(searchTerm) {
 function reloadResults() {
 	$(".results").html(""); //empty results section
 	$(".spinner").removeClass("hide"); //add spinner
-	var apiUrl = marvelApi.buildApiUrl(currentSearch, resultLimit, currentOffset);
+	var apiUrl = marvelApi.buildSearchApiUrl(currentSearch, resultLimit, currentOffset);
 	$.get(apiUrl, function( data ) {
 		processResults(data);
 	});
