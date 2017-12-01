@@ -46,14 +46,14 @@ function processResults(data) {
 		var resultDescription = resultData[0].description;
 	
 		var featuredCharacters = [];
-		var resultCreators = [];
+		var resultCreators = "";
 
 		$(resultData[0].characters.items).each(function(index) {
 			featuredCharacters[index] = $(this)[0].name;
 		});
 
 		$(resultData[0].creators.items).each(function(index) {
-			resultCreators[index] = $(this)[0].name + " - " + $(this)[0].role;
+			resultCreators = resultCreators + "<div class='creator'>" + $(this)[0].name + " - " + $(this)[0].role + ",</div>";
 		});
 
 		var markup = buildResultMarkup(resultTitle, resultImage, resultSeries, resultIssueNumber, resultDescription, featuredCharacters, resultCreators);
@@ -86,12 +86,19 @@ function buildResultMarkup(resultTitle, resultImage, resultSeries, resultIssueNu
 		if(resultCreators !== null && resultCreators.length > 0) {
 			markup = markup + "<div class='result-creators'> Creators: " + resultCreators + "</div>";
 		}
-
 		if(resultDescription !== null && resultDescription.length > 0) {
+			if (resultDescription.length > 100) {
+				resultDescription = resultDescription.substring(0, 100) + "...";
+			}
+
 			markup = markup + "<div class='result-description'>" + resultDescription + "</div>";
 		}
 
 		if(featuredCharacters !== null && featuredCharacters.length > 0) {
+			if (featuredCharacters.length > 100) {
+				featuredCharacters = featuredCharacters.substring(0, 100) + "...";
+			}
+
 			markup = markup + "<div class='result-characters'> Featured Characters: " + featuredCharacters + "</div>";
 		}
 

@@ -35,21 +35,21 @@
 .search-result {
   background: #fff;
   border: 2px solid #518cca;
-  min-height: 300px;
-  max-width: 500px;
-  margin: 5px auto; }
+  margin: 5px auto;
+  min-height: 500px;
+  width: 300px; }
   .search-result .result-img {
     display: inline-block;
     float: left;
-    height: 300px;
-    width: 200px; }
+    width: 300px; }
   .search-result .result-information {
     display: inline-block;
     padding: 10px;
-    vertical-align: top;
-    width: 45%; }
+    vertical-align: top; }
     .search-result .result-information div {
-      padding: 5px; }
+      padding: 5px 0px; }
+  .search-result .creator {
+    display: block; }
 
 .pagination {
   margin: 5px auto;
@@ -70,5 +70,17 @@
     padding: 5px; }
     .pagination .page-selctor.current-page {
       font-weight: bold; }
+
+@media only screen and (min-width: 448px) {
+  .search-result {
+    min-height: 300px;
+    min-width: 400px;
+    display: inline-block;
+    margin: 10px 20px; }
+    .search-result .result-img {
+      height: 300px;
+      width: 200px; }
+    .search-result .result-information {
+      width: calc(100% - 220px); } }
 
 /*# sourceMappingURL=search.css.map */
