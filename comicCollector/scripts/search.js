@@ -26,9 +26,9 @@ function processResults(data) {
 	var resultsList = data.data.results;
 	var totalPages = Math.ceil(totalResults/resultLimit);
 
-	//console.log(totalResults);
-	//console.log(totalPages);
+	console.log(totalResults);
 	console.log(resultsList);
+	//console.log(totalPages);
 	//outputResults(resultsList);
 
 	$(resultsList).each(function(result) {
@@ -37,7 +37,7 @@ function processResults(data) {
 			var resultImage = resultData[0].images[0].path + "." + resultData[0].images[0].extension;
 		} else {
 			//no image available
-			var resultImage = "http://bwconner.com/bwconner/images/noimage.jpg";
+			var resultImage = "http://bwconner.com/comiccollector/images/noimage.png";
 		}
 
 		var resultTitle = resultData[0].title;
@@ -78,20 +78,20 @@ function outputResults(resultsList) {
 
 function buildResultMarkup(resultTitle, resultImage, resultSeries, resultIssueNumber, resultDescription, featuredCharacters, resultCreators) {
 		var markup = "<div class='search-result'>" +
-		"<img src='" + resultImage + "'/>" +
+		"<img class='result-img' src='" + resultImage + "'/>" +
 		"<div class='result-information'>" +
 		"<div class='result-title'>" + resultTitle + "</div>";
 
 		//sanitize data function
-		if(resultCreators !== null) {
+		if(resultCreators !== null && resultCreators.length > 0) {
 			markup = markup + "<div class='result-creators'> Creators: " + resultCreators + "</div>";
 		}
 
-		if(resultDescription !== null) {
+		if(resultDescription !== null && resultDescription.length > 0) {
 			markup = markup + "<div class='result-description'>" + resultDescription + "</div>";
 		}
 
-		if(featuredCharacters !== null) {
+		if(featuredCharacters !== null && featuredCharacters.length > 0) {
 			markup = markup + "<div class='result-characters'> Featured Characters: " + featuredCharacters + "</div>";
 		}
 
