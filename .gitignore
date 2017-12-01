@@ -8,3 +8,4 @@ npm
 *.cmd
 npx
 *.man
+package-lock.json
