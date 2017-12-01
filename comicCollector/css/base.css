@@ -11,7 +11,9 @@ a {
   /*#0066cc;*/
   color: #ffffff;
   text-align: center;
-  width: 100%; }
+  width: 100%;
+  border-bottom: 5px solid #000;
+  box-shadow: 0px 0px 15px #000; }
   .header .header-logo,
   .header .home-header {
     color: #ffffff;
@@ -137,6 +139,11 @@ a {
     letter-spacing: .7px; }
 
 /* STANDARD BUTTON STYLES */
+.button {
+  background: #e23636;
+  border: 1px solid #000;
+  box-shadow: 0px 0px 4px #000; }
+
 /*MQ OVERRIDES*/
 @media only screen and (min-width: 448px) {
   .header h1 {
