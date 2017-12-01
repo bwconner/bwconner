@@ -7,38 +7,36 @@ function getComicInfo(comicId) {
 
 function processComicInfo(data) {
 	console.log(data);
+	var resultData = data.data.results[0];
+	console.log(resultData);
+	if (resultData.images[0] !== undefined && resultData.images[0].path !== undefined) {
+		var resultImage = resultData.images[0].path + "." + resultData.images[0].extension;
+	} else {
+		//no image available
+		var resultImage = "http://bwconner.com/comiccollector/images/noimage.png";
+	}
 
-	$(resultsList).each(function(result) {
-		var resultData = $(this);
-		if (resultData[0].images[0] !== undefined && resultData[0].images[0].path !== undefined) {
-			var resultImage = resultData[0].images[0].path + "." + resultData[0].images[0].extension;
-		} else {
-			//no image available
-			var resultImage = "http://bwconner.com/comiccollector/images/noimage.png";
-		}
+	var resultTitle = resultData.title;
+	var resultSeries = resultData.series.name;
+	var resultIssueNumber = resultData.issueNumber;
+	var resultDescription = resultData.description;
+	var resultId = resultData.id;
 
-		var resultTitle = resultData[0].title;
-		var resultSeries = resultData[0].series.name;
-		var resultIssueNumber = resultData[0].issueNumber;
-		var resultDescription = resultData[0].description;
-		var resultId = resultData[0].id;
-	
-		var featuredCharacters = [];
-		var resultCreators = "";
+	var featuredCharacters = [];
+	var resultCreators = "";
 
-		$(resultData[0].characters.items).each(function(index) {
-			featuredCharacters[index] = $(this)[0].name;
-		});
-
-		$(resultData[0].creators.items).each(function(index) {
-			resultCreators = resultCreators + "<div class='creator'>" + $(this)[0].name + " - " + $(this)[0].role + "</div>";
-		});
-
-		var markup = buildResultMarkup(resultTitle, resultImage, resultSeries, resultIssueNumber, resultDescription, featuredCharacters, resultCreators, resultId);
-
-
-		$(".results").append(markup);
+	$(resultData.characters.items).each(function(index) {
+		featuredCharacters[index] = $(this)[0].name;
 	});
+
+	$(resultData.creators.items).each(function(index) {
+		resultCreators = resultCreators + "<div class='creator'>" + $(this)[0].name + " - " + $(this)[0].role + "</div>";
+	});
+
+	var markup = buildResultMarkup(resultTitle, resultImage, resultSeries, resultIssueNumber, resultDescription, featuredCharacters, resultCreators, resultId);
+
+
+	$(".site-body-wrapper").append(markup);
 
 	if (totalPages > 1) {
 		$(".pagination").removeClass("hide");
@@ -70,30 +68,23 @@ function buildResultMarkup(resultTitle, resultImage, resultSeries, resultIssueNu
 		}
 		
 		if(resultDescription !== null && resultDescription.length > 0) {
-			if (resultDescription.length > 100) {
-				resultDescription = resultDescription.substring(0, 100) + "...";
-			}
-
-			//markup = markup + "<div class='result-description'>" + resultDescription + "</div>";
+			markup = markup + "<div class='result-description'>" + resultDescription + "</div>";
 		}
 
 		if(featuredCharacters !== null && featuredCharacters.length > 0) {
-			if (featuredCharacters.length > 100) {
-				featuredCharacters = featuredCharacters.substring(0, 100) + "...";
-			}
-
-			//markup = markup + "<div class='result-characters'> Featured Characters: " + featuredCharacters + "</div>";
+			markup = markup + "<div class='result-characters'> Featured Characters: " + featuredCharacters + "</div>";
 		}
 
-		var  viewFullInfoLink = "<a href='/comiccollector/pages/viewcomicinfo?&comicId=" + resultId + "'>View Full Information</a>";
-
-		markup = markup + viewFullInfoLink + "</div></div>";
+		markup = markup + "</div></div>";
 		
 
 		return markup;
 }
 
 $(document).ready(function() {
-
+	var pageUrl = window.location.href;
+	var comicId = pageUrl.split("comicId=");
+	console.log(comicId[1]);
+	getComicInfo(comicId[1]);
 });
 
