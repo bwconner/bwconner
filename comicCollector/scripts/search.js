@@ -6,6 +6,7 @@ var currentSearch;
 
 function getResults(searchTerm) {
 	$(".results").html(""); //empty results section
+	$(".spinner").removeClass("hide"); //add spinner
 	currentSearch = searchTerm;
 	var apiUrl = marvelApi.buildApiUrl(searchTerm, resultLimit, currentOffset);
 	$.get(apiUrl, function( data ) {
@@ -15,7 +16,8 @@ function getResults(searchTerm) {
 
 function reloadResults() {
 	$(".results").html(""); //empty results section
-	var apiUrl = marvelApi.buildApiUrl(searchTerm, resultLimit, currentOffset);
+	$(".spinner").removeClass("hide"); //add spinner
+	var apiUrl = marvelApi.buildApiUrl(currentSearch, resultLimit, currentOffset);
 	$.get(apiUrl, function( data ) {
 		processResults(data);
 	});
@@ -31,6 +33,7 @@ function processResults(data) {
 	//console.log(totalPages);
 	//outputResults(resultsList);
 
+	$(".spinner").addClass("hide"); //remove spinner
 	$(resultsList).each(function(result) {
 		var resultData = $(this);
 		if (resultData[0].images[0] !== undefined && resultData[0].images[0].path !== undefined) {
@@ -44,6 +47,7 @@ function processResults(data) {
 		var resultSeries = resultData[0].series.name;
 		var resultIssueNumber = resultData[0].issueNumber;
 		var resultDescription = resultData[0].description;
+		var resultId = resultData[0].id;
 	
 		var featuredCharacters = [];
 		var resultCreators = "";
@@ -53,10 +57,10 @@ function processResults(data) {
 		});
 
 		$(resultData[0].creators.items).each(function(index) {
-			resultCreators = resultCreators + "<div class='creator'>" + $(this)[0].name + " - " + $(this)[0].role + ",</div>";
+			resultCreators = resultCreators + "<div class='creator'>" + $(this)[0].name + " - " + $(this)[0].role + "</div>";
 		});
 
-		var markup = buildResultMarkup(resultTitle, resultImage, resultSeries, resultIssueNumber, resultDescription, featuredCharacters, resultCreators);
+		var markup = buildResultMarkup(resultTitle, resultImage, resultSeries, resultIssueNumber, resultDescription, featuredCharacters, resultCreators, resultId);
 
 
 		$(".results").append(markup);
@@ -76,7 +80,7 @@ function outputResults(resultsList) {
 
 }
 
-function buildResultMarkup(resultTitle, resultImage, resultSeries, resultIssueNumber, resultDescription, featuredCharacters, resultCreators) {
+function buildResultMarkup(resultTitle, resultImage, resultSeries, resultIssueNumber, resultDescription, featuredCharacters, resultCreators, resultId) {
 		var markup = "<div class='search-result'>" +
 		"<img class='result-img' src='" + resultImage + "'/>" +
 		"<div class='result-information'>" +
@@ -86,12 +90,13 @@ function buildResultMarkup(resultTitle, resultImage, resultSeries, resultIssueNu
 		if(resultCreators !== null && resultCreators.length > 0) {
 			markup = markup + "<div class='result-creators'> Creators: " + resultCreators + "</div>";
 		}
+		
 		if(resultDescription !== null && resultDescription.length > 0) {
 			if (resultDescription.length > 100) {
 				resultDescription = resultDescription.substring(0, 100) + "...";
 			}
 
-			markup = markup + "<div class='result-description'>" + resultDescription + "</div>";
+			//markup = markup + "<div class='result-description'>" + resultDescription + "</div>";
 		}
 
 		if(featuredCharacters !== null && featuredCharacters.length > 0) {
@@ -99,10 +104,12 @@ function buildResultMarkup(resultTitle, resultImage, resultSeries, resultIssueNu
 				featuredCharacters = featuredCharacters.substring(0, 100) + "...";
 			}
 
-			markup = markup + "<div class='result-characters'> Featured Characters: " + featuredCharacters + "</div>";
+			//markup = markup + "<div class='result-characters'> Featured Characters: " + featuredCharacters + "</div>";
 		}
 
-		markup = markup + "</div></div>";
+		var  viewFullInfoLink = "<a href='/comiccollector/pages/viewcomicinfo?&comicId=" + resultId + "'>View Full Information</a>";
+
+		markup = markup + viewFullInfoLink + "</div></div>";
 		
 
 		return markup;
