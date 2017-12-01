@@ -11,3 +11,4 @@ npx
 package-lock.json
 comicCollector/scripts/apiUrlBuilderService.js
 comicCollector.zip
+*.zip
