@@ -7,6 +7,40 @@
 
 	<body lang="en">
 		<?php include '../snippets/header.html';?>
+
+<?php
+	//Sample Database Connection Syntax for PHP and MySQL.
+	
+	//Connect To Database
+	$hostname="localhost";
+	$username="bwconner_test";
+	$password="dbtest123";
+	$dbname="comic_collector";
+	$usertable="user_profiles";
+	$yourfield = "userName";
+
+	$con = mysqli_connect($hostname,$username, $password) or die ("<html><script language='JavaScript'>alert('Unable to connect to database! Please try again later.'),history.go(-1)</script></html>");
+	mysqli_select_db($con, $dbname);
+
+	#Post Test
+	$link = mysqli_connect($hostname,$username, $password, $dbname);
+	$sql = "INSERT INTO user_profiles (userID, userName, password, firstName, favoriteCharacter, profileText) VALUES (23232323, 'pparker', 'pparker1', 'Peter', 'Spidey', 'I am not Spider-Man')";
+	mysqli_query($link, $sql);
+
+	# Check If Record Exists
+	$query = "SELECT * FROM $usertable";
+
+	$result = mysqli_query($con, $query);
+	
+	if($result){
+		while($row = mysqli_fetch_array($result)){
+			$name = $row["$yourfield"];
+			echo "Name: ".$name."<br/>";
+		}
+	}
+?>
+
+
 		<div class="site-body-wrapper">
 			<div class="main-content-section">
 				<div class="main-content-section_subsection">
