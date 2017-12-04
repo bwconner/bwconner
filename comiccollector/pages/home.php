@@ -1,42 +1,12 @@
 <html>
 	<head>
 		<title>bwconner.com | Comic Collector</title>
-		<link rel="import" href="../snippets/global.html">
+		<?php include '../snippets/global.html';?>
 		<script type="text/javascript" src="../scripts/search.js"></script>
 	</head>
 
 	<body lang="en">
-		<link rel="import" href="../snippets/header.html">
-		<header>
-			<div class="header">
-				<a class="home-header" href="/comiccollector/pages/home"><h1 class="header-logo">Comic Collector</h1></a>
-				<div class="main-nav">
-					<div class="link">
-						<a href="/comiccollector/pages/search">Login</a>
-					</div>
-					<div class="link">
-						<a href="/comiccollector/pages/search">Search</a>
-					</div>
-					<div class="link">
-						<a href="/comiccollector/pages/search">Contact</a>
-					</div>
-				</div>
-			</div>
-			<div class="mini-header">
-				<a class="home-header" href="/comiccollector/pages/home"><h2>Comic Collector</h2></a>
-				<div class="main-nav">
-					<div class="link">
-						<a href="/comiccollector/pages/search">Login</a>
-					</div>
-					<div class="link">
-						<a href="/comiccollector/pages/search">Search</a>
-					</div>
-					<div class="link">
-						<a href="/comiccollector/pages/search">Contact</a>
-					</div>
-				</div>
-			</div>
-		</header>
+		<?php include '../snippets/header.html';?>
 		<div class="site-body-wrapper">
 			<div class="main-content-section">
 				<div class="main-content-section_subsection">

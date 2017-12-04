@@ -1,12 +1,12 @@
 <html>
 	<head>
 		<title>bwconner.com | Comic Collector</title>
-		<link rel="import" href="../snippets/global.html">
+		<?php include '../snippets/global.html';?>
 		<link rel="stylesheet" type="text/css" href="../css/search.css">
 		<script type="text/javascript" src="../scripts/search.js"></script>
 	</head>
 	<body lang="en">
-		<link rel="import" href="../snippets/header.html">
+		<?php include '../snippets/header.html';?>
 		<div class="site-body-wrapper">
 			<div class="search-body-wrapper">
 				<div class="search-form">
