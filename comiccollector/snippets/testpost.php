@@ -28,8 +28,8 @@
 
 	#Post Test
 	$link = mysqli_connect($hostname,$username, $password, $dbname);
-	$sql = "INSERT user_profiles (userID, userName, password, firstName, favoriteCharacter, profileText)
-	        VALUES ('".$post_userID."', '".$_POST["username"]."','".$_POST["password"]."','".$_POST["email"]."', '', '')";
+	$sql = "INSERT user_profiles (userID, userName, password, firstName, favoriteCharacter, profileText, profileImage)
+	        VALUES ('".$post_userID."', '".$_POST["username"]."','".$_POST["password"]."','".$_POST["email"]."', '', 'http://bwconner.com/comiccollector/images/blankprofile.png')";
 	mysqli_query($link, $sql);
 
 	# Check If Record Exists
