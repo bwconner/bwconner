@@ -13,7 +13,8 @@ module.exports = function(grunt) {
           'comicCollector/css/index.css' : 'comicCollector/scss/index.scss',
           'comicCollector/css/search.css' : 'comicCollector/scss/search.scss',
           'comicCollector/css/profile.css' : 'comicCollector/scss/profile.scss',
-          'comicCollector/css/comicInfoPage.css' : 'comicCollector/scss/comicInfoPage.scss'
+          'comicCollector/css/comicInfoPage.css' : 'comicCollector/scss/comicInfoPage.scss',
+          'comicCollector/css/createAccount.css' : 'comicCollector/scss/createAccount.scss'
         }
       }
     },
