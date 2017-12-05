@@ -5,6 +5,20 @@
 		margin: 0px auto;
 		text-align: center;
 		width: 300px;
+		transition: all 0.5s ease;
+
+		&.hide {
+
+			visibility: hidden;
+		}
+	}
+
+	.create-account-wrapper_success {
+		transition: all 0.5s ease;
+
+		&.hide {
+			visibility: hidden;
+		}
 	}
 
 	.create-account-wrapper_benefits {
@@ -14,7 +28,7 @@
 	}
 
 	.section-header {
-		margin-bottom: 10px auto;
+		margin: 10px auto;
 		text-align: center;
 	}
 

@@ -2,13 +2,20 @@
   display: block;
   margin: 0px auto;
   text-align: center;
-  width: 300px; }
+  width: 300px;
+  transition: all 0.5s ease; }
+  .create-account-wrapper .create-account-wrapper_form.hide {
+    visibility: hidden; }
+.create-account-wrapper .create-account-wrapper_success {
+  transition: all 0.5s ease; }
+  .create-account-wrapper .create-account-wrapper_success.hide {
+    visibility: hidden; }
 .create-account-wrapper .create-account-wrapper_benefits {
   display: block;
   margin: 0px auto;
   width: 300px; }
 .create-account-wrapper .section-header {
-  margin-bottom: 10px auto;
+  margin: 10px auto;
   text-align: center; }
 .create-account-wrapper .input-label {
   margin: 25px 0px 0px; }

@@ -14,15 +14,18 @@
 					<form id="form" method="post" action="">
 						<p class="input-label">Username:</p>
 						<input id="username" type="text" name="username" class="username" placeholder="Enter a User Name"/>
-						<p class="error username-error hide">Please enter a username.</p>
+						<p class="error username-error hide">Please enter a user name between 3 and 16 characters long.</p>
 						<p class="input-label">Password:</p>
 						<input id="password" type="text" name="password" class="password" placeholder="Enter a Password"/>
-						<p class="error password-error hide">Please enter a password.</p>
+						<p class="error password-error hide">Please enter a user name between 8 and 16 characters long. Your password must contain at least one letter, one number and one special character.</p>
 						<p class="input-label">E-Mail:</p>
 						<input id="email" type="text" name="email" class="email" placeholder="Enter an E-Mail"/>
-						<p class="error email-error hide">Please enter a e-mail.</p>
+						<p class="error email-error hide">Please enter a valid e-mail address.</p>
 					</form>
 					<button class="create-account button">Create Account</button>
+					<div class="create-account-wrapper_success hide">
+						<p>You have succesfully created an account! Please <a href="#">click here</a> to visit and further customize your profile.</p>
+					</div>
 				</div>
 				<div class="create-account-wrapper_benefits">
 					<div class="section-header">Benefits of an account:</div>
