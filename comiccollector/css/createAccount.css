@@ -1,0 +1,47 @@
+.create-account-wrapper .create-account-wrapper_form {
+  display: block;
+  margin: 0px auto;
+  text-align: center;
+  width: 300px; }
+.create-account-wrapper .create-account-wrapper_benefits {
+  display: block;
+  margin: 0px auto;
+  width: 300px; }
+.create-account-wrapper .section-header {
+  margin-bottom: 10px auto;
+  text-align: center; }
+.create-account-wrapper .input-label {
+  margin: 25px 0px 0px; }
+.create-account-wrapper input {
+  border: 2px solid #000;
+  font-family: 'Oswald', sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  padding: 10px;
+  width: 200px; }
+.create-account-wrapper .button {
+  font-size: 16px;
+  margin-top: 15px;
+  width: 200px; }
+.create-account-wrapper .create-account-section {
+  border: 2px solid #000;
+  margin-top: 25px;
+  min-height: 255px; }
+  .create-account-wrapper .create-account-section li {
+    padding: 10px 0px; }
+.create-account-wrapper .error {
+  color: #e23636;
+  margin: 0px; }
+
+/*MQ OVERRIDES*/
+@media only screen and (min-width: 900px) {
+  .create-account-wrapper .create-account-wrapper_form {
+    display: inline-block;
+    float: left; }
+  .create-account-wrapper .create-account-wrapper_benefits {
+    display: inline-block;
+    float: left;
+    padding-left: 100px;
+    width: calc(100% - 420px); } }
+
+/*# sourceMappingURL=createAccount.css.map */
