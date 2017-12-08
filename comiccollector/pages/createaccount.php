@@ -46,16 +46,6 @@
 					</div>
 				</div>
 			</div>
-			<div class="login-wrapper">
-				<div class="section-header">Login:</div>
-				<form class="login-form" id="login-form" method="post" action="">
-					<p class="input-label">Username:</p>
-					<input id="login-username" type="text" name="username" class="username" placeholder="User Name:"/>
-					<p class="input-label">Password:</p>
-					<input id="login-password" type="text" name="password" class="password" placeholder="Password:"/>
-				</form>
-				<button class="login button">Login</button>
-			</div>
 		</div>
 	</body>
 </html>

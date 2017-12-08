@@ -34,7 +34,7 @@ function checkUniqueUserName (username) {
 	 $.ajax({
 		data: data,
 		type: "post",
-		url: "../snippets/uniqueusernamesql.php",
+		url: "../phpscripts/uniqueusernamesql.php",
 		success: function(data){
 			if (data === "true") {
 				return "true";
@@ -53,7 +53,7 @@ function createNewAccountID () {
 	 $.ajax({
 		data: data,
 		type: "post",
-		url: "../snippets/uniqueuseridsql.php",
+		url: "../phpscripts/uniqueuseridsql.php",
 		success: function(data){
 			if (data === "true") {
 				createAccountAjax(uniqueNumber);
@@ -76,7 +76,7 @@ function createAccountAjax (newUserID) {
 	$.ajax({
 		data: data,
 		type: "post",
-		url: "../snippets/createaccountsql.php",
+		url: "../phpscripts/createaccountsql.php",
 		success: function(data){
 			$(".create-account-wrapper_form form").addClass("hide");
 			$(".create-account-wrapper .button").addClass("hide");
@@ -97,7 +97,7 @@ function validateLogin () {
 	$.ajax({
 		data: data,
 		type: "post",
-		url: "../snippets/loginsql.php",
+		url: "../phpscripts/loginsql.php",
 		success: function(data){
 			var userName = $('.login-form .username').val();
 			var userSessionID = createNewToken();
@@ -118,7 +118,7 @@ function updateUserSession (userName, userSessionID, expireDate, userID) {
 	$.ajax({
 		data: data,
 		type: "post",
-		url: "../snippets/sessionupdatesql.php",
+		url: "../phpscripts/sessionupdatesql.php",
 		success: function(data){
 			//console.log("db updated");
 		}
@@ -170,7 +170,7 @@ function verifyLoggedInCookie (cookieValue) {
 	$.ajax({
 		data: cookieValue,
 		type: "post",
-		url: "../snippets/verifyloginsql.php",
+		url: "../phpscripts/verifyloginsql.php",
 		success: function(data){
 			if (data == "true") {
 				parseUserCookie(cookieValue);
