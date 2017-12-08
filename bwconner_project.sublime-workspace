@@ -4,12 +4,20 @@
 		"selected_items":
 		[
 			[
-				"min",
-				"min-height"
+				"result",
+				"resultData"
 			],
 			[
-				"result",
-				"resultLimit"
+				"page",
+				"pageUrl"
+			],
+			[
+				"curr",
+				"currentPage"
+			],
+			[
+				"min",
+				"min-height"
 			],
 			[
 				"sea",
@@ -140,98 +148,82 @@
 	"buffers":
 	[
 		{
-			"file": "comicCollector/scss/base.scss",
+			"file": "comiccollector/pages/viewcomicinfo.php",
 			"settings":
 			{
-				"buffer_size": 3591,
+				"buffer_size": 581,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "comicCollector/css/base.css",
+			"file": "comiccollector/pages/createaccount.php",
 			"settings":
 			{
-				"buffer_size": 3634,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "comicCollector/scss/search.scss",
-			"settings":
-			{
-				"buffer_size": 1658,
+				"buffer_size": 2605,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "comicCollector/css/search.css",
+			"file": "comiccollector/scripts/login.js",
 			"settings":
 			{
-				"buffer_size": 2047,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "comicCollector/pages/search.html",
-			"settings":
-			{
-				"buffer_size": 3443,
+				"buffer_size": 4801,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "comicCollector/pages/viewcomicinfo.html",
+			"file": "comiccollector/snippets/createaccountsql.php",
 			"settings":
 			{
-				"buffer_size": 3443,
+				"buffer_size": 997,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "comicCollector/pages/home.html",
+			"file": "comiccollector/snippets/loginsql.php",
 			"settings":
 			{
-				"buffer_size": 7877,
+				"buffer_size": 965,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "comicCollector/scss/index.scss",
+			"file": "comiccollector/snippets/sessionupdatesql.php",
 			"settings":
 			{
-				"buffer_size": 370,
+				"buffer_size": 973,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "comicCollector/scripts/main.js",
+			"file": "comiccollector/snippets/verifyloginsql.php",
 			"settings":
 			{
-				"buffer_size": 438,
+				"buffer_size": 1155,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "comicCollector/scripts/search.js",
+			"file": "comiccollector/snippets/uniqueusernamesql.php",
 			"settings":
 			{
-				"buffer_size": 4661,
+				"buffer_size": 547,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "comicCollector/scripts/apiUrlBuilderService.js",
+			"file": "comiccollector/snippets/uniqueuseridsql.php",
 			"settings":
 			{
-				"buffer_size": 344,
+				"buffer_size": 539,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -279,21 +271,50 @@
 	"expanded_folders":
 	[
 		"/B/Users/Bruce/Documents/GitHub/bwconner",
-		"/B/Users/Bruce/Documents/GitHub/bwconner/bwconner"
+		"/B/Users/Bruce/Documents/GitHub/bwconner/bwconner",
+		"/B/Users/Bruce/Documents/GitHub/bwconner/bwconner/pages",
+		"/B/Users/Bruce/Documents/GitHub/bwconner/bwconner/scss",
+		"/B/Users/Bruce/Documents/GitHub/bwconner/comiccollector"
 	],
 	"file_history":
 	[
+		"/B/Users/Bruce/Documents/GitHub/bwconner/comiccollector/css/base.css",
+		"/B/Users/Bruce/Documents/GitHub/bwconner/comiccollector/scss/base.scss",
+		"/B/Users/Bruce/Documents/GitHub/bwconner/comiccollector/css/createAccount.css",
+		"/B/Users/Bruce/Documents/GitHub/bwconner/comiccollector/scss/createAccount.scss",
+		"/B/Users/Bruce/Documents/GitHub/bwconner/Gruntfile.js",
+		"/B/Users/Bruce/Documents/GitHub/bwconner/comiccollector/scss/index.scss",
+		"/B/Users/Bruce/Documents/GitHub/bwconner/bwconner/scss/index.scss",
+		"/B/Users/Bruce/Documents/GitHub/bwconner/comiccollector/scss/search.scss",
+		"/B/Users/Bruce/Documents/GitHub/bwconner/bwconner/scss/profile.scss",
+		"/B/Users/Bruce/Documents/GitHub/bwconner/bwconner/scss/createaccount.scss",
+		"/B/Users/Bruce/Documents/GitHub/bwconner/comiccollector/snippets/testpost.php",
+		"/B/Users/Bruce/Documents/GitHub/bwconner/comiccollector/snippets/header.html",
+		"/B/Users/Bruce/Documents/GitHub/bwconner/comicCollector/scripts/apiUrlBuilderService.js",
+		"/B/Users/Bruce/Documents/GitHub/bwconner/comiccollector/scripts/viewcomicinfo.js",
+		"/B/Users/Bruce/Documents/GitHub/bwconner/comicCollector/scripts/search.js",
+		"/B/Users/Bruce/Documents/GitHub/bwconner/comicCollector/scripts/main.js",
+		"/B/Users/Bruce/Documents/GitHub/bwconner/comiccollector/pages/home.php",
+		"/B/Users/Bruce/Documents/GitHub/bwconner/comiccollector/pages/search.php",
+		"/B/Users/Bruce/Documents/GitHub/bwconner/bwconner/scss/createaccount",
+		"/B/Users/Bruce/Documents/GitHub/bwconner/comicCollector/scss/index.scss",
+		"/B/Users/Bruce/Documents/GitHub/bwconner/comicCollector/css/search.css",
+		"/B/Users/Bruce/Documents/GitHub/bwconner/comicCollector/scss/base.scss",
+		"/B/Users/Bruce/Documents/GitHub/bwconner/comicCollector/css/base.css",
+		"/B/Users/Bruce/Documents/GitHub/bwconner/comicCollector/scss/search.scss",
+		"/B/Users/Bruce/Documents/GitHub/bwconner/comiccollector/pages/home.html",
+		"/B/Users/Bruce/Documents/GitHub/bwconner/comiccollector/pages/search.html",
+		"/B/Users/Bruce/Documents/GitHub/bwconner/comiccollector/pages/viewcomicinfo.html",
+		"/B/Users/Bruce/Documents/GitHub/bwconner/comiccollector/snippets/global.html",
+		"/B/Users/Bruce/Documents/GitHub/bwconner/comiccollector/pages/viewcomicinfo.php",
+		"/B/Users/Bruce/Documents/GitHub/bwconner/.htaccess",
 		"/B/Users/Bruce/Documents/GitHub/bwconner/bwconner/scripts/main.js",
 		"/B/Users/Bruce/Documents/GitHub/bwconner/comicCollector/snippets/header.html",
 		"/B/Users/Bruce/Documents/GitHub/bwconner/bwconner/pages/projects.html",
 		"/B/Users/Bruce/Documents/GitHub/bwconner/home.html",
-		"/B/Users/Bruce/Documents/GitHub/bwconner/bwconner/scss/index.scss",
 		"/B/Users/Bruce/Documents/GitHub/bwconner/comicCollector/scss/comicInfoPage.scss",
-		"/B/Users/Bruce/Documents/GitHub/bwconner/comicCollector/scripts/apiUrlBuilderService.js",
-		"/B/Users/Bruce/Documents/GitHub/bwconner/comicCollector/scss/index.scss",
 		"/B/Users/Bruce/Documents/GitHub/bwconner/bwconner/scss/base.scss",
 		"/B/Users/Bruce/Documents/GitHub/bwconner/comicCollector/scss/profile.scss",
-		"/B/Users/Bruce/Documents/GitHub/bwconner/Gruntfile.js",
 		"/B/Users/Bruce/Documents/GitHub/bwconner/comicCollector/scss/marvel.scss",
 		"/C/Users/Bruce/Desktop/hollister.PNG",
 		"/B/Users/Bruce/Documents/GitHub/bwconner/bwconner/scss/projects.scss",
@@ -384,43 +405,20 @@
 		"/C/Users/Bruce/Desktop/theleague/pages/season_recaps.html",
 		"/C/Users/Bruce/Desktop/theleague/css/hall.css",
 		"/C/Users/Bruce/Desktop/websites/bruceconner/bwconner/libs/jquery-3.1.0.min.js",
-		"/C/Users/Bruce/Desktop/TarpitDev/assets/theme.js.liquid",
-		"/C/Users/Bruce/Desktop/bwslider/bwslider2.js",
-		"/C/Users/Bruce/Desktop/bwslider/wip readme",
-		"/C/Users/Bruce/Desktop/bwslider/readme",
-		"/C/Users/Bruce/Desktop/bruceconner/bwconner/scripts/bwslider.js",
-		"/C/Users/Bruce/Desktop/bruceconner/bwconner/scripts/main.js",
-		"/C/Users/Bruce/Desktop/bwSlider/readme",
-		"/C/Users/Bruce/Desktop/websites/my ig.html",
-		"/C/Users/Bruce/Desktop/websites/bruceconner/bwconner/pages/projects.html",
-		"/C/Users/Bruce/Desktop/websites/bruceconner/bwconner/css/base.css",
-		"/C/Users/Bruce/Desktop/websites/bruceconner/bwconner/pages/contact.html",
-		"/C/Users/Bruce/Desktop/websites/bruceconner/cloudhome.html",
-		"/C/Users/Bruce/Desktop/websites/bruceconner/bwconner/css/projects.css",
-		"/C/Users/Bruce/Desktop/websites/bruceconner/newhome.html",
-		"/C/Users/Bruce/Desktop/websites/bruceconner/bwconner/css/media.css",
-		"/C/Users/Bruce/Desktop/websites/bruceconner/bwconner/css/contact.css",
-		"/C/Users/Bruce/Desktop/TarpitMisc/tarpitIG.html",
-		"/C/Users/Bruce/Desktop/websites/h3h3Soundboard/scripts/main.js",
-		"/C/Users/Bruce/Desktop/tarpitIG.html",
-		"/C/Users/Bruce/Desktop/TarpitDev/landing page tests",
-		"/C/Users/Bruce/Desktop/TarpitDev/custom slider settings",
-		"/C/Users/Bruce/Desktop/TarpitDev/config.yml",
-		"/C/Users/Bruce/Desktop/theme setup file",
-		"/C/Users/Bruce/Desktop/wl",
-		"/C/Users/Bruce/Desktop/chuck/scripts/test.php",
-		"/C/Users/Bruce/Desktop/chuckPDPOld",
-		"/C/Users/Bruce/Desktop/my explosion logic"
+		"/C/Users/Bruce/Desktop/TarpitDev/assets/theme.js.liquid"
 	],
 	"find":
 	{
-		"height": 43.0
+		"height": 41.0
 	},
 	"find_in_files":
 	{
-		"height": 104.0,
+		"height": 110.0,
 		"where_history":
 		[
+			"*.scss",
+			"*/bwconner/*.scss",
+			"*/bwconner/*",
 			"*.*",
 			""
 		]
@@ -430,6 +428,61 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"createLoggedInCookie",
+			"session",
+			"data",
+			"createLoggedInCookie",
+			"createAccountCookie",
+			"createLoggedInCookie",
+			"data",
+			"post_firstName",
+			"alert",
+			"createNewToken",
+			"alert",
+			"console",
+			"createLoggedInCookie",
+			"#form",
+			"form",
+			"#form",
+			"cookieID",
+			"2147483647",
+			"cookie",
+			"createNewCookieID",
+			"createAccountAjax",
+			"valid",
+			"checkUniqueUserName",
+			"createNewAccountID",
+			"createAccountAjax",
+			"checkUniqueUserName",
+			"hide",
+			"alert",
+			"validateInputs",
+			"create-account-section",
+			".create-account-wrapper_benefits",
+			"input-label",
+			"button",
+			"main-content-section_subsection-header",
+			"main-content-section_subsection-header\nmain-content-section_subsection-header",
+			"main-content-section_subsection-header",
+			"button",
+			"console",
+			"alert",
+			"he",
+			"hey",
+			"post_favoriteCharacter",
+			"html",
+			"resultsList",
+			"gotoPage",
+			"totalPages",
+			"totalPa",
+			"currentPage",
+			"currentOffset",
+			"totalPages",
+			"pag",
+			"paginati",
+			"images",
+			"thecollector",
+			"background",
 			"creator",
 			"resultCreators",
 			"console",
@@ -502,62 +555,7 @@
 			"numbersofslides",
 			"numberofslides",
 			"displayInitialSlides",
-			"infinite",
-			"'",
-			"infitineScroll",
-			"'",
-			"transitionSpeed",
-			"bwslider-next-slide",
-			"bwslider-prev-slide",
-			"\t\t\t$(",
-			"bwslider-prev-slide",
-			"//$(\".",
-			"2",
-			"}\n",
-			"bwslider-prev-slide",
-			"height",
-			"alert",
-			" parseInt",
-			"alert",
-			"slideWidth",
-			"next-slide",
-			"$(\".bwslider-slide\")",
-			"bwslider-next-slide",
-			"bwslider-prev-slide",
-			".bwslider-prev-slide",
-			"bwslider-next-slide",
-			"\t$(\".bwslider-slide\").removeClass(\"bwslider-prev-slide\");\n\t$(\".bwslider-slide\").removeClass(\"bwslider-next-slide\");",
-			"alert",
-			"1",
-			"bwslider-active-slide",
-			"left",
-			"console",
-			"}",
-			"{\n",
-			"product-first-image-wrapper",
-			"<div class=\"grid__item grid-product one-whole medium--one-half large--one-half\">\n  <div class=\"grid-product__wrapper\">\n    <div class=\"grid-product__image-wrapper\">\n      <a class=\"grid-product__image-link\" href=\"{{product.url}}\">\n         <img class=\"grid-product__image\" src=\"{{ image.src | img_url: 'grande' }}\" alt=\"{{ image.alt | escape }}\" data-image-id=\"{{ image.id }}\">\n      </a>\n    </div>\n\n    <a href=\"{{product.url}}\" class=\"grid-product__meta\">\n      <span class=\"grid-product__title\">{{product.title}}</span>\n      <span class=\"grid-product__price-wrap\">\n        <span class=\"long-dash\">—</span>\n        <span class=\"grid-product__price\">\n            <span class=\"visually-hidden\">Regular price</span>\n            ${{product.price}}\n        </span>\n      </span>\n    </a>\n  </div>\n</div>",
-			"charity",
-			"emailSend.",
-			"myform",
-			">\n",
-			"}\n",
-			"main.min",
-			"math.ro",
-			"$</",
-			"math",
-			" + \" \"",
-			"text",
-			"output",
-			"display: no",
-			"}\n",
-			"cloud",
-			"class=\"home-header\"",
-			"cloud",
-			"footer",
-			"project-thumbnail",
-			"\">\n",
-			"seconds/",
-			"seconds"
+			"infinite"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -575,134 +573,45 @@
 	"groups":
 	[
 		{
-			"selected": 9,
+			"selected": 5,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "comicCollector/scss/base.scss",
+					"file": "comiccollector/pages/viewcomicinfo.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3591,
+						"buffer_size": 581,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								3591
+								6,
+								6
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
 							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 3857.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "comicCollector/css/base.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3634,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								3634
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "comicCollector/scss/search.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1658,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1037,
-								1037
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 911.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 8,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "comicCollector/css/search.css",
+					"buffer": 1,
+					"file": "comiccollector/pages/createaccount.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2047,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1219,
-								1226
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 594.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 10,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "comicCollector/pages/search.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3443,
+						"buffer_size": 2605,
 						"regions":
 						{
 						},
@@ -710,127 +619,99 @@
 						[
 							[
 								0,
-								3443
+								2605
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 660.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "comicCollector/pages/viewcomicinfo.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3443,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2960,
-								2960
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1350.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "comicCollector/pages/home.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 7877,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1673,
-								1673
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 144.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "comicCollector/scss/index.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 370,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								198,
-								168
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 600.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 7,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
-					"file": "comicCollector/scripts/main.js",
+					"buffer": 2,
+					"file": "comiccollector/scripts/login.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 438,
+						"buffer_size": 4801,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								438,
-								438
+								2903,
+								2903
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1748.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "comiccollector/snippets/createaccountsql.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 997,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								329,
+								329
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "comiccollector/snippets/loginsql.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 965,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								965
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
@@ -841,61 +722,119 @@
 					"type": "text"
 				},
 				{
-					"buffer": 9,
-					"file": "comicCollector/scripts/search.js",
+					"buffer": 5,
+					"file": "comiccollector/snippets/sessionupdatesql.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4661,
+						"buffer_size": 973,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3712,
-								3712
+								648,
+								648
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1947.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "comicCollector/scripts/apiUrlBuilderService.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 344,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								344
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "comiccollector/snippets/verifyloginsql.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1155,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1108,
+								1108
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "comiccollector/snippets/uniqueusernamesql.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 547,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								391,
+								427
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "comiccollector/snippets/uniqueuseridsql.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 539,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								381,
+								308
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
 					"type": "text"
 				}
 			]
@@ -903,7 +842,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 30.0
+		"height": 28.0
 	},
 	"input":
 	{
@@ -940,7 +879,7 @@
 	"project": "bwconner_project.sublime-project",
 	"replace":
 	{
-		"height": 56.0
+		"height": 52.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -951,7 +890,43 @@
 		[
 			[
 				"index.scss",
-				"comicCollector\\scss\\index.scss"
+				"comiccollector\\scss\\index.scss"
+			],
+			[
+				"base.css",
+				"comiccollector\\css\\base.css"
+			],
+			[
+				"base.scss",
+				"comiccollector\\scss\\base.scss"
+			],
+			[
+				"createaccount.css",
+				"comiccollector\\css\\createAccount.css"
+			],
+			[
+				"search.scss",
+				"comiccollector\\scss\\search.scss"
+			],
+			[
+				"gruntfi",
+				"Gruntfile.js"
+			],
+			[
+				"testpst",
+				"comiccollector\\snippets\\testpost.php"
+			],
+			[
+				"header",
+				"comiccollector\\snippets\\header.html"
+			],
+			[
+				"header.h",
+				"comiccollector\\snippets\\header.html"
+			],
+			[
+				"hom",
+				"comiccollector\\pages\\home.html"
 			],
 			[
 				"main.js",
