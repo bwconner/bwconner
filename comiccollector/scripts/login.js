@@ -136,18 +136,51 @@ function createLoggedInCookie (userName, userSessionID, expireDate, userID, cook
 
 //Check if a logged in cookie exists
 function checkForLoggedInCookie () {
-
-}
-
-//If a logged in cookie exists, check its validity 
-function verifyLoggedInCookie () {
-
+	if (document.cookie.length > 0) {
+		var cookieName = "ccuid";
+		cookieStart = document.cookie.indexOf(cookieName + "=");
+		if (cookieStart != -1) {
+			cookieStart = cookieStart + cookieName.length + 1;
+			cookieEnd = document.cookie.indexOf(";", cookieStart);
+			if (cookieEnd == -1) {
+				cookieEnd = document.cookie.length;
+			}
+			var cookieValue = unescape(document.cookie.substring(cookieStart, cookieEnd));
+			verifyLoggedInCookie(cookieValue);
+			//parseUserCookie(cookieValue);
+		}
+	}
 }
 
 //Parse the values out of the cookie
-function parseUserCookie () {
-
+//May not even need this function
+function parseUserCookie (cookieValue) {
+	var cookieSplit = cookieValue.split("&");
+	var userID = cookieSplit[0].split("=")[1];
+	var username = cookieSplit[1].split("=")[1];
+	var sessionID = cookieSplit[2].split("=")[1];
+	var cookieID = cookieSplit[3].split("=")[1];
+	//verifyLoggedInCookie(userID, username, sessionID, cookieID);
 }
+
+//If a logged in cookie exists, check its validity 
+function verifyLoggedInCookie (cookieValue) {
+	$.ajax({
+		data: cookieValue,
+		type: "post",
+		url: "../snippets/verifyloginsql.php",
+		success: function(data){
+			console.log(data);
+			if (data == "true") {
+				console.log("login verified");
+			} else {
+				console.log("login failed");
+			}
+		}
+	});
+}
+
+
 
 //Create expiration date equal to 14 days from now
 function getExpirationDate () {
@@ -158,6 +191,8 @@ function getExpirationDate () {
 }
 
 $(document).ready(function() {
+
+	checkForLoggedInCookie();
 
 	$('.create-account').on('click', function() {
 		var params = {
