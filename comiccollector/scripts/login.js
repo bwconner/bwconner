@@ -85,7 +85,7 @@ function createAccountAjax (newUserID) {
 			var userName = $('.create-account-form .username').val();
 			var expireDate = getExpirationDate();
 			updateUserSession(userName, userSessionID, expireDate, newUserID);
-			createLoggedInCookie(userName, userSessionID, expires, userID, cookieID);
+			createLoggedInCookie(userName, userSessionID, expireDate, userID, cookieID);
 		}
 	});
 }
@@ -101,20 +101,20 @@ function validateLogin () {
 		success: function(data){
 			var userName = $('.login-form .username').val();
 			var userSessionID = createNewToken();
-			var expires = getExpirationDate();
+			var expireDate = getExpirationDate();
 			var dataSplit = data.split("&");
 			var userID = dataSplit[0].split("=")[1];
 			var cookieID = dataSplit[1].split("=")[1];
 
-			updateUserSession(userName, userSessionID, expires, userID);
-			createLoggedInCookie(userName, userSessionID, expires, userID, cookieID);
+			updateUserSession(userName, userSessionID, expireDate, userID);
+			createLoggedInCookie(userName, userSessionID, expireDate, userID, cookieID);
 		}
 	});	
 }
 
-function updateUserSession (userName, userSessionID, expires, userID) {
+function updateUserSession (userName, userSessionID, expireDate, userID) {
 
-	var data = "userID=" + userName + "&userName=" + userName + "userSessionID=" + userSessionID + "&expires=" + expires;
+	var data = "userID=" + userName + "&userName=" + userName + "userSessionID=" + userSessionID + "&expireDate=" + expireDate;
 
 	$.ajax({
 		data: data,
@@ -127,12 +127,12 @@ function updateUserSession (userName, userSessionID, expires, userID) {
 }
 
 //Create logged in cookie following an account login
-function createLoggedInCookie (userName, userSessionID, expires, userID, cookieID) {
+function createLoggedInCookie (userName, userSessionID, expireDate, userID, cookieID) {
 	//logged in cookie will hold userID, userName, sessionID and cookieID.
 	//All 4 must match to allow user to view and manipulate their profile.
 	var cookieName = "ccuid";
 	var cookieValue = "userID=" + userID + "&userName=" + userName + "&sessionToken=" + userSessionID + "&cookieToken=" + cookieToken;
-	document.cookie = cookieName + "=" + cookieValue + ";" + expires + ";path=/";
+	document.cookie = cookieName + "=" + cookieValue + "; expires=" + expireDate + ";path=/";
 }
 
 //Check if a logged in cookie exists
@@ -154,8 +154,8 @@ function parseUserCookie () {
 function getExpirationDate () {
 	var date = new Date();
 	date.setTime(date.getTime() + (14 * 24 * 60 * 60 * 1000));
-	expires = "expires=" + date.toUTCString();
-	return expires;
+	expireDate = date.toUTCString();
+	return expireDate;
 }
 
 $(document).ready(function() {
