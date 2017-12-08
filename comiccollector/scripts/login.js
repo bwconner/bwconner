@@ -93,11 +93,11 @@ function checkLoggedInCookie (userID, userName, sessionID, cookieID) {
 	//All 4 must match to allow user to view and manipulate their profile.
 }
 
-function createAccountCookie (userID, userName, sessionToken, cookieToken) {
+function createAccountCookie (userID, userName, sessionID, cookieID) {
 	//logged in cookie will hold userID, userName, sessionID and cookieID.
 	//All 4 must match to allow user to view and manipulate their profile.
 	var cookieName = "ccuid";
-	var cookieValue = "userID=" + userID + "&userName=" + userName + "&sessionToken=" + sessionToken + "&cookieToken=" + cookieToken;
+	var cookieValue = "userID=" + userID + "&userName=" + userName + "&sessionToken=" + sessionID + "&cookieToken=" + cookieID;
     var date = new Date();
     date.setTime(date.getTime() + (14 * 24 * 60 * 60 * 1000));
     var expires = "expires="+date.toUTCString();
@@ -105,18 +105,11 @@ function createAccountCookie (userID, userName, sessionToken, cookieToken) {
 	document.cookie = cookieName + "=" + cookieValue + ";" + expires + ";path=/";
 }
 
-function createLoggedInCookie (userName, userSessionID) {
+function createLoggedInCookie (userName, userSessionID, data) {
+	var dataSplit = data.split("&");
+	var userID = dataSplit[0].split("=")[1];
+	var cookieToken = dataSplit[1].split("=")[1];
 
-
-	$.ajax({
-		data: data,
-		type: "post",
-		url: "../snippets/createaccountsql.php",
-		success: function(data){
-			console.log(data)
-		}
-	});
-	
 	//logged in cookie will hold userID, userName, sessionID and cookieID.
 	//All 4 must match to allow user to view and manipulate their profile.
 	var cookieName = "ccuid";
@@ -141,10 +134,9 @@ function validateLogin () {
 		type: "post",
 		url: "../snippets/loginsql.php",
 		success: function(data){
-			var userSessionID = createNewToken();
 			var userName = $('.login-form .username').val();
-			console.log("LOGGED IN DATA:" + data);
-			//createLoggedInCookie(userName, userSessionID);
+			var userSessionID = createNewToken();
+			createLoggedInCookie(userName, userSessionID, data);
 		}
 	});	
 }
