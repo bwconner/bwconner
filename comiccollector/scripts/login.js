@@ -88,11 +88,7 @@ function createAccountAjax (newUserID) {
 	});
 }
 
-function checkLoggedInCookie (userID, userName, sessionID, cookieID) {
-	//logged in cookie will hold userID, userName and cookieID.
-	//All 4 must match to allow user to view and manipulate their profile.
-}
-
+//Create logged in cookie following creation of a new account
 function createAccountCookie (userID, userName, sessionID, cookieID) {
 	//logged in cookie will hold userID, userName, sessionID and cookieID.
 	//All 4 must match to allow user to view and manipulate their profile.
@@ -103,26 +99,6 @@ function createAccountCookie (userID, userName, sessionID, cookieID) {
 	var expires = "expires="+date.toUTCString();
 
 	document.cookie = cookieName + "=" + cookieValue + ";" + expires + ";path=/";
-}
-
-function createLoggedInCookie (userName, userSessionID, data) {
-	var dataSplit = data.split("&");
-	var userID = dataSplit[0].split("=")[1];
-	var cookieToken = dataSplit[1].split("=")[1];
-
-	//logged in cookie will hold userID, userName, sessionID and cookieID.
-	//All 4 must match to allow user to view and manipulate their profile.
-	var cookieName = "ccuid";
-	var cookieValue = "userID=" + userID + "&userName=" + userName + "&sessionToken=" + userSessionID + "&cookieToken=" + cookieToken;
-	var date = new Date();
-	date.setTime(date.getTime() + (14 * 24 * 60 * 60 * 1000));
-	var expires = "expires="+date.toUTCString();
-
-	document.cookie = cookieName + "=" + cookieValue + ";" + expires + ";path=/";
-}
-
-function parseUserCookie () {
-
 }
 
 function validateLogin () {
@@ -136,9 +112,37 @@ function validateLogin () {
 		success: function(data){
 			var userName = $('.login-form .username').val();
 			var userSessionID = createNewToken();
-			createLoggedInCookie(userName, userSessionID, data);
+			var expires = getExpirationDate();
+			updateUserSession(userSessionID, expires);
+			createLoggedInCookie(userName, userSessionID, expires, data);
 		}
 	});	
+}
+
+//Create logged in cookie following an account login
+function createLoggedInCookie (userName, userSessionID, expires, data) {
+	var dataSplit = data.split("&");
+	var userID = dataSplit[0].split("=")[1];
+	var cookieToken = dataSplit[1].split("=")[1];
+
+	//logged in cookie will hold userID, userName, sessionID and cookieID.
+	//All 4 must match to allow user to view and manipulate their profile.
+	var cookieName = "ccuid";
+	var cookieValue = "userID=" + userID + "&userName=" + userName + "&sessionToken=" + userSessionID + "&cookieToken=" + cookieToken;
+	document.cookie = cookieName + "=" + cookieValue + ";" + expires + ";path=/";
+}
+
+function updateUserSession (userSessionID, expires) {
+	var data = "sessionID=" + userSessionID + "&expireDate=" + expires;
+
+	$.ajax({
+		data: data,
+		type: "post",
+		url: "../snippets/sessionupdatesql.php",
+		success: function(data){
+			console.log("db updated");
+		}
+	});
 }
 
 //Check if a logged in cookie exists
@@ -151,14 +155,22 @@ function verifyLoggedInCookie () {
 
 }
 
-function createUserSession () {
+//Parse the values out of the cookie
+function parseUserCookie () {
 
+}
+
+//Create expiration date equal to 14 days from now
+function getExpirationDate () {
+	var date = new Date();
+	date.setTime(date.getTime() + (14 * 24 * 60 * 60 * 1000));
+	expires = "expires=" + date.toUTCString();
+	return expires;
 }
 
 $(document).ready(function() {
 
 	$('.create-account').on('click', function() {
-		
 		var params = {
 			username: $('.create-account-form .username').val(),
 			password: $('.create-account-form .password').val(),
@@ -175,14 +187,7 @@ $(document).ready(function() {
 	});
 
 	$('.login').on('click', function() {
-		
-		var params = {
-			username: $('.login-form .username').val(),
-			password: $('.login-form .password').val(),
-		};
-
 		validateLogin();
-		
 	});
 
 });
