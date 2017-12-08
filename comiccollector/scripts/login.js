@@ -160,7 +160,9 @@ function parseUserCookie (cookieValue) {
 	var username = cookieSplit[1].split("=")[1];
 	var sessionID = cookieSplit[2].split("=")[1];
 	var cookieID = cookieSplit[3].split("=")[1];
-	//verifyLoggedInCookie(userID, username, sessionID, cookieID);
+	
+	$("body").addClass("logged-in");
+	$("body").attr("data-userid", userID);
 }
 
 //If a logged in cookie exists, check its validity 
@@ -170,9 +172,8 @@ function verifyLoggedInCookie (cookieValue) {
 		type: "post",
 		url: "../snippets/verifyloginsql.php",
 		success: function(data){
-			console.log(data);
 			if (data == "true") {
-				console.log("login verified");
+				parseUserCookie(cookieValue);
 			} else {
 				console.log("login failed");
 			}

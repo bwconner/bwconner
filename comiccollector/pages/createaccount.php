@@ -3,7 +3,6 @@
 		<title>bwconner.com | Comic Collector</title>
 		<?php include '../snippets/global.html';?>
 		<link rel="stylesheet" type="text/css" href="../css/createAccount.css">
-		<script type="text/javascript" src="../scripts/login.js"></script>
 	</head>
 	<body lang="en">
 		<?php include '../snippets/header.html';?>
@@ -48,11 +47,12 @@
 				</div>
 			</div>
 			<div class="login-wrapper">
+				<div class="section-header">Login:</div>
 				<form class="login-form" id="login-form" method="post" action="">
 					<p class="input-label">Username:</p>
-					<input id="username" type="text" name="username" class="username" placeholder="User Name:"/>
+					<input id="login-username" type="text" name="username" class="username" placeholder="User Name:"/>
 					<p class="input-label">Password:</p>
-					<input id="password" type="text" name="password" class="password" placeholder="Password:"/>
+					<input id="login-password" type="text" name="password" class="password" placeholder="Password:"/>
 				</form>
 				<button class="login button">Login</button>
 			</div>
