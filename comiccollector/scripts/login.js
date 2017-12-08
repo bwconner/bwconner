@@ -132,6 +132,10 @@ function createLoggedInCookie (userName, userSessionID, expireDate, userID, cook
 	var cookieName = "ccuid";
 	var cookieValue = "userID=" + userID + "&username=" + userName + "&sessionID=" + userSessionID + "&cookieID=" + cookieID;
 	document.cookie = cookieName + "=" + cookieValue + "; expires=" + expireDate + ";path=/";
+
+	$("body").addClass("logged-in");
+	$("body").attr("data-userid", userID);
+	$(document).trigger('login-verified');
 }
 
 //Check if a logged in cookie exists
@@ -163,6 +167,7 @@ function parseUserCookie (cookieValue) {
 	
 	$("body").addClass("logged-in");
 	$("body").attr("data-userid", userID);
+	$(document).trigger('login-verified');
 }
 
 //If a logged in cookie exists, check its validity 
