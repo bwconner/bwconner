@@ -65,10 +65,19 @@ function createNewAccountID () {
 	});
 }
 
-function createAccountAjax (newUserID) {
-	var data = $("#form").serialize() + "&userID=" + newUserID;
+function createNewCookieID () {
+	return Math.floor(Math.random() * 900000000000000000000000) + 100000000000000000000000;
+}
 
-	  $.ajax({
+function createNewSessionID () {
+	return Math.floor(Math.random() * 900000000000) + 100000000000;
+}
+
+function createAccountAjax (newUserID) {
+	var userCookieID = createNewCookieID();
+	var data = $("#form").serialize() + "&userID=" + newUserID + "&cookieID=" + userCookieID;
+
+	$.ajax({
 		data: data,
 		type: "post",
 		url: "../snippets/createaccountsql.php",
@@ -76,14 +85,32 @@ function createAccountAjax (newUserID) {
 			$(".create-account-wrapper_form form").addClass("hide");
 			$(".create-account-wrapper .button").addClass("hide");
 			$(".create-account-wrapper_success").removeClass("hide");
-			//create logged in cookie function
+			var userSessionID = createNewSessionID();
+			var userName = $('.username').val();
+			createLoggedInCookie(newUserID, userName, userSessionID, userCookieID);
 		}
 	});
 }
 
-function createLoggedInCookie () {
+function checkLoggedInCookie (userID, userName, sessionID, cookieID) {
 	//logged in cookie will hold userID, userName and cookieID.
-	//All 3 must match to allow user to view and manipulate their profile.
+	//All 4 must match to allow user to view and manipulate their profile.
+}
+
+function createLoggedInCookie (userID, userName, sessionToken, cookieToken) {
+	//logged in cookie will hold userID, userName, sessionID and cookieID.
+	//All 4 must match to allow user to view and manipulate their profile.
+	var cookieName = "ccuid";
+	var cookieValue = "userID=" + userID + "&userName=" + userName + "&sessionToken=" + sessionToken + "&cookieToken=" + cookieToken;
+    var date = new Date();
+    date.setTime(date.getTime() + (14 * 24 * 60 * 60 * 1000));
+    var expires = "expires="+date.toUTCString();
+
+	document.cookie = cookieName + "=" + cookieValue + ";" + expires + ";path=/";
+}
+
+function parseUserCookie () {
+
 }
 
 $(document).ready(function() {
