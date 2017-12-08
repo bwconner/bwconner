@@ -15,7 +15,7 @@
 	//Insert the new profile into the user profiles table in DB
 	$link = mysqli_connect($hostname,$username, $password, $dbname);
 
-	$sessionremove = "DELETE * FROM user_sessions WHERE `userName` = '".$post_username."' AND `userID` = '".$post_userID."'";
+	$sessionremove = "DELETE FROM user_sessions WHERE `userName` = '".$post_username."' AND `userID` = '".$post_userID."'";
 	$sessionupdate = "INSERT user_sessions (userID, userName, sessionID, expirationDate) VALUES ('".$post_userID."', '".$post_username."','".$post_userSessionID."','".$post_expireDate."')";
 
 	$userresult = mysqli_query($link, $sessionremove);

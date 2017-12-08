@@ -85,7 +85,7 @@ function createAccountAjax (newUserID) {
 			var userName = $('.create-account-form .username').val();
 			var expireDate = getExpirationDate();
 			updateUserSession(userName, userSessionID, expireDate, newUserID);
-			createLoggedInCookie(userName, userSessionID, expireDate, userID, cookieID);
+			createLoggedInCookie(userName, userSessionID, expireDate, newUserID, userCookieID);
 		}
 	});
 }
@@ -105,7 +105,6 @@ function validateLogin () {
 			var dataSplit = data.split("&");
 			var userID = dataSplit[0].split("=")[1];
 			var cookieID = dataSplit[1].split("=")[1];
-
 			updateUserSession(userName, userSessionID, expireDate, userID);
 			createLoggedInCookie(userName, userSessionID, expireDate, userID, cookieID);
 		}
@@ -114,14 +113,14 @@ function validateLogin () {
 
 function updateUserSession (userName, userSessionID, expireDate, userID) {
 
-	var data = "userID=" + userName + "&username=" + userName + "userSessionID=" + userSessionID + "&expireDate=" + expireDate;
+	var data = "userID=" + userID + "&username=" + userName + "&userSessionID=" + userSessionID + "&expireDate=" + expireDate;
 
 	$.ajax({
 		data: data,
 		type: "post",
 		url: "../snippets/sessionupdatesql.php",
 		success: function(data){
-			console.log("db updated");
+			//console.log("db updated");
 		}
 	});
 }
@@ -131,7 +130,7 @@ function createLoggedInCookie (userName, userSessionID, expireDate, userID, cook
 	//logged in cookie will hold userID, userName, sessionID and cookieID.
 	//All 4 must match to allow user to view and manipulate their profile.
 	var cookieName = "ccuid";
-	var cookieValue = "userID=" + userID + "&username=" + userName + "&sessionToken=" + userSessionID + "&cookieToken=" + cookieToken;
+	var cookieValue = "userID=" + userID + "&username=" + userName + "&sessionID=" + userSessionID + "&cookieID=" + cookieID;
 	document.cookie = cookieName + "=" + cookieValue + "; expires=" + expireDate + ";path=/";
 }
 
