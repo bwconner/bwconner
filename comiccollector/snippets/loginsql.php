@@ -19,7 +19,7 @@
 	$cookieresult = mysqli_query($link, $cookieIDsql);
 	$userresultStr = mysqli_fetch_row($userresult);
 	$cookieresultStr = mysqli_fetch_row($cookieresult);
-	$output = "userID=" . $userresultStr[1] . "&cookieID=" . $cookieresultStr[1];
+	$output = "userID=" . $userresultStr[0] . "&cookieID=" . $cookieresultStr[0];
 	echo $output;
 
 	mysqli_close($link);
