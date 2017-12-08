@@ -98,9 +98,9 @@ function createAccountCookie (userID, userName, sessionID, cookieID) {
 	//All 4 must match to allow user to view and manipulate their profile.
 	var cookieName = "ccuid";
 	var cookieValue = "userID=" + userID + "&userName=" + userName + "&sessionToken=" + sessionID + "&cookieToken=" + cookieID;
-    var date = new Date();
-    date.setTime(date.getTime() + (14 * 24 * 60 * 60 * 1000));
-    var expires = "expires="+date.toUTCString();
+	var date = new Date();
+	date.setTime(date.getTime() + (14 * 24 * 60 * 60 * 1000));
+	var expires = "expires="+date.toUTCString();
 
 	document.cookie = cookieName + "=" + cookieValue + ";" + expires + ";path=/";
 }
@@ -114,9 +114,9 @@ function createLoggedInCookie (userName, userSessionID, data) {
 	//All 4 must match to allow user to view and manipulate their profile.
 	var cookieName = "ccuid";
 	var cookieValue = "userID=" + userID + "&userName=" + userName + "&sessionToken=" + userSessionID + "&cookieToken=" + cookieToken;
-    var date = new Date();
-    date.setTime(date.getTime() + (14 * 24 * 60 * 60 * 1000));
-    var expires = "expires="+date.toUTCString();
+	var date = new Date();
+	date.setTime(date.getTime() + (14 * 24 * 60 * 60 * 1000));
+	var expires = "expires="+date.toUTCString();
 
 	document.cookie = cookieName + "=" + cookieValue + ";" + expires + ";path=/";
 }
