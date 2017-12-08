@@ -47,7 +47,7 @@ function checkUniqueUserName (username) {
 }
 
 function createNewAccountID () {
-	var uniqueNumber = Math.floor(Math.random() * 90000000) + 10000000;
+	var uniqueNumber = createNewToken();
 	var data = "uniqueid=" + uniqueNumber;
 
 	 $.ajax({
@@ -65,16 +65,14 @@ function createNewAccountID () {
 	});
 }
 
-function createNewCookieID () {
-	return Math.floor(Math.random() * 900000000000000000000000) + 100000000000000000000000;
-}
-
-function createNewSessionID () {
-	return Math.floor(Math.random() * 900000000000) + 100000000000;
+function createNewToken () {
+	var x= Math.floor(Math.random() * 90000000) + 10000000;
+	alert(x);
+	return x;
 }
 
 function createAccountAjax (newUserID) {
-	var userCookieID = createNewCookieID();
+	var userCookieID = createNewToken();
 	var data = $("#form").serialize() + "&userID=" + newUserID + "&cookieID=" + userCookieID;
 
 	$.ajax({
@@ -85,7 +83,7 @@ function createAccountAjax (newUserID) {
 			$(".create-account-wrapper_form form").addClass("hide");
 			$(".create-account-wrapper .button").addClass("hide");
 			$(".create-account-wrapper_success").removeClass("hide");
-			var userSessionID = createNewSessionID();
+			var userSessionID = createNewToken();
 			var userName = $('.username').val();
 			createLoggedInCookie(newUserID, userName, userSessionID, userCookieID);
 		}
