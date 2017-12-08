@@ -156,20 +156,7 @@ function checkForLoggedInCookie () {
 
 //If a logged in cookie exists, check its validity 
 function verifyLoggedInCookie () {
-	var userCookieID = createNewToken();
-	var data = $("#login-form").serialize();
 
-	$.ajax({
-		data: data,
-		type: "post",
-		url: "../snippets/loginsql.php",
-		success: function(data){
-			var userSessionID = createNewToken();
-			var userName = $('.login-form .username').val();
-			var password = $('.login-form .password').val();
-			createLoggedInCookie(userName, password);
-		}
-	});	
 }
 
 function createUserSession () {
