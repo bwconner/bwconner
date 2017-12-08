@@ -114,7 +114,7 @@ function validateLogin () {
 
 function updateUserSession (userName, userSessionID, expireDate, userID) {
 
-	var data = "userID=" + userName + "&userName=" + userName + "userSessionID=" + userSessionID + "&expireDate=" + expireDate;
+	var data = "userID=" + userName + "&username=" + userName + "userSessionID=" + userSessionID + "&expireDate=" + expireDate;
 
 	$.ajax({
 		data: data,
@@ -131,7 +131,7 @@ function createLoggedInCookie (userName, userSessionID, expireDate, userID, cook
 	//logged in cookie will hold userID, userName, sessionID and cookieID.
 	//All 4 must match to allow user to view and manipulate their profile.
 	var cookieName = "ccuid";
-	var cookieValue = "userID=" + userID + "&userName=" + userName + "&sessionToken=" + userSessionID + "&cookieToken=" + cookieToken;
+	var cookieValue = "userID=" + userID + "&username=" + userName + "&sessionToken=" + userSessionID + "&cookieToken=" + cookieToken;
 	document.cookie = cookieName + "=" + cookieValue + "; expires=" + expireDate + ";path=/";
 }
 
