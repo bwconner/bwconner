@@ -11,7 +11,7 @@
 			<div class="create-account-wrapper">
 				<div class="create-account-wrapper_form">
 					<div class="section-header">Create An Account</div>
-					<form id="form" method="post" action="">
+					<form class="create-account-form" id="create-account-form" method="post" action="">
 						<p class="input-label">Username:</p>
 						<input id="username" type="text" name="username" class="username" placeholder="Enter a User Name"/>
 						<p class="error username-error hide">Please enter a user name between 3 and 16 characters long.</p>
@@ -46,6 +46,15 @@
 						</ul>
 					</div>
 				</div>
+			</div>
+			<div class="login-wrapper">
+				<form class="login-form" id="login-form" method="post" action="">
+					<p class="input-label">Username:</p>
+					<input id="username" type="text" name="username" class="username" placeholder="User Name:"/>
+					<p class="input-label">Password:</p>
+					<input id="password" type="text" name="password" class="password" placeholder="Password:"/>
+				</form>
+				<button class="login button">Login</button>
 			</div>
 		</div>
 	</body>
