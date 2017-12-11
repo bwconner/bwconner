@@ -4,7 +4,8 @@ var currentFormat = "";
 var currentOffset = 0;
 var currentPage = 1;
 var totalPages;
-var currentSearch = "";
+var currentSearchTerm = "";
+var currentSearchCharacter = "";
 var currentCharacterList = "";
 
 
@@ -24,8 +25,8 @@ function setAdvancedSearchOptions(optionName, optionValue) {
 	}
 }
 
-function getCharacterIDList(searchCharacter) {
-	var apiUrl = marvelApi.buildCharacterListApiUrl(searchCharacter);
+function getCharacterIDList() {
+	var apiUrl = marvelApi.buildCharacterListApiUrl(currentSearchCharacter);
 
 	var characterList = $.get(apiUrl, function(data) {
 		createCharacterIdList(data);
@@ -33,30 +34,28 @@ function getCharacterIDList(searchCharacter) {
 	});
 }
 
-function getResults(searchTitle, searchCharacter) {
-	if (searchCharacter.length) {
+function getResults() {
+	if (currentSearchCharacter.length) {
 		$(".results").html(""); //empty results section
 		$(".spinner").removeClass("hide"); //add spinner
-		currentSearch = searchTitle;
-		getCharacterIDList(searchCharacter);
+		getCharacterIDList(currentSearchCharacter);
 	} else {
-		getResultsByTitle(searchTitle);
+		getResultsByTitle(currentSearchTerm);
 	}
 }
 
-function getResultsByTitle(searchTitle) {
+function getResultsByTitle() {
 	$(".results").html(""); //empty results section
 	$(".spinner").removeClass("hide"); //add spinner
-	currentSearch = searchTitle;
 
-	var apiUrl = marvelApi.buildSearchApiUrl(currentSearch, resultLimit, currentOffset, currentOrder, currentFormat, currentCharacterList);
+	var apiUrl = marvelApi.buildSearchApiUrl(currentSearchTerm, resultLimit, currentOffset, currentOrder, currentFormat, currentCharacterList);
 	$.get(apiUrl, function(data) {
 		processResults(data);
 	});
 }
 
 function getResultsByCharacter() {
-	var apiUrl = marvelApi.buildSearchApiUrl(currentSearch, resultLimit, currentOffset, currentOrder, currentFormat, currentCharacterList);
+	var apiUrl = marvelApi.buildSearchApiUrl(currentSearchTerm, resultLimit, currentOffset, currentOrder, currentFormat, currentCharacterList);
 	$.get(apiUrl, function(data) {
 		processResults(data);
 	});
@@ -65,7 +64,7 @@ function getResultsByCharacter() {
 function reloadResults() {
 	$(".results").html(""); //empty results section
 	$(".spinner").removeClass("hide"); //add spinner
-	var apiUrl = marvelApi.buildSearchApiUrl(currentSearch, resultLimit, currentOffset);
+	var apiUrl = marvelApi.buildSearchApiUrl(currentSearchTerm, resultLimit, currentOffset);
 	$.get(apiUrl, function(data) {
 		processResults(data);
 	});
@@ -231,9 +230,9 @@ $(document).ready(function() {
 
 	$('.search').on('click', function() {
 		//Reset global search terms
-		currentSearch = "";
-		currentCharacterList = "";
-		getResults($('.search-by-title').val(), $('.search-by-character').val());
+		currentSearchTerm = $('.search-by-title').val();
+		currentSearchCharacter = $('.search-by-character').val();
+		getResults();
 	});
 
 });
