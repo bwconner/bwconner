@@ -10,15 +10,24 @@
 		<div class="site-body-wrapper">
 			<div class="search-body-wrapper">
 				<div class="search-form">
-					<p class="search-form-description">
-						Search for a title that starts with or matches:
-					</p>
-					<input type="text" name="search-by-title" class="search-by-title" placeholder="Enter a Title to Search"/>
-					<p class="search-form-description">
-						Search by a character name that starts with or matches:
-					</p>
-					<input type="text" name="search-by-character" class="search-by-character" placeholder="Enter a Character to Search"/>
-					<button class="search">Search</button>
+					<div class="search-form_field-set">
+						<p class="search-form-description">
+							Search for a title that starts with or matches:
+						</p>
+						<input type="text" name="search-by-title" class="search-by-title" placeholder="Enter a Title to Search"/>
+					</div>
+					<div class="search-form_field-set">
+						<p class="search-form-description">
+							And/Or
+						</p>
+					</div>
+					<div class="search-form_field-set">
+						<p class="search-form-description">
+							Search by a character name that starts with or matches:
+						</p>
+						<input type="text" name="search-by-character" class="search-by-character" placeholder="Enter a Character to Search"/>
+					</div>
+					<button class="search button">Search</button>
 					<div class="advanced-search-options-show"> Show Advanced Search Options </div>
 					<div class="advanced-search-options-wrapper"/>
 						<div class="advanced-search-option">

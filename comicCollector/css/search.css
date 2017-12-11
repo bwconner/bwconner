@@ -3,11 +3,22 @@
   width: 80%; }
 
 .search-form {
-  padding-top: 25px; }
-  .search-form .search-text,
-  .search-form .dropdown-label,
-  .search-form .search {
+  padding-top: 15px; }
+  .search-form .dropdown-label {
     display: inline-block; }
+  .search-form .search {
+    display: inline-block;
+    margin-top: 20px;
+    width: 150px; }
+  .search-form .search-form_field-set {
+    padding-top: 10px; }
+  .search-form .search-form-description {
+    margin: 0px;
+    padding: 0px; }
+  .search-form input {
+    line-height: 25px;
+    padding-left: 5px;
+    width: 300px; }
 
 .advanced-search-options-show {
   cursor: pointer;

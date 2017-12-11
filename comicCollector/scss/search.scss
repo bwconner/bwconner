@@ -4,11 +4,30 @@
 }
 
 .search-form {
-	padding-top: 25px;
-	.search-text,
-	.dropdown-label,
+	padding-top: 15px;
+	.dropdown-label {
+		display: inline-block;
+	}
+
 	.search {
 		display: inline-block;
+		margin-top: 20px;
+		width: 150px;	
+	}
+
+	.search-form_field-set {
+		padding-top: 10px;
+	}
+
+	.search-form-description {
+		margin: 0px;
+		padding: 0px;
+	}
+
+	input {
+		line-height: 25px;
+		padding-left: 5px;
+		width: 300px;
 	}
 }
 
