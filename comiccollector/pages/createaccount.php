@@ -7,7 +7,7 @@
 	<body lang="en">
 		<?php include '../snippets/header.html';?>
 		<div class="site-body-wrapper">
-			<div class="login-account-wrapper">
+			<div class="login-account-wrapper hide">
 				<div class="login-account-wrapper_form">
 					<div class="section-header">Login</div>
 					<form class="login-account-form" id="create-account-form" method="post" action="">
@@ -23,6 +23,9 @@
 					<div class="login-account-section">
 						<img src="../images/thecollectorMCU.png"/>
 					</div>
+				</div>
+				<div class="login-account-wrapper_create-account">
+					<p class="">Need an account? </p><p class="click-to-create">Click here to create an account.</p>
 				</div>
 			</div>
 			<div class="create-account-wrapper">
@@ -41,7 +44,7 @@
 					</form>
 					<button class="create-account button">Create Account</button>
 					<div class="create-account-wrapper_success hide">
-						<p>You have succesfully created an account! Please <a href="#">click here</a> to visit and further customize your profile.</p>
+						<p>You have succesfully created an account! Please <a href="/comiccollector/pages/myaccount.php">click here</a> to visit and further customize your profile.</p>
 					</div>
 				</div>
 				<div class="create-account-wrapper_benefits">
@@ -62,6 +65,9 @@
 							</li>
 						</ul>
 					</div>
+				</div>
+				<div class="create-account-wrapper_login">
+					<p class="">Already have an account? </p><p class="click-to-login">Click here to login.</p>
 				</div>
 			</div>
 		</div>

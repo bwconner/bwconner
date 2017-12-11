@@ -1,4 +1,15 @@
 .login-account-wrapper {
+	height: auto;
+	opacity: 1;
+	transition: opacity .5s ease-in-out;
+	-moz-transition: opacity .5s ease-in-out;
+	-webkit-transition: opacity .5s ease-in-out;
+
+	&.hide {
+		opacity: 0;
+		height: 0px;
+	}
+
 	.login-account-wrapper_form {
 		display: block;
 		margin: 0px auto;
@@ -7,7 +18,6 @@
 		transition: all 0.5s ease;
 
 		&.hide {
-
 			visibility: hidden;
 		}
 
@@ -71,9 +81,35 @@
 		color: #e23636;
 		margin: 0px
 	}
+
+	.login-account-wrapper_create-account {
+		display: block;
+		margin: 0px auto;
+		width: 100%;
+
+		p {
+			display: inline-block;
+		}
+
+		.click-to-create {
+			cursor: pointer;
+			text-decoration: underline;
+		}
+	}
 }
 
 .create-account-wrapper {
+	height: auto;
+	opacity: 1;
+	transition: opacity .5s ease-in-out;
+	-moz-transition: opacity .5s ease-in-out;
+	-webkit-transition: opacity .5s ease-in-out;
+
+	&.hide {
+		opacity: 0;
+		height: 0px;
+	}
+
 	.create-account-wrapper_form {
 		display: block;
 		margin: 0px auto;
@@ -82,7 +118,6 @@
 		transition: all 0.5s ease;
 
 		&.hide {
-
 			visibility: hidden;
 		}
 
@@ -144,6 +179,21 @@
 	.error {
 		color: #e23636;
 		margin: 0px
+	}
+
+	.create-account-wrapper_login {
+		display: block;
+		margin: 0px auto;
+		width: 100%;
+
+		p {
+			display: inline-block;
+		}
+
+		.click-to-login {
+			cursor: pointer;
+			text-decoration: underline;
+		}
 	}
 }
 

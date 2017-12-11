@@ -201,11 +201,11 @@ $(document).ready(function() {
 
 	checkForLoggedInCookie();
 
-	$('.create-account').on('click', function() {
+	$(".create-account").on("click", function() {
 		var params = {
-			username: $('.create-account-form .username').val(),
-			password: $('.create-account-form .password').val(),
-			email: $('.create-account-form .email').val()
+			username: $(".create-account-form .username").val(),
+			password: $(".create-account-form .password").val(),
+			email: $(".create-account-form .email").val()
 		};
 
 		//Sanitize Inputs
@@ -214,11 +214,20 @@ $(document).ready(function() {
 		if (validInputs) {
 			createNewAccountID();
 		}
-		
 	});
 
-	$('.login').on('click', function() {
+	$(".login").on("click", function() {
 		validateLogin();
+	});
+
+	$(".click-to-create").on("click", function() {
+		$(".login-account-wrapper").addClass("hide");
+		$(".create-account-wrapper").removeClass("hide");
+	});
+
+	$(".click-to-login").on("click", function() {
+		$(".create-account-wrapper").addClass("hide");
+		$(".login-account-wrapper").removeClass("hide");
 	});
 
 });
