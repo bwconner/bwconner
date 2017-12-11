@@ -7,6 +7,38 @@
 	<body lang="en">
 		<?php include '../snippets/header.html';?>
 		<div class="site-body-wrapper">
+			<div class="login-account-wrapper">
+				<div class="login-account-wrapper_form">
+					<div class="section-header">Login</div>
+					<form class="login-account-form" id="create-account-form" method="post" action="">
+						<p class="input-label">Username:</p>
+						<input id="username" type="text" name="username" class="username" placeholder="Enter a User Name"/>
+						<p class="input-label">Password:</p>
+						<input id="password" type="text" name="password" class="password" placeholder="Enter a Password"/>
+						<p class="error login-error hide">Please enter valid login credentials.</p>
+					</form>
+					<button class="login-account button">Login</button>
+				</div>
+				<div class="login-account-wrapper_benefits">
+					<div class="section-header">Benefits of an account:</div>
+					<div class="login-account-section">
+						<ul>
+							<li>
+								Connect with friends.
+							</li>
+							<li>
+								Manage your collection.
+							</li>
+							<li>
+								Add comics to your wishlist.
+							</li>
+							<li>
+								Discover new reads.
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
 			<div class="create-account-wrapper">
 				<div class="create-account-wrapper_form">
 					<div class="section-header">Create An Account</div>

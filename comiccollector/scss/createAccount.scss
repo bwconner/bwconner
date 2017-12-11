@@ -1,5 +1,78 @@
-.create-account-wrapper {
+.login-account-wrapper {
+	.login-account-wrapper_form {
+		display: block;
+		margin: 0px auto;
+		text-align: center;
+		width: 300px;
+		transition: all 0.5s ease;
 
+		&.hide {
+
+			visibility: hidden;
+		}
+
+		.login-account-form {
+			display: inline-block;
+			text-align: left;
+		}
+	}
+
+	.login-account-wrapper_success {
+		transition: all 0.5s ease;
+
+		&.hide {
+			visibility: hidden;
+		}
+	}
+
+	.login-account-wrapper_benefits {
+		display: block;
+		margin: 0px auto;
+		width: 300px;
+	}
+
+	.section-header {
+		margin: 10px auto;
+		text-align: center;
+	}
+
+	.input-label {
+		margin: 25px 0px 0px;
+	}
+
+	input {
+		border: 2px solid #000;
+		font-family: 'Oswald', sans-serif;
+		font-size: 14px;
+		letter-spacing: 0.5px;
+		padding: 10px;
+		width: 200px;
+	}
+
+	.button {
+		cursor: pointer;
+		font-size: 16px;
+		margin-top: 15px;
+		width: 200px;
+	}
+
+	.login-account-section {
+		border: 2px solid #000;
+		margin-top: 25px;
+		min-height: 255px;
+
+		li {
+			padding: 10px 0px;
+		}
+	}
+
+	.error {
+		color: #e23636;
+		margin: 0px
+	}
+}
+
+.create-account-wrapper {
 	.create-account-wrapper_form {
 		display: block;
 		margin: 0px auto;
@@ -10,6 +83,11 @@
 		&.hide {
 
 			visibility: hidden;
+		}
+
+		.create-account-form {
+			display: inline-block;
+			text-align: left;
 		}
 	}
 
@@ -55,7 +133,7 @@
 	.create-account-section {
 		border: 2px solid #000;
 		margin-top: 25px;
-		min-height: 255px;
+		min-height: 335px;
 
 		li {
 			padding: 10px 0px;
@@ -70,6 +148,20 @@
 
 /*MQ OVERRIDES*/
 @media only screen and (min-width: 900px) {
+
+	.login-account-wrapper {
+		.login-account-wrapper_form {
+			display: inline-block;
+			float: left;
+		}
+		.login-account-wrapper_benefits {
+			display: inline-block;
+			float: left;
+			padding-left: 100px;
+			width: calc(100% - 420px);
+		}
+	}
+
 	.create-account-wrapper {
 		.create-account-wrapper_form {
 			display: inline-block;

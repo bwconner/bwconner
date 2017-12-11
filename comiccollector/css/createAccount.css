@@ -1,3 +1,49 @@
+.login-account-wrapper .login-account-wrapper_form {
+  display: block;
+  margin: 0px auto;
+  text-align: center;
+  width: 300px;
+  transition: all 0.5s ease; }
+  .login-account-wrapper .login-account-wrapper_form.hide {
+    visibility: hidden; }
+  .login-account-wrapper .login-account-wrapper_form .login-account-form {
+    display: inline-block;
+    text-align: left; }
+.login-account-wrapper .login-account-wrapper_success {
+  transition: all 0.5s ease; }
+  .login-account-wrapper .login-account-wrapper_success.hide {
+    visibility: hidden; }
+.login-account-wrapper .login-account-wrapper_benefits {
+  display: block;
+  margin: 0px auto;
+  width: 300px; }
+.login-account-wrapper .section-header {
+  margin: 10px auto;
+  text-align: center; }
+.login-account-wrapper .input-label {
+  margin: 25px 0px 0px; }
+.login-account-wrapper input {
+  border: 2px solid #000;
+  font-family: 'Oswald', sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  padding: 10px;
+  width: 200px; }
+.login-account-wrapper .button {
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 15px;
+  width: 200px; }
+.login-account-wrapper .login-account-section {
+  border: 2px solid #000;
+  margin-top: 25px;
+  min-height: 255px; }
+  .login-account-wrapper .login-account-section li {
+    padding: 10px 0px; }
+.login-account-wrapper .error {
+  color: #e23636;
+  margin: 0px; }
+
 .create-account-wrapper .create-account-wrapper_form {
   display: block;
   margin: 0px auto;
@@ -6,6 +52,9 @@
   transition: all 0.5s ease; }
   .create-account-wrapper .create-account-wrapper_form.hide {
     visibility: hidden; }
+  .create-account-wrapper .create-account-wrapper_form .create-account-form {
+    display: inline-block;
+    text-align: left; }
 .create-account-wrapper .create-account-wrapper_success {
   transition: all 0.5s ease; }
   .create-account-wrapper .create-account-wrapper_success.hide {
@@ -34,7 +83,7 @@
 .create-account-wrapper .create-account-section {
   border: 2px solid #000;
   margin-top: 25px;
-  min-height: 255px; }
+  min-height: 335px; }
   .create-account-wrapper .create-account-section li {
     padding: 10px 0px; }
 .create-account-wrapper .error {
@@ -43,6 +92,15 @@
 
 /*MQ OVERRIDES*/
 @media only screen and (min-width: 900px) {
+  .login-account-wrapper .login-account-wrapper_form {
+    display: inline-block;
+    float: left; }
+  .login-account-wrapper .login-account-wrapper_benefits {
+    display: inline-block;
+    float: left;
+    padding-left: 100px;
+    width: calc(100% - 420px); }
+
   .create-account-wrapper .create-account-wrapper_form {
     display: inline-block;
     float: left; }
