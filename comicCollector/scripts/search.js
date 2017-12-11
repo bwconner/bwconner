@@ -11,7 +11,7 @@ var currentCharacterList = "";
 
 function setAdvancedSearchOptions(optionName, optionValue) {
 	switch(optionName) {
-		case "limt":
+		case "limit":
 			resultLimit = optionValue;
 			break;
 		case "format":
@@ -87,8 +87,6 @@ function processResults(data) {
 	var resultsList = data.data.results;
 	totalPages = Math.ceil(totalResults/resultLimit);
 
-	//outputResults(resultsList);
-
 	$(".spinner").addClass("hide"); //remove spinner
 	$(resultsList).each(function(result) {
 		var resultData = $(this);
@@ -125,20 +123,6 @@ function processResults(data) {
 	if (totalPages > 1) {
 		$(".pagination").removeClass("hide");
 	}
-}
-
-function outputResults(resultsList) {
-	alert("dont think i use this");
-	$(resultsList).each(function(result) {
-		var resultData = $(this);
-		var resultImage = resultData[0].images[0].path + "." + resultData[0].images[0].extension;
-		var resultTitle = resultData[0].title;
-		var markup = buildResultMarkup(resultTitle, resultImage);
-
-
-		$(".results").append(markup);
-	});
-
 }
 
 function buildResultMarkup(resultTitle, resultImage, resultSeries, resultIssueNumber, resultDescription, featuredCharacters, resultCreators, resultId) {
@@ -185,7 +169,7 @@ $(document).ready(function() {
 
 	//Advanced Options
 	$(".advanced-search-options-show").on("click", function() {
-		$(".advanced-search-options-wrapper").toggleClass("show");
+		$(".advanced-search-options-wrapper").addClass("show");
 	});
 
 	$(".advanced-search-option select").on("change", function() {
