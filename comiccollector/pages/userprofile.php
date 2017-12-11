@@ -5,7 +5,7 @@
 		<link rel="stylesheet" type="text/css" href="../css/profile.css">
 		<script type="text/javascript" src="../scripts/profile.js"></script>
 	</head>
-	<body>
+	<body class="user-profile">
 		<?php include '../snippets/header.html';?>
 		<div class="site-body-wrapper">
 			<div class="profile-wrapper">
