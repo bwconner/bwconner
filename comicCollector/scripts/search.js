@@ -1,4 +1,4 @@
-var resultLimit = 25;
+var resultLimit = 24;
 var currentOrder = "";
 var currentFormat = "";
 var currentOffset = 0;
@@ -111,7 +111,17 @@ function processResults(data) {
 		});
 
 		$(resultData[0].creators.items).each(function(index) {
-			resultCreators = resultCreators + "<div class='creator'>" + $(this)[0].name + " - " + $(this)[0].role + "</div>";
+			console.log(index);
+			if (index < 3) {
+				console.log($(this)[0].name);
+				resultCreators = resultCreators + "<div class='creator'>" + $(this)[0].name + " - " + $(this)[0].role + "</div>";
+			}
+
+			if (index === 4) {
+				console.log($(this)[0].name + "equal to 3");
+				resultCreators = resultCreators + "<div class='creator'>More...</div>";
+			}
+
 		});
 
 		var markup = buildResultMarkup(resultTitle, resultImage, resultSeries, resultIssueNumber, resultDescription, featuredCharacters, resultCreators, resultId);

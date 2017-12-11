@@ -35,10 +35,10 @@
 								Number of results to show:
 							</div>
 							<select name="limit" class="search-limit advanced-search-option_dropdown">
-								<option value="25">25</option>
-								<option value="50">50</option>
-								<option value="75">75</option>
-								<option value="100">100</option>
+								<option value="24">24</option>
+								<option value="48">48</option>
+								<option value="72">72</option>
+								<option value="96">96</option>
 							</select>
 						</div>
 						<div class="advanced-search-option">
