@@ -19,4 +19,12 @@ function miniNavSetup() {
 
 $(document).ready(function() {
 	miniNavSetup();
+
+	/*$(document).on("click",".account-link", function(e){
+		if( $("body").hasClass(".logged-in")){
+			e.preventDefault();
+			$(".account-link").addClass("selected");
+			$(".login-wrapper").addClass("show");
+		}
+	});*/
 });

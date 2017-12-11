@@ -57,6 +57,31 @@ a {
 			font-family: 'Oswald', sans-serif;
 		}
 	}
+
+	.login-wrapper {
+		background: #000;
+		display: none;
+		height: 165px;
+		width: 170px;
+		left: -122px;
+		position: absolute;
+		margin-top: -5px;
+
+		.input-label {
+			padding: 5px 10px 5px;
+			margin: 0px;
+			text-align: left;
+		}
+
+		input {
+			line-height: 20px;
+			width: 150px;
+		}
+
+		.button {
+			width: 150px;
+		}
+	}
 }
 
 .mini-header {
@@ -126,6 +151,44 @@ a {
 		float: right;
 		line-height: 63px;
 		margin: 0px 10px;
+	}
+}
+
+.main-nav {
+	.link {
+		border-bottom: 0px;
+		text-decoration: none;
+
+		&.selected {
+			background: #000;
+		}
+
+		a {
+			background-size: cover;
+			display: block;
+			height: 30px;
+			margin-top: 10px;
+			line-height: 30px;
+			width: 30px;
+		}
+	}
+
+	.account-link {
+		background-image: url("../images/icons/account.png");
+		&.selected {
+			background: #000;
+			background-image: url("../images/icons/account_selected.png");
+			background-size: cover;
+		}
+	}
+
+	.search-link {
+		background-image: url("../images/icons/search.png");
+		&.selected {
+			background: #000;
+			background-image: url("../images/icons/search_selected.png");
+			background-size: cover;
+		}
 	}
 }
 
@@ -233,5 +296,11 @@ a {
 		opacity: 0.95;
 		transition: all .2s ease .1s;
 		z-index: 1000;
+	}
+}
+
+@media only screen and (min-width: 1110px) {
+	.login-wrapper.show {
+		display: block;
 	}
 }

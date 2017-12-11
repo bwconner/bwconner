@@ -168,6 +168,7 @@ function parseUserCookie (cookieValue) {
 	$("body").addClass("logged-in");
 	$("body").attr("data-userid", userID);
 	$(document).trigger('login-verified');
+	$(".account-link").attr("href", "/comiccollector/pages/myaccount.php");
 }
 
 //If a logged in cookie exists, check its validity 
