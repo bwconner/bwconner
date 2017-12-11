@@ -26,9 +26,12 @@
 	}
 
 	.login-account-wrapper_benefits {
-		display: block;
 		margin: 0px auto;
-		width: 300px;
+		width: 180px;
+		img {
+			margin-top: 20px;
+			width: 180px;
+		}
 	}
 
 	.section-header {
@@ -57,8 +60,6 @@
 	}
 
 	.login-account-section {
-		border: 2px solid #000;
-		margin-top: 25px;
 		min-height: 255px;
 
 		li {
@@ -150,23 +151,36 @@
 @media only screen and (min-width: 900px) {
 
 	.login-account-wrapper {
+		display: flex;
+		margin: 0px auto;
+		min-width: 50%;
+		width: 505px;
+
 		.login-account-wrapper_form {
 			display: inline-block;
 			float: left;
 		}
+
 		.login-account-wrapper_benefits {
 			display: inline-block;
 			float: left;
-			padding-left: 100px;
-			width: calc(100% - 420px);
+			padding-left: 25px;
+			margin-top: 8px;
+			img { 
+				margin: 0px;
+			}
 		}
 	}
 
 	.create-account-wrapper {
+		display: inline-block;
+		width: 100%;
+
 		.create-account-wrapper_form {
 			display: inline-block;
 			float: left;
 		}
+
 		.create-account-wrapper_benefits {
 			display: inline-block;
 			float: left;

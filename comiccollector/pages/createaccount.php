@@ -20,22 +20,8 @@
 					<button class="login-account button">Login</button>
 				</div>
 				<div class="login-account-wrapper_benefits">
-					<div class="section-header">Benefits of an account:</div>
 					<div class="login-account-section">
-						<ul>
-							<li>
-								Connect with friends.
-							</li>
-							<li>
-								Manage your collection.
-							</li>
-							<li>
-								Add comics to your wishlist.
-							</li>
-							<li>
-								Discover new reads.
-							</li>
-						</ul>
+						<img src="../images/thecollectorMCU.png"/>
 					</div>
 				</div>
 			</div>
