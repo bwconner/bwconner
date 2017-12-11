@@ -1,16 +1,63 @@
 var resultLimit = 25;
+var currentOrder = "";
 var currentFormat = "";
 var currentOffset = 0;
 var currentPage = 1;
 var totalPages;
-var currentSearch;
+var currentSearch = "";
+var currentCharacterList = "";
 
-function getResults(searchTerm) {
+
+function setAdvancedSearchOptions(optionName, optionValue) {
+	switch(optionName) {
+		case "limt":
+			resultLimit = optionValue;
+			break;
+		case "format":
+			currentFormat = optionValue;
+			break;
+		case "sort":
+			currentOrder = optionValue;
+			break;
+		default:
+			return;
+	}
+}
+
+function getCharacterIDList(searchCharacter) {
+	var apiUrl = marvelApi.buildCharacterListApiUrl(searchCharacter);
+
+	var characterList = $.get(apiUrl, function(data) {
+		createCharacterIdList(data);
+		getResultsByCharacter();
+	});
+}
+
+function getResults(searchTitle, searchCharacter) {
+	if (searchCharacter.length) {
+		$(".results").html(""); //empty results section
+		$(".spinner").removeClass("hide"); //add spinner
+		currentSearch = searchTitle;
+		getCharacterIDList(searchCharacter);
+	} else {
+		getResultsByTitle(searchTitle);
+	}
+}
+
+function getResultsByTitle(searchTitle) {
 	$(".results").html(""); //empty results section
 	$(".spinner").removeClass("hide"); //add spinner
-	currentSearch = searchTerm;
-	var apiUrl = marvelApi.buildSearchApiUrl(searchTerm, resultLimit, currentOffset);
-	$.get(apiUrl, function( data ) {
+	currentSearch = searchTitle;
+
+	var apiUrl = marvelApi.buildSearchApiUrl(currentSearch, resultLimit, currentOffset, currentOrder, currentFormat, currentCharacterList);
+	$.get(apiUrl, function(data) {
+		processResults(data);
+	});
+}
+
+function getResultsByCharacter() {
+	var apiUrl = marvelApi.buildSearchApiUrl(currentSearch, resultLimit, currentOffset, currentOrder, currentFormat, currentCharacterList);
+	$.get(apiUrl, function(data) {
 		processResults(data);
 	});
 }
@@ -19,19 +66,28 @@ function reloadResults() {
 	$(".results").html(""); //empty results section
 	$(".spinner").removeClass("hide"); //add spinner
 	var apiUrl = marvelApi.buildSearchApiUrl(currentSearch, resultLimit, currentOffset);
-	$.get(apiUrl, function( data ) {
+	$.get(apiUrl, function(data) {
 		processResults(data);
 	});
 }
+
+function createCharacterIdList(data) {
+	var characterList = "";
+	var resultsList = data.data.results;
+
+	$(resultsList).each(function(result) {
+		var resultData = $(this)[0];
+		characterList = characterList + resultData.id + ",";
+	});
+
+	currentCharacterList = characterList;
+} 
 
 function processResults(data) {
 	var totalResults = data.data.total;
 	var resultsList = data.data.results;
 	totalPages = Math.ceil(totalResults/resultLimit);
 
-	console.log(totalResults);
-	console.log(resultsList);
-	//console.log(totalPages);
 	//outputResults(resultsList);
 
 	$(".spinner").addClass("hide"); //remove spinner
@@ -73,6 +129,7 @@ function processResults(data) {
 }
 
 function outputResults(resultsList) {
+	alert("dont think i use this");
 	$(resultsList).each(function(result) {
 		var resultData = $(this);
 		var resultImage = resultData[0].images[0].path + "." + resultData[0].images[0].extension;
@@ -127,20 +184,21 @@ function gotoPage(newPage) {
 
 $(document).ready(function() {
 
-	$('.search-limit-option').on('click', function() {
-		resultLimit = $(this).attr("data-limit");
-		console.log(resultLimit);
-	});
-
-	$('.advanced-search-options-show').on('click', function() {
+	//Advanced Options
+	$(".advanced-search-options-show").on("click", function() {
 		$(".advanced-search-options-wrapper").toggleClass("show");
 	});
 
-	$('.page-selector').on('click', function() {
+	$(".advanced-search-option select").on("change", function() {
+		setAdvancedSearchOptions($(this).attr("name"), $(this).val());
+	});
+
+	//Pagination events
+	$(".page-selector").on("click", function() {
 		gotoPage($(this).attr("data-page"));
 	});
 
-	$('.prev').on('click', function() {
+	$(".prev").on("click", function() {
 		currentPage = currentPage - 1;
 
 		if (currentPage === 1) {
@@ -151,7 +209,7 @@ $(document).ready(function() {
 
 	});
 
-	$('.next').on('click', function() {
+	$(".next").on("click", function() {
 		currentPage = currentPage + 1;
 
 		if (currentPage === totalPages) {
@@ -162,10 +220,20 @@ $(document).ready(function() {
 
 	});
 
+
+	//Initiate search events
+	$(document).keypress(
+		function(e) {
+		if(e.keyCode == 13) {
+			$(".search").click();
+		}
+	});
+
 	$('.search').on('click', function() {
-		//resultLimit = $("select.search-limit:first").text();
-		//currentFormat = $("select.format:first").text();
-		getResults($('.search-text').val());
+		//Reset global search terms
+		currentSearch = "";
+		currentCharacterList = "";
+		getResults($('.search-by-title').val(), $('.search-by-character').val());
 	});
 
 });
