@@ -2,22 +2,56 @@ function validateInputs (params) {
 	var valid = true;
 	$(".error").addClass("hide");
 
+	//Verify Usernames Length
 	if ((params.username).length <= 2 || (params.username).length > 16) {
 		$(".username-error").removeClass("hide");
 		valid = false;
 	}
 
-	//checkUniqueUserName(params.username);
+	valid = checkUniqueUserName(params.username);
 
+	//Verify passwords length
 	if ((params.password).length < 8 || (params.password).length > 16) {
 		$(".password-error").removeClass("hide");
 		valid = false;
 	}
 
-	//if ((params.password).index("@") < 0 || (params.password).length > 16) {
-	//	$(".username-error").removeClass("hide");
-	//	valid = false;
-	//}
+	var requiredSpecialCharacters = new RegExp(/[!#$%&\?]/);
+	var invalidSpecialChracters = new RegExp(/[~`\^*+=\-\[\]\\';,/{}|\\":<>]/);
+	var checkForNumber = new RegExp(/[0-9]/);
+	var checkForLetter = new RegExp(/[a-zA-Z]/);
+
+	//Verify Password doesn't contain an illegal special character
+	if (invalidSpecialChracters.test(params.password)) {
+		$(".password-error").removeClass("hide");
+		valid = false;
+	}
+
+	//Verify Password contains a legal special character
+	if (requiredSpecialCharacters.test(params.password)) {
+		//valid = true;
+	} else {
+		$(".password-error").removeClass("hide");
+		valid = false;
+	}
+
+	//Verify Password has a number in it
+	if (checkForNumber.test(params.password)) {
+		//valid = true;
+		alert("NUMBER");
+	} else {
+		$(".password-error").removeClass("hide");
+		valid = false;
+	}
+
+	//Verify Password has a letter in it
+	if (checkForLetter.test(params.password)) {
+		valid = true;
+		alert("LETER");
+	} else {
+		$(".password-error").removeClass("hide");
+		valid = false;
+	}
 
 	if ((params.email).length <= 4 ||(params.email).indexOf("@") <= 0  || (params.email).indexOf(".") <= 0) {
 		$(".email-error").removeClass("hide");
@@ -186,8 +220,6 @@ function verifyLoggedInCookie (cookieValue) {
 		}
 	});
 }
-
-
 
 //Create expiration date equal to 14 days from now
 function getExpirationDate () {

@@ -113,12 +113,10 @@ function processResults(data) {
 		$(resultData[0].creators.items).each(function(index) {
 			console.log(index);
 			if (index < 3) {
-				console.log($(this)[0].name);
 				resultCreators = resultCreators + "<div class='creator'>" + $(this)[0].name + " - " + $(this)[0].role + "</div>";
 			}
 
 			if (index === 4) {
-				console.log($(this)[0].name + "equal to 3");
 				resultCreators = resultCreators + "<div class='creator'>More...</div>";
 			}
 
