@@ -25,47 +25,6 @@
 					<div class="main-content-section_subsection-img"></div>
 				</div>
 			</div>
-			<div class="search-form">
-				<input type="text" name="search-text" class="search-text" placeholder="Enter a Search Term"/>
-				<button class="search">Search</button>
-				<div class="advanced-search-options-show"> Show Advanced Search Options </div>
-				<div class="advanced-search-options-wrapper"/>
-					<div class="advanced-search-option">
-						<div class="dropdown-label">
-							Search Limit:
-						</div>
-						<select name="Search Limit" class="search-limit">
-							<option value="25">25</option>
-							<option value="50">50</option>
-							<option value="75">75</option>
-							<option value="100">100</option>
-						</select>
-					</div>
-					<div class="advanced-search-option">
-						<div class="dropdown-label">
-							Format:
-						</div>
-						<select name="Format" class="format">
-							<option value="comic">Comic</option>
-							<option value="digital Comic">Digital Comic</option>
-							<option value="trade Paperback">Trade Paperback</option>
-						</select>
-					</div>
-				</div>
-			</div>
-			<div class="results">
-
-			</div>
-			<div class="pagination">
-				<div class="prev button">
-					< Previous
-				</div>
-				<div class="pages">
-				</div>
-				<div class="next button">
-					Next >
-				</div>
-			</div>
 		</div>
 	</body>
 </html>
