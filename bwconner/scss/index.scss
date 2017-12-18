@@ -126,12 +126,12 @@
 }
 
 
-@media only screen and (min-width: 555px) {
+@media only screen and (min-width: 790px) {
 	.site-body-section {
 		.bio-block {
 			display: inline-block;
 			margin: 25px 25px;
-			font-size: 25px;
+			font-size: 20px;
 			text-align: center;
 			width: calc(100% - 350px);
 			vertical-align: top;
@@ -149,6 +149,7 @@
 
 @media only screen and (min-width: 835px) {
 	.site-body-section .bio-block {
+		font-size: 22px;
 		margin: 25px 5%;
 		width: 50%;
 	}
