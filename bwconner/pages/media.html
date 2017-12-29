@@ -7,14 +7,12 @@
 	<link rel="stylesheet" type="text/css" href="../css/smoothDivScrollOverrides.css" />
 	<link rel="stylesheet" type="text/css" href="../css/base.css">
 	<link rel="stylesheet" type="text/css" href="../css/media.css">
-	<link rel="stylesheet" type="text/css" href="../css/bwslider.css">
+	<link rel="stylesheet" type="text/css" href="../libs/bwslider/bwslider.css">
 	<script type="text/javascript" src="../libs/jquery-3.1.0.min.js"></script>
 	<script type="text/javascript" src="../libs/jquery-3.1.0.js"></script>
-	<script type="text/javascript" src="../libs/jquery-ui-1.12.0/jquery-ui.min.js"></script>
-	<script type="text/javascript" src="../libs/jquery-ui-1.12.0/jquery-ui.js"></script>
 	<script type="text/javascript" src="../libs/smooth-div-scroll/js/jquery.smoothdivscroll-1.3-min.js"></script>
 	<script type="text/javascript" src="../scripts/main.js"></script>
-	<script type="text/javascript" src="../scripts/bwslider.js"></script>
+	<script type="text/javascript" src="../libs/bwslider/bwslider.js"></script>
 </head>
 <body lang="en">
 	<div class="header">
@@ -45,44 +43,51 @@
 			</div>
 		</div>
 	</div>
+
 	<!-- IMAGE SLIDER SECTION -->
-	<div id="image-selector-div" class="smooth-scroller">
-		<div class="image-slide"><img src="../images/sliderImages/alwayssunny.jpg" data-desc="Paddy's Pub"/></div>
-		<div class="image-slide"><img src="../images/sliderImages/cabin1.jpg" data-desc="Hocking Hills, OH"/></div>
-		<div class="image-slide"><img src="../images/sliderImages/ericWedding.jpg" data-desc="Eric's Wedding"/></div>
-		<div class="image-slide"><img src="../images/sliderImages/hhills1.jpg" data-desc="Hocking Hills, OH"/></div>
-		<div class="image-slide"><img src="../images/sliderImages/hhills2.jpg" data-desc="Hocking Hills, OH"/></div>
-		<div class="image-slide"><img src="../images/sliderImages/joeWings.jpg" data-desc="Pool and Wings"/></div>
-		<div class="image-slide"><img src="../images/sliderImages/lastadium.jpg" data-desc="LA Memorial Stadium"/></div>
-		<div class="image-slide"><img src="../images/sliderImages/mansfield1.jpg" data-desc="Mansfield Reformatory"/></div>
-		<div class="image-slide"><img src="../images/sliderImages/mansfield2.jpg" data-desc="Mansfield Reformatory"/></div>
-		<div class="image-slide"><img src="../images/sliderImages/picnic1.jpg" data-desc="Family Picnic"/></div>
-		<div class="image-slide"><img src="../images/sliderImages/picnic2.jpg" data-desc="Family Picnic"/></div>
-		<div class="image-slide"><img src="../images/sliderImages/rockmill.jpg" data-desc="Rockmill Brewery"/></div>
-		<div class="image-slide"><img src="../images/sliderImages/sanclem1.jpg" data-desc="San Clemente, CA"/></div>
-		<div class="image-slide"><img src="../images/sliderImages/sanclem2.jpg" data-desc="San Clemente, CA"/></div>
-		<div class="image-slide"><img src="../images/sliderImages/sanclem3.jpg" data-desc="San Clemente, CA"/></div>
-		<div class="image-slide"><img src="../images/sliderImages/sanclem4.jpg" data-desc="San Clemente, CA"/></div>
-		<div class="image-slide"><img src="../images/sliderImages/sanclem5.jpg" data-desc="San Clemente, CA"/></div>
-		<div class="image-slide"><img src="../images/sliderImages/dc1.jpg" data-desc="Washington, DC"/></div>
-		<div class="image-slide"><img src="../images/sliderImages/dc2.jpg" data-desc="Washington, DC"/></div>
-		<div class="image-slide"><img src="../images/sliderImages/dc3.jpg" data-desc="Washington, DC"/></div>
-		<div class="image-slide"><img src="../images/sliderImages/champsbanner.jpg" data-desc="2016 NBA Champions"/></div>
-		<div class="image-slide"><img src="../images/sliderImages/griffith.jpg" data-desc="Los Angeles, CA"/></div>
-		<div class="image-slide"><img src="../images/sliderImages/sanfran.jpg" data-desc="San Francisco, CA"/></div>
-		<div class="image-slide"><img src="../images/sliderImages/sanfran2.jpg" data-desc="San Francisco, CA"/></div>
-		<div class="image-slide"><img src="../images/sliderImages/sanfran3.jpg" data-desc="San Francisco, CA"/></div>
-		<div class="image-slide"><img src="../images/sliderImages/sanfran4.jpg" data-desc="San Francisco, CA"/></div>
-		<div class="image-slide"><img src="../images/sliderImages/va1.jpg" data-desc="Virginia"/></div>
-		<div class="image-slide"><img src="../images/sliderImages/va2.jpg" data-desc="Norfolk, VA"/></div>
-		<div class="image-slide"><img src="../images/sliderImages/sanclem6.jpg" data-desc="San Clemente, CA"/></div>
-		<div class="image-slide"><img src="../images/sliderImages/brooklyn.jpg" data-desc="Brooklyn Brewery"/></div>
-		<div class="image-slide"><img src="../images/sliderImages/ny1.jpg" data-desc="New York, New York"/></div>
-		<div class="image-slide"><img src="../images/sliderImages/sanclem7.jpg" data-desc="San Clemente, CA"/></div>
-		<div class="image-slide"><img src="../images/sliderImages/q1.jpg" data-desc="Quicken Loans Arena"/></div>
-		<div class="image-slide"><img src="../images/sliderImages/q2.jpg" data-desc="Quicken Loans Arena"/></div>
-		<div class="image-slide"><img src="../images/sliderImages/q3.jpg" data-desc="Quicken Loans Arena"/></div>
-		<div class="image-slide"><img src="../images/sliderImages/cle1.jpg" data-desc="Cleveland, Ohio"/></div>
+	<div class="bwslider" data-infinite="false" data-continuous="true" data-slides-to-show="3" data-slides-per-click="1" data-slide-transition="slide" data-slide-infinite="false" data-slide-padding="25">
+		<ul class="bwslider-stack">
+			<li class="bwslider-slide"><img src="../images/sliderImages/alwayssunny.jpg" data-desc="Paddy's Pub"/></li>
+			<li class="bwslider-slide"><img src="../images/sliderImages/cabin1.jpg" data-desc="Hocking Hills, OH"/></li>
+			<li class="bwslider-slide"><img src="../images/sliderImages/ericWedding.jpg" data-desc="Eric's Wedding"/></li>
+			<li class="bwslider-slide"><img src="../images/sliderImages/hhills1.jpg" data-desc="Hocking Hills, OH"/></li>
+			<li class="bwslider-slide"><img src="../images/sliderImages/hhills2.jpg" data-desc="Hocking Hills, OH"/></li>
+			<li class="bwslider-slide"><img src="../images/sliderImages/joeWings.jpg" data-desc="Pool and Wings"/></li>
+			<li class="bwslider-slide"><img src="../images/sliderImages/lastadium.jpg" data-desc="LA Memorial Stadium"/></li>
+			<li class="bwslider-slide"><img src="../images/sliderImages/mansfield1.jpg" data-desc="Mansfield Reformatory"/></li>
+			<li class="bwslider-slide"><img src="../images/sliderImages/mansfield2.jpg" data-desc="Mansfield Reformatory"/></li>
+			<li class="bwslider-slide"><img src="../images/sliderImages/picnic1.jpg" data-desc="Family Picnic"/></li>
+			<li class="bwslider-slide"><img src="../images/sliderImages/picnic2.jpg" data-desc="Family Picnic"/></li>
+			<li class="bwslider-slide"><img src="../images/sliderImages/rockmill.jpg" data-desc="Rockmill Brewery"/></li>
+			<li class="bwslider-slide"><img src="../images/sliderImages/sanclem1.jpg" data-desc="San Clemente, CA"/></li>
+			<li class="bwslider-slide"><img src="../images/sliderImages/sanclem2.jpg" data-desc="San Clemente, CA"/></li>
+			<li class="bwslider-slide"><img src="../images/sliderImages/sanclem3.jpg" data-desc="San Clemente, CA"/></li>
+			<li class="bwslider-slide"><img src="../images/sliderImages/sanclem4.jpg" data-desc="San Clemente, CA"/></li>
+			<li class="bwslider-slide"><img src="../images/sliderImages/sanclem5.jpg" data-desc="San Clemente, CA"/></li>
+			<li class="bwslider-slide"><img src="../images/sliderImages/dc1.jpg" data-desc="Washington, DC"/></li>
+			<li class="bwslider-slide"><img src="../images/sliderImages/dc2.jpg" data-desc="Washington, DC"/></li>
+			<li class="bwslider-slide"><img src="../images/sliderImages/dc3.jpg" data-desc="Washington, DC"/></li>
+			<li class="bwslider-slide"><img src="../images/sliderImages/champsbanner.jpg" data-desc="2016 NBA Champions"/></li>
+			<li class="bwslider-slide"><img src="../images/sliderImages/griffith.jpg" data-desc="Los Angeles, CA"/></li>
+			<li class="bwslider-slide"><img src="../images/sliderImages/sanfran.jpg" data-desc="San Francisco, CA"/></li>
+			<li class="bwslider-slide"><img src="../images/sliderImages/sanfran2.jpg" data-desc="San Francisco, CA"/></li>
+			<li class="bwslider-slide"><img src="../images/sliderImages/sanfran3.jpg" data-desc="San Francisco, CA"/></li>
+			<li class="bwslider-slide"><img src="../images/sliderImages/sanfran4.jpg" data-desc="San Francisco, CA"/></li>
+			<li class="bwslider-slide"><img src="../images/sliderImages/va1.jpg" data-desc="Virginia"/></li>
+			<li class="bwslider-slide"><img src="../images/sliderImages/va2.jpg" data-desc="Norfolk, VA"/></li>
+			<li class="bwslider-slide"><img src="../images/sliderImages/sanclem6.jpg" data-desc="San Clemente, CA"/></li>
+			<li class="bwslider-slide"><img src="../images/sliderImages/brooklyn.jpg" data-desc="Brooklyn Brewery"/></li>
+			<li class="bwslider-slide"><img src="../images/sliderImages/ny1.jpg" data-desc="New York, New York"/></li>
+			<li class="bwslider-slide"><img src="../images/sliderImages/sanclem7.jpg" data-desc="San Clemente, CA"/></li>
+			<li class="bwslider-slide"><img src="../images/sliderImages/q1.jpg" data-desc="Quicken Loans Arena"/></li>
+			<li class="bwslider-slide"><img src="../images/sliderImages/q2.jpg" data-desc="Quicken Loans Arena"/></li>
+			<li class="bwslider-slide"><img src="../images/sliderImages/q3.jpg" data-desc="Quicken Loans Arena"/></li>
+			<li class="bwslider-slide"><img src="../images/sliderImages/cle1.jpg" data-desc="Cleveland, Ohio"/></li>
+		</ul>
+		<div class="bwslider-controls">
+			<div class="bwslider-arrow bwslider-next"></div>
+			<div class="bwslider-arrow bwslider-prev"></div>
+		</div>
 	</div>
 
 	<div id="image-spot-div"></div>
