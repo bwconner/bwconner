@@ -21,17 +21,11 @@ function miniNavSetup() {
 	});
 }
 
-function sliderInit() {
-	$(".smooth-scroller").smoothDivScroll({
-		autoScrollingMode: "onStart"
-	});
-}
-
 function imageSliderSetup() {
-	var firstImage = $(".smooth-scroller img").first().attr("src"),
-		clickedElementDesc = $(".smooth-scroller img").first().attr("data-desc");
+	var firstImage = $(".bwslider-slide-content").first().attr("src"),
+		clickedElementDesc = $(".bwslider-slide-content").first().attr("data-desc");
 
-	$(".smooth-scroller .image-slide").each(function() {
+	$(".bwslider-slide-content").each(function() {
 		$(this).css("background-image", "url(" + $(this).children().attr("src") + ")");
 	});
 
@@ -40,7 +34,7 @@ function imageSliderSetup() {
 }
 
 function imageSliderClickHandler() {
-	$('.smooth-scroller img').on('click', function() {
+	$('.bwslider-slide-content').on('click', function() {
 		var clickedElementSrc = $(this).attr("src"),
 			clickedElementDesc = $(this).attr("data-desc");
 		$("#image-spot-div").css("background-image", "url(" + clickedElementSrc + ")");
@@ -136,8 +130,8 @@ $(document).ready(function() {
 	}
 
 	//setup smooth div scroll if needed
-	if($(".smooth-scroller").length > 0) {
-		sliderInit();
+	if($(".bwslider").length > 0) {
+		//sliderInit();
 		imageSliderSetup();
 		imageSliderClickHandler();	
 	}

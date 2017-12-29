@@ -6,58 +6,68 @@ body {
 .spotify-section {
 	width: 320px;
 	margin: 20px auto;
-}
-	.spotify-section .section-body {
+
+	.section-body {
 		padding: 10px;
 	}
+}
 
-
-/* VIDEO PAGE STYLE */
-#image-selector-div {
+.bwslider {
 	height: 200px;
-	margin: 0px auto;
+	margin: 25px auto;
 	padding-top: 20px;
 	position: relative;
 	width: 60%;
-}
-	#image-selector-div div.scrollableArea div.image-slide {
+
+	.bwslider-slide {
 		-khtml-user-select: none;
 		-moz-user-select: none;
 		-o-user-select: none;
 		-webkit-user-select: none;
-		background-position: center;
-		background-size: cover;
-		border-radius: 25px;
-		border: 3px solid #0059b3;
+		user-select: none;
 		cursor: pointer;
 		filter: alpha(opacity=50);
-		float: left;
 		height: 160px;
 		margin: 0px 10px;
 		opacity: 0.5;
 		position: relative;
-		user-select: none;
 		width: 280px;
-	}
-		#image-selector-div div.scrollableArea div.image-slide:hover {
+
+		&:hover {
 			filter: alpha(opacity=100);
 			opacity: 1.0;
 		}
-		#image-selector-div div.scrollableArea div.image-slide img {
+
+		.bwslider-slide-content {
+			object-fit: cover;
 			border-radius: 25px;
+			border: 3px solid #0059b3;
 			cursor: pointer;
 			filter: alpha(opacity=50);
 			height: 160px;
-			opacity: 0.0;
 			width: 280px;
 		}
-		#video-selector-div p,
-		#image-selector-div div.scrollableArea div p {
-			color: #ffffff;
-			font-family: 'Oswald', sans-serif;
-			text-align: center;
-			text-shadow: 0px 0px 12px #0059b3;
-		}
+	}
+}
+
+#image-spot-div {
+	background-position: center;
+	background-size: cover;
+	height: 90%;
+	margin-top: 40px;
+	margin: 0px auto;
+	max-height: 650px;
+	max-width: 760px;
+	transition: background .35s;
+	width: 90%;
+}
+
+#video-selector-div p {
+	color: #ffffff;
+	font-family: 'Oswald', sans-serif;
+	text-align: center;
+	text-shadow: 0px 0px 12px #0059b3;
+}
 
 #image-spot-div {
 	background-position: center;

@@ -5,12 +5,17 @@ var numberOfActiveSlides = 1;
 var numberOfTotalSlides = 1;
 var slidesPerClick = 1;
 var transitionMode = ""; //this will be used to surround js that only needs to be called for certain transition modes
-var infitineScroll = false;
 var firstActiveSlide = 0;
 var lastActiveSlide = 0;
 var slideWidth = "100%";
 var slidesLeftInStack = 1;
 var slidePadding = 0;
+var infitineScroll = false;
+var normalizeImages = false;
+var continuousScroll = false;
+var hoverScroll = false;
+var verticalScroll = false;
+
 
 if (infitineScroll === "true") {
 	var clonedNextStack;
@@ -26,6 +31,7 @@ function sliderDataSetup() {
 	transitionMode = $(".bwslider").attr("data-slide-transition").toLowerCase();
 	infitineScroll = $(".bwslider").attr("data-slide-infinite").toLowerCase();
 	slidePadding = $(".bwslider").attr("data-slide-padding");
+	normalizeImages = $(".bwslider").attr("data-normalize-images");
 
 	//Set up new variables
 	var transitionSpeed = parseInt($(".bwslider").attr("data-slide-speed"));
@@ -344,9 +350,17 @@ function sliderPaddingSetup() {
 	$(".bwslider-slide .bwslider-slide-content").css("width", newSlideWidth);
 }
 
+function displayNormalizedImages() {
+
+}
+
 function bwsliderInit() {
 	sliderDataSetup();
 	sliderTransitionSetup();
+
+	if (normalizeImages === "true") {
+		displayNormalizedImages();
+	}
 
 	if (infitineScroll === "true") {
 		displayInitialInfiniteSlides();
