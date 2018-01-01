@@ -203,6 +203,10 @@ function parseUserCookie (cookieValue) {
 	$("body").attr("data-userid", userID);
 	$(document).trigger('login-verified');
 	$(".account-link").attr("href", "/comiccollector/pages/myaccount.php");
+
+	if($(".create-account-page").length) {
+		window.location.href = "/comiccollector/pages/myaccount.php";
+	}
 }
 
 //If a logged in cookie exists, check its validity 
@@ -250,6 +254,7 @@ $(document).ready(function() {
 
 	$(".login").on("click", function() {
 		validateLogin();
+		$("body").addClass("login-clicked");
 	});
 
 	$(".click-to-create").on("click", function() {
