@@ -28,8 +28,6 @@ function parseUserData (userData) {
 	buildProfileMarkup(username, firstname, character, description, imageSrc);
 }
 
-
-
 function buildProfileMarkup (username, firstname, character, description, imageSrc) {
 	$(".username").html(username);
 	$(".first-name").html(firstname);
@@ -42,6 +40,40 @@ function displayEditProfile () {
 	$(".profile-information .hide").removeClass("hide");
 	$(".edit-profile").addClass("hide");
 }
+
+//Check if a logged in cookie exists
+function checkForAccountCookie () {
+	if (document.cookie.length > 0) {
+		var cookieName = "ccuid";
+		cookieStart = document.cookie.indexOf(cookieName + "=");
+		if (cookieStart != -1) {
+			cookieStart = cookieStart + cookieName.length + 1;
+			cookieEnd = document.cookie.indexOf(";", cookieStart);
+			if (cookieEnd == -1) {
+				cookieEnd = document.cookie.length;
+			}
+			var cookieValue = unescape(document.cookie.substring(cookieStart, cookieEnd));
+			verifyAccountCookie(cookieValue);
+		}
+	}
+}
+
+//Verify logged in cookie data against DB before allowing an edit
+function verifyAccountCookie (cookieValue) {
+	$.ajax({
+		data: cookieValue,
+		type: "post",
+		url: "../phpscripts/verifyloginsql.php",
+		success: function(data){
+			if (data == "true") {
+				displayEditProfile(cookieValue);
+			} else {
+				console.log("login verified");
+			}
+		}
+	});
+}
+
 
 $(document).ready(function() {
 	//if viewing my account page
@@ -62,7 +94,7 @@ $(document).ready(function() {
 	$(".edit-profile").on("click", function() {
 		//verify userId is same as one in cookie and not someone medling with the DOM
 		//if (userID === parseUserCookie("ccuid")) {
-			displayEditProfile();
+			checkForAccountCookie();
 		//}
 	});
 
