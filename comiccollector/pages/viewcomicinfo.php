@@ -4,6 +4,7 @@
 		<?php include '../snippets/global.html';?>
 		<link rel="stylesheet" type="text/css" href="../css/search.css">
 		<script type="text/javascript" src="../scripts/viewcomicinfo.js"></script>
+		<script type="text/javascript" src="../scripts/comic.js"></script>
 	</head>
 	<body lang="en">
 		<?php include '../snippets/header.html';?>
