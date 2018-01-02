@@ -42,7 +42,9 @@ function displayEditProfile () {
 }
 
 //Check if a logged in cookie exists
-function checkForAccountCookie () {
+function checkForAccountCookie (event) {
+	event.preventDefault();
+
 	if (document.cookie.length > 0) {
 		var cookieName = "ccuid";
 		cookieStart = document.cookie.indexOf(cookieName + "=");
@@ -74,6 +76,23 @@ function verifyAccountCookie (cookieValue) {
 	});
 }
 
+function updateAccount (newUserID) {
+	var userCookieID = createNewToken(),
+		data = "username=" + $(".username").text() + "&userID=" + $("body").attr("data-userid") + "&firstname=" + $(".firstname-field").val() + "&favoriteCharacter=" + $(".favorite-character-field").val() + "&profileText=" + $(".user-description-field").val();
+
+	console.log(data);
+
+	$.ajax({
+		data: data,
+		type: "post",
+		url: "../phpscripts/updateaccountsql.php",
+		success: function(data){
+			alert("hey");
+		}
+	});
+}
+
+
 
 $(document).ready(function() {
 	//if viewing my account page
@@ -94,8 +113,12 @@ $(document).ready(function() {
 	$(".edit-profile").on("click", function() {
 		//verify userId is same as one in cookie and not someone medling with the DOM
 		//if (userID === parseUserCookie("ccuid")) {
-			checkForAccountCookie();
+			checkForAccountCookie(event);
 		//}
+	});
+
+	$(".submit-edit").on("click", function() {
+		updateAccount();
 	});
 
 });
