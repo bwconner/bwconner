@@ -18,12 +18,12 @@ function retriveUserData (userID) {
 }
 
 function parseUserData (userData) {
-	var userData = userData.split("&");
-	var username = userData[0].split("=")[1];
-	var firstname = userData[1].split("=")[1];
-	var character = userData[2].split("=")[1];
-	var description = userData[3].split("=")[1];
-	var imageSrc = userData[4].split("=")[1];
+	var userData = userData.split("&"),
+		username = userData[0].split("=")[1],
+		firstname = userData[1].split("=")[1],
+		character = userData[2].split("=")[1],
+		description = userData[3].split("=")[1],
+		imageSrc = userData[4].split("=")[1];
 
 	buildProfileMarkup(username, firstname, character, description, imageSrc);
 }
@@ -86,8 +86,8 @@ $(document).ready(function() {
 
 	//if viewing another user profile
 	if ($("body").hasClass("user-profile")) {
-		var pageUrl = window.location.href;
-		var profileID = pageUrl.split("profileId=");
+		var pageUrl = window.location.href,
+			profileID = pageUrl.split("profileId=");
 		retriveUserData(profileID[1]);
 	}
 

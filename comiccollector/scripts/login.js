@@ -16,10 +16,10 @@ function validateInputs (params) {
 		valid = false;
 	}
 
-	var requiredSpecialCharacters = new RegExp(/[!#$%&\?]/);
-	var invalidSpecialChracters = new RegExp(/[~`\^*+=\-\[\]\\';,/{}|\\":<>]/);
-	var checkForNumber = new RegExp(/[0-9]/);
-	var checkForLetter = new RegExp(/[a-zA-Z]/);
+	var requiredSpecialCharacters = new RegExp(/[!#$%&\?]/),
+		invalidSpecialChracters = new RegExp(/[~`\^*+=\-\[\]\\';,/{}|\\":<>]/),
+		checkForNumber = new RegExp(/[0-9]/),
+		checkForLetter = new RegExp(/[a-zA-Z]/);
 
 	//Verify Password doesn't contain an illegal special character
 	if (invalidSpecialChracters.test(params.password)) {
@@ -38,7 +38,6 @@ function validateInputs (params) {
 	//Verify Password has a number in it
 	if (checkForNumber.test(params.password)) {
 		//valid = true;
-		alert("NUMBER");
 	} else {
 		$(".password-error").removeClass("hide");
 		valid = false;
@@ -46,8 +45,7 @@ function validateInputs (params) {
 
 	//Verify Password has a letter in it
 	if (checkForLetter.test(params.password)) {
-		valid = true;
-		alert("LETER");
+		//valid = true;
 	} else {
 		$(".password-error").removeClass("hide");
 		valid = false;
@@ -81,8 +79,8 @@ function checkUniqueUserName (username) {
 }
 
 function createNewAccountID () {
-	var uniqueNumber = createNewToken();
-	var data = "uniqueid=" + uniqueNumber;
+	var uniqueNumber = createNewToken(),
+		data = "uniqueid=" + uniqueNumber;
 
 	 $.ajax({
 		data: data,
@@ -104,8 +102,8 @@ function createNewToken () {
 }
 
 function createAccountAjax (newUserID) {
-	var userCookieID = createNewToken();
-	var data = $("#create-account-form").serialize() + "&userID=" + newUserID + "&cookieID=" + userCookieID;
+	var userCookieID = createNewToken(),
+		data = $("#create-account-form").serialize() + "&userID=" + newUserID + "&cookieID=" + userCookieID;
 
 	$.ajax({
 		data: data,
@@ -115,9 +113,11 @@ function createAccountAjax (newUserID) {
 			$(".create-account-wrapper_form form").addClass("hide");
 			$(".create-account-wrapper .button").addClass("hide");
 			$(".create-account-wrapper_success").removeClass("hide");
-			var userSessionID = createNewToken();
-			var userName = $('.create-account-form .username').val();
-			var expireDate = getExpirationDate();
+
+			var userSessionID = createNewToken(),
+				userName = $('.create-account-form .username').val(),
+				expireDate = getExpirationDate();
+
 			updateUserSession(userName, userSessionID, expireDate, newUserID);
 			createLoggedInCookie(userName, userSessionID, expireDate, newUserID, userCookieID);
 		}
@@ -125,20 +125,21 @@ function createAccountAjax (newUserID) {
 }
 
 function validateLogin () {
-	var userCookieID = createNewToken();
-	var data = $("#login-form").serialize();
+	var userCookieID = createNewToken(),
+		data = $("#login-form").serialize();
 
 	$.ajax({
 		data: data,
 		type: "post",
 		url: "../phpscripts/loginsql.php",
 		success: function(data){
-			var userName = $('.login-form .username').val();
-			var userSessionID = createNewToken();
-			var expireDate = getExpirationDate();
-			var dataSplit = data.split("&");
-			var userID = dataSplit[0].split("=")[1];
-			var cookieID = dataSplit[1].split("=")[1];
+			var userName = $('.login-form .username').val(),
+				userSessionID = createNewToken(),
+				expireDate = getExpirationDate(),
+				dataSplit = data.split("&"),
+				userID = dataSplit[0].split("=")[1],
+				cookieID = dataSplit[1].split("=")[1];
+
 			updateUserSession(userName, userSessionID, expireDate, userID);
 			createLoggedInCookie(userName, userSessionID, expireDate, userID, cookieID);
 		}
@@ -146,7 +147,6 @@ function validateLogin () {
 }
 
 function updateUserSession (userName, userSessionID, expireDate, userID) {
-
 	var data = "userID=" + userID + "&username=" + userName + "&userSessionID=" + userSessionID + "&expireDate=" + expireDate;
 
 	$.ajax({
@@ -163,8 +163,8 @@ function updateUserSession (userName, userSessionID, expireDate, userID) {
 function createLoggedInCookie (userName, userSessionID, expireDate, userID, cookieID) {
 	//logged in cookie will hold userID, userName, sessionID and cookieID.
 	//All 4 must match to allow user to view and manipulate their profile.
-	var cookieName = "ccuid";
-	var cookieValue = "userID=" + userID + "&username=" + userName + "&sessionID=" + userSessionID + "&cookieID=" + cookieID;
+	var cookieName = "ccuid",
+		cookieValue = "userID=" + userID + "&username=" + userName + "&sessionID=" + userSessionID + "&cookieID=" + cookieID;
 	document.cookie = cookieName + "=" + cookieValue + "; expires=" + expireDate + ";path=/";
 
 	$("body").addClass("logged-in");
@@ -181,15 +181,17 @@ function checkForLoggedInCookie () {
 	if (document.cookie.length > 0) {
 		var cookieName = "ccuid";
 		cookieStart = document.cookie.indexOf(cookieName + "=");
+
 		if (cookieStart != -1) {
 			cookieStart = cookieStart + cookieName.length + 1;
 			cookieEnd = document.cookie.indexOf(";", cookieStart);
+
 			if (cookieEnd == -1) {
 				cookieEnd = document.cookie.length;
 			}
+
 			var cookieValue = unescape(document.cookie.substring(cookieStart, cookieEnd));
 			verifyLoggedInCookie(cookieValue);
-			//parseUserCookie(cookieValue);
 		}
 	}
 }
@@ -197,11 +199,11 @@ function checkForLoggedInCookie () {
 //Parse the values out of the cookie
 //May not even need this function
 function parseUserCookie (cookieValue) {
-	var cookieSplit = cookieValue.split("&");
-	var userID = cookieSplit[0].split("=")[1];
-	var username = cookieSplit[1].split("=")[1];
-	var sessionID = cookieSplit[2].split("=")[1];
-	var cookieID = cookieSplit[3].split("=")[1];
+	var cookieSplit = cookieValue.split("&"),
+		userID = cookieSplit[0].split("=")[1],
+		username = cookieSplit[1].split("=")[1],
+		sessionID = cookieSplit[2].split("=")[1],
+		cookieID = cookieSplit[3].split("=")[1];
 	
 	$("body").addClass("logged-in");
 	$("body").attr("data-userid", userID);
@@ -272,4 +274,3 @@ $(document).ready(function() {
 	});
 
 });
-

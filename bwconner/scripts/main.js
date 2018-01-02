@@ -1,7 +1,3 @@
-function main(){
-	//Probably don't need this
-}
-
 function miniNavSetup() {
 	var headerHeight = $('.header').height(),
 		$window = $(window);
@@ -64,7 +60,6 @@ function videoClickHandler() {
 	});
 }
 
-
 function animateClouds() {
 	$(".cloud").animate({left: "+=3000"}, 75000);
 	//remove old clouds
@@ -77,7 +72,6 @@ function appendCloudMarkup(imageNumber, verticalCloudPosition, cloudSpeed) {
 	$(".clouds").append(cloudMarkup);
 }
 
-
 function generateCloud() {
 	//Set up position of each cloud
 	var cloudNumber = Math.round(Math.random() * 11) + 1,
@@ -88,7 +82,6 @@ function generateCloud() {
 		appendCloudMarkup(cloudNumber, verticalCloudPosition, randomSpeed);
 
 }
-
 
 function cloudsInit () {
 	//determine how many clouds. up to five clouds
@@ -114,14 +107,15 @@ function rotateBackground() {
 	var imageNumber = Math.round(Math.random() * 23) + 1,
 		randomTimeout = (Math.round(Math.random() * 4) + 3) * 1000,
 		backgroundImage = "images/backgroundLibrary/bg" + imageNumber + ".jpg";
+
 	$(".site-body").css("background-image", "url(" + backgroundImage + ")");
+
 	setTimeout(function(){
 		rotateBackground();
 	}, randomTimeout);
 }
 
 $(document).ready(function() {
-	main();
 	miniNavSetup();
 	videoClickHandler();
 
@@ -129,13 +123,9 @@ $(document).ready(function() {
 		cloudsInit();
 	}
 
-	//setup smooth div scroll if needed
+	//setup bwconner scroll if needed
 	if($(".bwslider").length > 0) {
-		//sliderInit();
 		imageSliderSetup();
 		imageSliderClickHandler();	
 	}
 });
-
-//var x = $(".bwslider").length;
-//alert(x);
