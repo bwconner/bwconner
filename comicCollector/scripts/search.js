@@ -1,12 +1,12 @@
-var resultLimit = 24;
-var currentOrder = "";
-var currentFormat = "";
-var currentOffset = 0;
-var currentPage = 1;
-var totalPages;
-var currentSearchTerm = "";
-var currentSearchCharacter = "";
-var currentCharacterList = "";
+var resultLimit = 24,
+	currentOrder = "",
+	currentFormat = "",
+	currentOffset = 0,
+	currentPage = 1,
+	totalPages,
+	currentSearchTerm = "",
+	currentSearchCharacter = "",
+	currentCharacterList = "";
 
 
 function setAdvancedSearchOptions(optionName, optionValue) {
@@ -28,7 +28,7 @@ function setAdvancedSearchOptions(optionName, optionValue) {
 function getCharacterIDList() {
 	var apiUrl = marvelApi.buildCharacterListApiUrl(currentSearchCharacter);
 
-	var characterList = $.get(apiUrl, function(data) {
+	$.get(apiUrl, function(data) {
 		createCharacterIdList(data);
 		getResultsByCharacter();
 	});
@@ -71,8 +71,8 @@ function reloadResults() {
 }
 
 function createCharacterIdList(data) {
-	var characterList = "";
-	var resultsList = data.data.results;
+	var characterList = "",
+		resultsList = data.data.results;
 
 	$(resultsList).each(function(result) {
 		var resultData = $(this)[0];
@@ -83,8 +83,8 @@ function createCharacterIdList(data) {
 } 
 
 function processResults(data) {
-	var totalResults = data.data.total;
-	var resultsList = data.data.results;
+	var totalResults = data.data.total,
+		resultsList = data.data.results;
 	totalPages = Math.ceil(totalResults/resultLimit);
 
 	$(".spinner").addClass("hide"); //remove spinner
@@ -97,21 +97,20 @@ function processResults(data) {
 			var resultImage = "http://bwconner.com/comiccollector/images/noimage.png";
 		}
 
-		var resultTitle = resultData[0].title;
-		var resultSeries = resultData[0].series.name;
-		var resultIssueNumber = resultData[0].issueNumber;
-		var resultDescription = resultData[0].description;
-		var resultId = resultData[0].id;
+		var resultTitle = resultData[0].title,
+			resultSeries = resultData[0].series.name,
+			resultIssueNumber = resultData[0].issueNumber,
+			resultDescription = resultData[0].description,
+			resultId = resultData[0].id;
 	
-		var featuredCharacters = [];
-		var resultCreators = "";
+		var featuredCharacters = [],
+			resultCreators = "";
 
 		$(resultData[0].characters.items).each(function(index) {
 			featuredCharacters[index] = $(this)[0].name;
 		});
 
 		$(resultData[0].creators.items).each(function(index) {
-			console.log(index);
 			if (index < 3) {
 				resultCreators = resultCreators + "<div class='creator'>" + $(this)[0].name + " - " + $(this)[0].role + "</div>";
 			}
@@ -119,7 +118,6 @@ function processResults(data) {
 			if (index === 4) {
 				resultCreators = resultCreators + "<div class='creator'>More...</div>";
 			}
-
 		});
 
 		var markup = buildResultMarkup(resultTitle, resultImage, resultSeries, resultIssueNumber, resultDescription, featuredCharacters, resultCreators, resultId);
@@ -160,11 +158,12 @@ function buildResultMarkup(resultTitle, resultImage, resultSeries, resultIssueNu
 			//markup = markup + "<div class='result-characters'> Featured Characters: " + featuredCharacters + "</div>";
 		}
 
-		var  viewFullInfoLink = "<a href='/comiccollector/pages/viewcomicinfo?&comicId=" + resultId + "'>View Full Information</a>";
+		var addToCollection = "<div class='button' data-comicid=" + resultId + " href='/comiccollector/pages/viewcomicinfo?&comicId=" + resultId + "'>Add to Collection</div>",
+			addedSuccess = "<div class='hide'>Added Successfully!</div>",
+			viewFullInfoLink = "<a href='/comiccollector/pages/viewcomicinfo?&comicId=" + resultId + "'>View Full Information</a>";
 
-		markup = markup + viewFullInfoLink + "</div></div>";
+		markup = markup + addToCollection + addedSuccess + viewFullInfoLink + "</div></div>";
 		
-
 		return markup;
 }
 
