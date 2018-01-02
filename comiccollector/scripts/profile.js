@@ -104,8 +104,6 @@ function updateAccount (newUserID) {
 	});
 }
 
-
-
 $(document).ready(function() {
 	//if viewing my account page
 	$(document).on('login-verified', function(){
