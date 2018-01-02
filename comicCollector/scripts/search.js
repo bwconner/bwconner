@@ -132,7 +132,7 @@ function processResults(data) {
 }
 
 function buildResultMarkup(resultTitle, resultImage, resultSeries, resultIssueNumber, resultDescription, featuredCharacters, resultCreators, resultId) {
-		var markup = "<div class='search-result'>" +
+		var markup = "<div class='search-result comic-"+ resultId +"' data-title='" + resultTitle + "' data-image='" + resultImage + "' data-character='' data-date=''>" +
 		"<img class='result-img' src='" + resultImage + "'/>" +
 		"<div class='result-information'>" +
 		"<div class='result-title'>" + resultTitle + "</div>";
