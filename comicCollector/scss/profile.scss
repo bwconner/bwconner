@@ -1,4 +1,36 @@
-.button {
-	display: block;
-	width: 200px;
+.profile-wrapper {
+	.button {
+		display: block;
+		width: 200px;
+		&.hide {
+			display: none;
+		}
+	}
+
+	input {
+		display: block;
+		overflow-y: hidden;
+		max-height: 100px;
+		-webkit-transition: all 1s ease-in-out;
+		-moz-transition: all 1s ease-in-out;
+		-ms-transition: all  1s ease-in-out;
+		-o-transition: all  1s ease-in-out;
+		transition: all  1s ease-in-out; 
+		opacity: 1;
+
+		&.hide {
+			display: block;
+			opacity: 0;
+			height: 0px;
+			max-height: 0;
+		}
+	}
+
+	.profile-field {
+		display: block;
+		p {
+			display: inline-block;
+			margin-bottom: 0px;
+		}
+	}
 }

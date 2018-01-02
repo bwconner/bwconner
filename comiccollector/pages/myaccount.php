@@ -16,17 +16,22 @@
 				</div>
 				<div class="profile-information">
 					<p class="username"></p>
-
-					<p class="profile-label">First Name:</p>
-					<p class="first-name"></p>
+					<div class="profile-field">
+						<p class="profile-label">First Name:</p>
+						<p class="first-name"></p>
+					</div>
 					<input id="login-username" type="text" name="username" class="username hide" placeholder="Enter New First Name"/>
 
-					<p class="profile-label">Favorite Character:</p>
-					<p class="favorite-character"></p>
+					<div class="profile-field">
+						<p class="profile-label">Favorite Character:</p>
+						<p class="favorite-character"></p>
+					</div>
 					<input id="favorite-character" type="text" name="character" class="favorite-character hide" placeholder="Enter New Favorite Character"/>
-
-					<p class="profile-label"></p>
-					<p class="user-description"></p>
+					
+					<div class="profile-field">
+						<p class="profile-label">About Me:</p>
+						<p class="user-description"></p>
+					</div>
 					<input id="user-description" type="text" name="description" class="user-description hide" placeholder="Enter New Description"/>
 
 					<button class="edit-profile button">Edit Profile</button>
