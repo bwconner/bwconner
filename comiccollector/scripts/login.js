@@ -170,6 +170,10 @@ function createLoggedInCookie (userName, userSessionID, expireDate, userID, cook
 	$("body").addClass("logged-in");
 	$("body").attr("data-userid", userID);
 	$(document).trigger('login-verified');
+
+	if($(".login-clicked").length || $(".create-account-page").length) {
+		window.location.href = "/comiccollector/pages/myaccount.php";
+	}
 }
 
 //Check if a logged in cookie exists
