@@ -8,7 +8,7 @@
 	<body class="my-account">
 		<?php include '../snippets/header.html';?>
 		<div class="site-body-wrapper">
-			<div class="profile-wrapper" id="profile-update" action="">
+			<div class="profile-wrapper">
 				<div class="profile-image-wrapper">
 					<img class="profile-image" src="" alt=""/>
 					<button class="edit-image button">Edit Image</button>
@@ -40,6 +40,20 @@
 					<p class="edit-success hide">Your profile has been successfully updated!</p>
 				</div>
 			</div>
+			<p class="">Collection: </p>
+			<div class="profile-collection-preview">
+				<div  class="profile-comic">
+					No comics added yet.
+				</div>
+			</div>
+			<a href="" class="">View full collection...</a>
+			<p class="">Wishlist: </p>
+			<div class="profile-wishlist-preview">
+				<div class="profile-comic">
+					No comics added yet.
+				</div>
+			</div>
+			<a href="" class="">View full wishlist...</a>
 		</div>
 	</body>
 </html>
