@@ -1,29 +1,38 @@
 .profile-wrapper {
 	.button {
 		display: block;
+		margin-top: 15px;
 		width: 200px;
 		&.hide {
 			display: none;
 		}
+		&.edit-image {
+			width: 120px;
+		}
 	}
 
 	input {
-		display: block;
-		overflow-y: hidden;
-		max-height: 100px;
-		-webkit-transition: all 1s ease-in-out;
 		-moz-transition: all 1s ease-in-out;
 		-ms-transition: all  1s ease-in-out;
 		-o-transition: all  1s ease-in-out;
-		transition: all  1s ease-in-out; 
+		-webkit-transition: all 1s ease-in-out;
+		display: block;
+		max-height: 100px;
 		opacity: 1;
+		overflow-y: hidden;
+		transition: all  1s ease-in-out; 
+		width: 200px;
 
 		&.hide {
 			display: block;
-			opacity: 0;
 			height: 0px;
 			max-height: 0;
+			opacity: 0;
 		}
+	}
+
+	.username {
+		margin: 10px 0px 0px;
 	}
 
 	.profile-field {

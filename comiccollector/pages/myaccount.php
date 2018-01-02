@@ -11,8 +11,8 @@
 			<div class="profile-wrapper">
 				<div class="profile-image-wrapper">
 					<img class="profile-image" src="" alt=""/>
-					<button class="edit-image">Edit Image</button>
-					<button class="submit-image hide">Submit Image</button>
+					<button class="edit-image button">Edit Image</button>
+					<button class="submit-image hide botton">Submit Image</button>
 				</div>
 				<div class="profile-information">
 					<p class="username"></p>
