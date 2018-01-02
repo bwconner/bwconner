@@ -1,18 +1,18 @@
 .login-account-wrapper {
+  -moz-transition: opacity .5s ease-in-out;
+  -webkit-transition: opacity .5s ease-in-out;
   height: auto;
   opacity: 1;
-  transition: opacity .5s ease-in-out;
-  -moz-transition: opacity .5s ease-in-out;
-  -webkit-transition: opacity .5s ease-in-out; }
+  transition: opacity .5s ease-in-out; }
   .login-account-wrapper.hide {
-    opacity: 0;
-    height: 0px; }
+    height: 0px;
+    opacity: 0; }
   .login-account-wrapper .login-account-wrapper_form {
     display: block;
     margin: 0px auto;
     text-align: center;
-    width: 300px;
-    transition: all 0.5s ease; }
+    transition: all 0.5s ease;
+    width: 300px; }
     .login-account-wrapper .login-account-wrapper_form.hide {
       visibility: hidden; }
     .login-account-wrapper .login-account-wrapper_form .login-account-form {
@@ -63,20 +63,20 @@
       text-decoration: underline; }
 
 .create-account-wrapper {
+  -moz-transition: opacity .5s ease-in-out;
+  -webkit-transition: opacity .5s ease-in-out;
   height: auto;
   opacity: 1;
-  transition: opacity .5s ease-in-out;
-  -moz-transition: opacity .5s ease-in-out;
-  -webkit-transition: opacity .5s ease-in-out; }
+  transition: opacity .5s ease-in-out; }
   .create-account-wrapper.hide {
-    opacity: 0;
-    height: 0px; }
+    height: 0px;
+    opacity: 0; }
   .create-account-wrapper .create-account-wrapper_form {
     display: block;
     margin: 0px auto;
     text-align: center;
-    width: 300px;
-    transition: all 0.5s ease; }
+    transition: all 0.5s ease;
+    width: 300px; }
     .create-account-wrapper .create-account-wrapper_form.hide {
       visibility: hidden; }
     .create-account-wrapper .create-account-wrapper_form .create-account-form {
@@ -139,8 +139,8 @@
     .login-account-wrapper .login-account-wrapper_benefits {
       display: inline-block;
       float: left;
-      padding-left: 25px;
-      margin-top: 8px; }
+      margin-top: 8px;
+      padding-left: 25px; }
       .login-account-wrapper .login-account-wrapper_benefits img {
         margin: 0px; }
 

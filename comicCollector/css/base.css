@@ -9,11 +9,11 @@ a {
 .header {
   background: #e23636;
   /*#0066cc;*/
+  border-bottom: 5px solid #000;
+  box-shadow: 0px 0px 15px #000;
   color: #ffffff;
   text-align: center;
-  width: 100%;
-  border-bottom: 5px solid #000;
-  box-shadow: 0px 0px 15px #000; }
+  width: 100%; }
   .header .header-logo,
   .header .home-header {
     color: #ffffff;
@@ -25,8 +25,8 @@ a {
     padding: 0px; }
   .header .header-logo {
     background-image: url("../images/collectorPixelArt.png");
-    background-repeat: no-repeat;
     background-position: center;
+    background-repeat: no-repeat;
     display: inline-block;
     line-height: 210px;
     text-shadow: 4px 4px 8px #000; }
@@ -35,28 +35,28 @@ a {
     position: absolute;
     right: 0px; }
   .header .link {
-    font-size: 24px;
-    color: #ffffff;
     border-bottom: 1px solid #ffffff;
+    color: #ffffff;
     display: inline-block;
-    padding: 0px 5px;
-    margin: 0px 8px; }
+    font-size: 24px;
+    margin: 0px 8px;
+    padding: 0px 5px; }
     .header .link a {
       color: #ffffff;
+      font-family: 'Oswald', sans-serif;
       line-height: 25px;
-      text-decoration: none;
-      font-family: 'Oswald', sans-serif; }
+      text-decoration: none; }
   .header .login-wrapper {
     background: #000;
     display: none;
     height: 165px;
-    width: 170px;
     left: -122px;
+    margin-top: -5px;
     position: absolute;
-    margin-top: -5px; }
+    width: 170px; }
     .header .login-wrapper .input-label {
-      padding: 5px 10px 5px;
       margin: 0px;
+      padding: 5px 10px 5px;
       text-align: left; }
     .header .login-wrapper input {
       line-height: 20px;
@@ -67,15 +67,15 @@ a {
 .mini-header {
   background: #e23636;
   /*#0066cc;*/
+  box-shadow: 4px 4px 15px #000;
   color: #ffffff;
-  text-align: center;
-  width: 100%;
   height: 0px;
   opacity: 0;
-  position: fixed;
-  top: 0px;
   overflow: hidden;
-  box-shadow: 4px 4px 15px #000; }
+  position: fixed;
+  text-align: center;
+  top: 0px;
+  width: 100%; }
   .mini-header .home-header {
     color: #ffffff;
     cursor: pointer;
@@ -85,32 +85,32 @@ a {
     margin-bottom: 40px;
     margin-top: 0px; }
   .mini-header .link {
-    font-size: 24px;
-    color: #ffffff;
     border-bottom: 1px solid #ffffff;
+    color: #ffffff;
     display: inline-block;
-    padding: 0px 5px;
+    font-size: 24px;
     line-height: 25px;
-    margin: 0px 8px; }
+    margin: 0px 8px;
+    padding: 0px 5px; }
     .mini-header .link a {
       color: #ffffff;
-      text-decoration: none;
-      font-family: 'Oswald', sans-serif; }
+      font-family: 'Oswald', sans-serif;
+      text-decoration: none; }
   .mini-header .in-view {
     height: 0px;
     overflow: hidden; }
   .mini-header h2 {
     color: #ffffff;
     cursor: pointer;
-    font-family: 'Amatica SC', cursive;
     float: left;
+    font-family: 'Amatica SC', cursive;
     font-size: 35px;
     line-height: 44px;
     margin: 0px 35px; }
     .mini-header h2:before {
       background-image: url("../images/collectorPixelArt.png");
-      background-repeat: no-repeat;
       background-position: center;
+      background-repeat: no-repeat;
       background-size: contain;
       content: "";
       height: 45px;
@@ -131,45 +131,45 @@ a {
     background-size: cover;
     display: block;
     height: 30px;
-    margin-top: 10px;
     line-height: 30px;
+    margin-top: 10px;
     width: 30px; }
 .main-nav .account-link {
   background-image: url("../images/icons/account.png"); }
   .main-nav .account-link.selected {
-    background: #000;
     background-image: url("../images/icons/account_selected.png");
-    background-size: cover; }
+    background-size: cover;
+    background: #000; }
 .main-nav .search-link {
   background-image: url("../images/icons/search.png"); }
   .main-nav .search-link.selected {
-    background: #000;
     background-image: url("../images/icons/search_selected.png");
-    background-size: cover; }
+    background-size: cover;
+    background: #000; }
 
 .current-page {
-  color: #99ccff;
-  border-color: #99ccff; }
+  border-color: #99ccff;
+  color: #99ccff; }
   .current-page a {
     color: #99ccff; }
 
 /* FOOTER STYLES */
 .footer {
   background: #0059b3;
+  bottom: 0px;
   color: #ffffff;
   height: 120px;
-  bottom: 0px;
   width: 100%; }
 
 /* BASIC BODY STYLES */
 .site-body-wrapper {
   background: #ffffff;
   color: #000;
-  margin: 30px auto;
-  width: 90%;
   font-family: 'Oswald', sans-serif;
   font-size: 17px;
-  letter-spacing: .7px; }
+  letter-spacing: .7px;
+  margin: 30px auto;
+  width: 90%; }
   .site-body-wrapper .site-section-wrapper .section-header-text {
     color: #518cca;
     font-size: 18px;
@@ -193,17 +193,17 @@ a {
 
 /* STANDARD SPINNER STYLES */
 .spinner {
-  border: 16px solid #f78f3f;
-  border-top: 16px solid #518cca;
+  animation: spin 2s linear infinite;
+  background-image: url("../images/collectorPixelArt.png");
+  background-repeat: no-repeat;
+  background-size: cover;
   border-bottom: 16px solid #518cca;
   border-radius: 50%;
-  width: 80px;
+  border-top: 16px solid #518cca;
+  border: 16px solid #f78f3f;
   height: 80px;
-  animation: spin 2s linear infinite;
   margin: 0px auto;
-  background-image: url("../images/collectorPixelArt.png");
-  background-size: cover;
-  background-repeat: no-repeat; }
+  width: 80px; }
 
 /*STANDARD HEADER STYLE*/
 .section-header {
@@ -229,8 +229,8 @@ a {
 /*MQ OVERRIDES*/
 @media only screen and (min-width: 448px) {
   .header h1 {
-    margin-bottom: 25px;
-    line-height: 150px; }
+    line-height: 150px;
+    margin-bottom: 25px; }
 
   .mini-header.in-view {
     height: 50px;
