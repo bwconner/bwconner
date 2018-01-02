@@ -37,8 +37,15 @@ function buildProfileMarkup (username, firstname, character, description, imageS
 }
 
 function displayEditProfile () {
-	$(".profile-information .hide").removeClass("hide");
+	$(".profile-information input.hide").removeClass("hide");
+	$(".profile-information .submit-edit.hide").removeClass("hide");
 	$(".edit-profile").addClass("hide");
+
+	//Add in existing text placeholders if they are filled in already
+	$(".first-name-field").val($(".firstname").text());
+	$(".favorite-character-field").val($(".favorite-character").text());
+	$(".user-description-field").val($(".user-description").text());
+
 }
 
 //Check if a logged in cookie exists
@@ -80,14 +87,19 @@ function updateAccount (newUserID) {
 	var userCookieID = createNewToken(),
 		data = "username=" + $(".username").text() + "&userID=" + $("body").attr("data-userid") + "&firstname=" + $(".firstname-field").val() + "&favoriteCharacter=" + $(".favorite-character-field").val() + "&profileText=" + $(".user-description-field").val();
 
-	console.log(data);
-
 	$.ajax({
 		data: data,
 		type: "post",
 		url: "../phpscripts/updateaccountsql.php",
 		success: function(data){
-			alert("hey");
+			$(".first-name").html($(".firstname-field").val());
+			$(".favorite-character").html($(".favorite-character-field").val());
+			$(".user-description").html($(".user-description-field").val());
+
+			$(".profile-information input").addClass("hide");
+			$(".profile-information .submit-edit").addClass("hide");
+			$(".edit-profile").removeClass("hide");
+			$(".profile-information .edit-success").removeClass("hide");
 		}
 	});
 }
