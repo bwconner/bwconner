@@ -1,6 +1,12 @@
 function retriveUserData (userID) {
+
+	//verify userId is same as one in cookie and not someone medling with the DOM
+	//if (userID !== parseUserCookie("ccuid")) {
+	//	return; //don't retrieve data 
+	//}
+
 	var data = "userID=" + userID;
-	console.log(data);
+
 	$.ajax({
 		data: data,
 		type: "post",
@@ -22,6 +28,8 @@ function parseUserData (userData) {
 	buildProfileMarkup(username, firstname, character, description, imageSrc);
 }
 
+
+
 function buildProfileMarkup (username, firstname, character, description, imageSrc) {
 	$(".username").html(username);
 	$(".first-name").html(firstname);
@@ -30,8 +38,13 @@ function buildProfileMarkup (username, firstname, character, description, imageS
 	$(".profile-image").attr("src", imageSrc);
 }
 
+function displayEditProfile () {
+	$(".profile-information .hide").removeClass("hide");
+	$(".edit-profile").addClass("hide");
+}
+
 $(document).ready(function() {
-	//if my account page
+	//if viewing my account page
 	$(document).on('login-verified', function(){
 		if ($("body").hasClass("my-account")) {
 			var userID = $("body").attr("data-userid");
@@ -39,11 +52,18 @@ $(document).ready(function() {
 		}
 	});
 
-	//if user profile
+	//if viewing another user profile
 	if ($("body").hasClass("user-profile")) {
 		var pageUrl = window.location.href;
 		var profileID = pageUrl.split("profileId=");
 		retriveUserData(profileID[1]);
 	}
+
+	$(".edit-profile").on("click", function() {
+		//verify userId is same as one in cookie and not someone medling with the DOM
+		//if (userID === parseUserCookie("ccuid")) {
+			displayEditProfile();
+		//}
+	});
 
 });

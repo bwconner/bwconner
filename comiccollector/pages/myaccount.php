@@ -29,8 +29,8 @@
 					<p class="user-description"></p>
 					<input id="user-description" type="text" name="description" class="user-description hide" placeholder="Enter New Description"/>
 
-					<button class="edit-profile">Edit Profile</button>
-					<button class="submit-edit hide">Submit Profile</button>
+					<button class="edit-profile button">Edit Profile</button>
+					<button class="submit-edit hide button">Submit Profile</button>
 				</div>
 			</div>
 		</div>
