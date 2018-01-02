@@ -16,8 +16,6 @@
 	$post_cookieID= $_POST["cookieID"];
 	$post_profileText= "";
 	$post_favoriteCharacter= "";
-	$post_favoriteCharacter= "";
-
 
 	//Insert the new profile into the user profiles table in DB
 	$link = mysqli_connect($hostname,$username, $password, $dbname);
