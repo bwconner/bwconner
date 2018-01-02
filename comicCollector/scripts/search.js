@@ -158,7 +158,7 @@ function buildResultMarkup(resultTitle, resultImage, resultSeries, resultIssueNu
 			//markup = markup + "<div class='result-characters'> Featured Characters: " + featuredCharacters + "</div>";
 		}
 
-		var addToCollection = "<div class='button' data-comicid=" + resultId + " href='/comiccollector/pages/viewcomicinfo?&comicId=" + resultId + "'>Add to Collection</div>",
+		var addToCollection = "<div class='button add-to-collection' data-comicid=" + resultId + " href='/comiccollector/pages/viewcomicinfo?&comicId=" + resultId + "'>Add to Collection</div>",
 			addedSuccess = "<div class='hide'>Added Successfully!</div>",
 			viewFullInfoLink = "<a href='/comiccollector/pages/viewcomicinfo?&comicId=" + resultId + "'>View Full Information</a>";
 
@@ -219,10 +219,10 @@ $(document).ready(function() {
 		}
 	});
 
-	$('.search').on('click', function() {
+	$(".search").on("click", function() {
 		//Reset global search terms
-		currentSearchTerm = $('.search-by-title').val();
-		currentSearchCharacter = $('.search-by-character').val();
+		currentSearchTerm = $(".search-by-title").val();
+		currentSearchCharacter = $(".search-by-character").val();
 		getResults();
 	});
 
