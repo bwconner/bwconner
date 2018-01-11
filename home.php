@@ -5,7 +5,7 @@
 		<link href='https://fonts.googleapis.com/css?family=Poiret+One|Amatica+SC|Cedarville+Cursive|Oswald:400,300' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" type="text/css" href="bwconner/css/base.css">
 		<link rel="stylesheet" type="text/css" href="bwconner/css/index.css">
-		<script type="text/javascript" src="bwconner/libs/jquery-3.1.0.min.js"></script>
+		<script type="text/javascript" src="bwconner/libs/jquery-3.2.1.min.js"></script>
 		<script type="text/javascript" src="bwconner/scripts/main.min.js"></script>
 	</head>
 	<body lang="en">
