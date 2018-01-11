@@ -101,7 +101,7 @@
     -webkit-clip-path: polygon(45% 0, 100% 15%, 100% 100%, 0 100%, 0 calc(100% - 55px), 0 5%);
     clip-path: polygon(45% 0, 100% 15%, 100% 90%, 0 90%, 0 calc(100% - 55px), 0 5%);
     margin-top: -107px; } }
-@media only screen and (min-width: 790px) {
+@media only screen and (min-width: 851px) {
   .site-body-section .bio-block {
     display: inline-block;
     margin: 25px 25px;
@@ -114,7 +114,7 @@
     display: inline-block;
     min-width: 300px;
     max-width: 500px; } }
-@media only screen and (min-width: 835px) {
+@media only screen and (min-width: 851px) {
   .site-body-section .bio-block {
     font-size: 22px;
     margin: 25px 5%;
