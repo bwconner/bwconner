@@ -1,7 +1,7 @@
 .project-section {
   background: #ffffff;
   border: 5px solid #0059b3;
-  box-shadow: 0px 0px 60px 5px;
+  box-shadow: 10px 10px 30px 3px;
   color: #0059b3;
   font-family: 'Oswald', sans-serif;
   letter-spacing: 0.6px;
@@ -36,7 +36,7 @@
       color: #ffffff;
       padding: 5px; }
     .project-section .project-details .project-desc {
-      padding: 5px; }
+      padding: 10px; }
 
 .project-section-header {
   background: #0059b3;
