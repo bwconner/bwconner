@@ -62,14 +62,14 @@
 	width: 50%;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 750px) {
 	.project {
 		width: 320px;
 
 		.project__details {
 			display: block;
 			float: none;
-			width: 320;
+			width: 320px;
 		}
 	}
 }

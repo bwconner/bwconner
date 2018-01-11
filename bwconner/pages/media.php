@@ -1,46 +1,12 @@
 <html>
 <head>
 	<title>bwconner.com | My Media</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href='https://fonts.googleapis.com/css?family=Poiret+One|Amatica+SC|Cedarville+Cursive|Oswald:400,300' rel='stylesheet' type='text/css'>
+	<?php include '../snippets/header.php';?>
 	<link rel="stylesheet" type="text/css" href="../libs/bwslider/bwslider.css">
-	<link rel="stylesheet" type="text/css" href="../css/base.css">
 	<link rel="stylesheet" type="text/css" href="../css/media.css">
-	<script type="text/javascript" src="../libs/jquery-3.1.0.min.js"></script>
-	<script type="text/javascript" src="../libs/jquery-3.1.0.js"></script>
-	<script type="text/javascript" src="../scripts/main.js"></script>
-	<script type="text/javascript" src="../libs/bwslider/bwslider.js"></script>
 </head>
 <body lang="en">
-	<div class="header">
-		<a class="home-header" href="../../home.html"><h1>Bruce Conner</h1></a>
-		<div class="main-nav">
-			<div class="link">
-				<a href="projects.html">MY PROJECTS</a>
-			</div>
-			<div class="link current-page">
-				<a href="media.html">MEDIA</a>
-			</div>
-			<div class="link">
-				<a href="contact.html">CONTACT ME</a>
-			</div>
-		</div>
-	</div>
-	<div class="mini-header">
-		<a class="home-header" href="../../home.html"><h2>Bruce Conner</h2></a>
-		<div class="main-nav">
-			<div class="link">
-				<a href="projects.html">MY PROJECTS</a>
-			</div>
-			<div class="link current-page">
-				<a href="media.html">MEDIA</a>
-			</div>
-			<div class="link">
-				<a href="contact.html">CONTACT ME</a>
-			</div>
-		</div>
-	</div>
-
+	<?php include '../snippets/nav.php';?>
 	<!-- IMAGE SLIDER SECTION -->
 	<div class="bwslider" data-infinite="false" data-continuous="true" data-slides-to-show="3" data-slides-per-click="1" data-slide-transition="slide" data-slide-infinite="false" data-slide-padding="5">
 		<ul class="bwslider-stack">
@@ -104,7 +70,7 @@
 		
 	</div>
 
-	<div id="video-spot-div">
+	<!-- <div id="video-spot-div">
 		<div class="san-clemente-sunset video-modal">
 			<iframe src="https://player.vimeo.com/video/86573608" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 			<div class="close-video"><p>Close Video</p></div>
@@ -113,7 +79,7 @@
 			<iframe src="https://player.vimeo.com/video/127668596" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 			<div class="close-video"><p>Close Video</p></div>
 		</div>
-	</div>
+	</div> -->
 	
 	<!-- MUSIC SECTION -->
 	<div class="spotify-section site-section">
@@ -122,22 +88,6 @@
 		<iframe src="https://embed.spotify.com/?uri=spotify%3Auser%3A122644325%3Aplaylist%3A0uYkb0V8Rd800plvDObi4c" width="320" height="500" frameborder="0" allowtransparency="true"></iframe>
 	</div>
 
-	<!-- Late Load of smoothdivscroll-->
-	<!-- jQuery library - Please load it from Google API's -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
-	<!-- jQuery UI (Custom Download containing only Widget and Effects Core)
-	     You can make your own at: http://jqueryui.com/download -->
-	<script src="../libs/smooth-div-scroll/js/jquery-ui-1.10.3.custom.min.js" type="text/javascript"></script>
-	<!-- Latest version (3.1.4) of jQuery Mouse Wheel by Brandon Aaron
-	     You will find it here: https://github.com/brandonaaron/jquery-mousewheel -->
-	<script src="../libs/smooth-div-scroll/js/jquery.mousewheel.min.js" type="text/javascript"></script>
-	<!-- jQuery Kinectic (1.8.2) used for touch scrolling -->
-	<!-- https://github.com/davetayls/jquery.kinetic/ -->
-	<script src="../libs/smooth-div-scroll/js/jquery.kinetic.min.js" type="text/javascript"></script>
-	<!-- Smooth Div Scroll 1.3 minified-->
-	<script src="../libs/smooth-div-scroll/js/jquery.smoothdivscroll-1.3-min.js" type="text/javascript"></script>
-	<!-- If you want to look at the uncompressed version you find it at
-	     js/jquery.smoothDivScroll-1.3.js -->
 	<div class="footer">
 	</div>
 </body>

@@ -1,44 +1,11 @@
 <html>
 <head>
 	<title>bwconner.com | My Projects</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href='https://fonts.googleapis.com/css?family=Poiret+One|Amatica+SC|Cedarville+Cursive|Oswald:400,300' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" href="../css/base.css">
+	<?php include '../snippets/header.php';?>
 	<link rel="stylesheet" type="text/css" href="../css/projects.css">
-	<script type="text/javascript" src="../libs/jquery-3.1.0.min.js"></script>
-	<script type="text/javascript" src="../libs/jquery-3.1.0.js"></script>
-	<script type="text/javascript" src="../scripts/main.min.js"></script>
-	<script type="text/javascript" src="../scripts/main.js"></script>
 </head>
 <body lang="en">
-	<div class="header">
-		<a class="home-header" href="../../home.html"><h1>Bruce Conner</h1></a>
-		<div class="main-nav">
-			<div class="link current-page">
-				<a href="projects.html">MY PROJECTS</a>
-			</div>
-			<div class="link">
-				<a href="media.html">MEDIA</a>
-			</div>
-			<div class="link">
-				<a href="contact.html">CONTACT ME</a>
-			</div>
-		</div>
-	</div>
-	<div class="mini-header">
-		<a class="home-header" href="../../home.html"><h2>Bruce Conner</h2></a>
-		<div class="main-nav">
-			<div class="link current-page">
-				<a href="projects.html">MY PROJECTS</a>
-			</div>
-			<div class="link">
-				<a href="media.html">MEDIA</a>
-			</div>
-			<div class="link">
-				<a href="contact.html">CONTACT ME</a>
-			</div>
-		</div>
-	</div>
+	<?php include '../snippets/nav.php';?>
 	<div class="personal-projects">
 		<div class="project__header">Personal Projects</div>
 		<div class="project">

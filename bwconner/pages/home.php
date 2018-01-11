@@ -1,44 +1,11 @@
 <html>
 	<head>
 		<title>bwconner.com | Home</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link href='https://fonts.googleapis.com/css?family=Poiret+One|Amatica+SC|Cedarville+Cursive|Oswald:400,300' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" type="text/css" href="bwconner/css/base.css">
+		<?php include '../snippets/header.php';?>
 		<link rel="stylesheet" type="text/css" href="bwconner/css/index.css">
-		<script type="text/javascript" src="bwconner/libs/jquery-3.1.0.min.js"></script>
-		<script type="text/javascript" src="bwconner/libs/jquery-3.1.0.js"></script>
-		<script type="text/javascript" src="bwconner/scripts/main.min.js"></script>
-		<script type="text/javascript" src="bwconner/scripts/main.js"></script>
 	</head>
 	<body lang="en">
-		<div class="header">
-			<h1 class="header__home-link header__home-link--large">Bruce Conner</h1>
-			<div class="header__nav">
-				<div class="header__link">
-					<a href="bwconner/pages/projects.html">MY PROJECTS</a>
-				</div>
-				<div class="header__link">
-					<a href="bwconner/pages/media.html">MEDIA</a>
-				</div>
-				<div class="header__link">
-					<a href="bwconner/pages/contact.html">CONTACT ME</a>
-				</div>
-			</div>
-		</div>
-		<div class="header header--mini-nav">
-			<h2 class="header__home-link header__home-link--small">Bruce Conner</h2>
-			<div class="header__nav">
-				<div class="header__link">
-					<a href="bwconner/pages/projects.html">MY PROJECTS</a>
-				</div>
-				<div class="header__link">
-					<a href="bwconner/pages/media.html">MEDIA</a>
-				</div>
-				<div class="header__link">
-					<a href="bwconner/pages/contact.html">CONTACT ME</a>
-				</div>
-			</div>
-		</div>
+		<?php include '../snippets/nav.php';?>
 		<div class="site-body">
 			<div class="bio-section">
 				<img class="bio-section__image" alt="Bruce Conner being interviewed" src="bwconner/images/me.jpg"/>
