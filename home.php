@@ -6,7 +6,6 @@
 		<link rel="stylesheet" type="text/css" href="bwconner/css/base.css">
 		<link rel="stylesheet" type="text/css" href="bwconner/css/index.css">
 		<script type="text/javascript" src="bwconner/libs/jquery-3.1.0.min.js"></script>
-		<script type="text/javascript" src="bwconner/libs/jquery-3.1.0.js"></script>
 		<script type="text/javascript" src="bwconner/scripts/main.min.js"></script>
 		<script type="text/javascript" src="bwconner/scripts/main.js"></script>
 	</head>
@@ -15,13 +14,13 @@
 			<h1 class="header__home-link header__home-link--large">Bruce Conner</h1>
 			<div class="header__nav">
 				<div class="header__link">
-					<a href="bwconner/pages/projects.php">MY PROJECTS</a>
+					<a href="bwconner/pages/projects">MY PROJECTS</a>
 				</div>
 				<div class="header__link">
-					<a href="bwconner/pages/media.php">MEDIA</a>
+					<a href="bwconner/pages/media">MEDIA</a>
 				</div>
 				<div class="header__link">
-					<a href="bwconner/pages/contact.php">CONTACT ME</a>
+					<a href="bwconner/pages/contact">CONTACT ME</a>
 				</div>
 			</div>
 		</div>
@@ -29,13 +28,13 @@
 			<h2 class="header__home-link header__home-link--small">Bruce Conner</h2>
 			<div class="header__nav">
 				<div class="header__link">
-					<a href="bwconner/pages/projects.php">MY PROJECTS</a>
+					<a href="bwconner/pages/projects">MY PROJECTS</a>
 				</div>
 				<div class="header__link">
-					<a href="bwconner/pages/media.php">MEDIA</a>
+					<a href="bwconner/pages/media">MEDIA</a>
 				</div>
 				<div class="header__link">
-					<a href="bwconner/pages/contact.php">CONTACT ME</a>
+					<a href="bwconner/pages/contact">CONTACT ME</a>
 				</div>
 			</div>
 		</div>
