@@ -6,14 +6,19 @@
 	width: 90%;
 }
 
-.site-body-section {
+.bio-section {
 	display: table;
 	width: 100%;
 	box-shadow: 0px 0px 60px 5px;
 	background: #ffffff;
 	margin: 0px auto;
 
-	.bio-block {
+	.bio-section__image {
+		width: 100%;
+		display: block;
+	}
+
+	.bio-section__text {
 		color: #0059b3;
 		display: block;
 		font-size: 20px;
@@ -21,14 +26,9 @@
 		text-align: center;
 		width: 90%;
 	}
-
-	.bio-image {
-		width: 100%;
-		display: block;
-	}
 }
 
-.grid-wrapper {
+.comic-grid {
 	display: grid;
 	grid-gap: 10px;
 	grid-template-columns: repeat(2, 1fr);
@@ -36,17 +36,17 @@
 	max-width: 100%;
 	font-size: 0;
 	padding: 30px 0px 0px;
-}
 
-.photo-item {
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: cover;
+	.comic-grid__item {
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
 }
 
 @supports (display: grid) {
 	
-	.standard-item-1 {
+	.comic-grid__item--1 {
 		background-image: url("../images/sliderImages/joeWings.jpg");
 		grid-column: 1 / span 1;
 		grid-row: 1 / 50;
@@ -54,7 +54,7 @@
 		clip-path: polygon(0 0, 100% 0, 100% calc(100% - 45px), 0 100%);
 	}
 
-	.standard-item-2 {
+	.comic-grid__item--2 {
 		background-image: url("../images/sliderImages/alwayssunny.jpg");
 		grid-column: 2 / span 1;
 		grid-row: 1 / 50;
@@ -62,7 +62,7 @@
 		clip-path: polygon(0 0, 100% 0, 100% calc(100% - 80px), 0 calc(100% - 45px));
 	}
 
-	.standard-item-3 {
+	.comic-grid__item--3 {
 		background-image: url("../images/sliderImages/sanfran3.jpg");
 		grid-column: 1 / span 1;
 		grid-row: 50 / 100;
@@ -71,7 +71,7 @@
 		margin-top: -73px;
 	}
 
-	.standard-item-4 {
+	.comic-grid__item--4 {
 		background-image: url("../images/sliderImages/ericWedding.jpg");
 		grid-column: 2 / span 1;
 		grid-row: 50 / 100;
@@ -82,7 +82,7 @@
 		margin-bottom: 18px;
 	}
 
-	.standard-item-5 {
+	.comic-grid__item--5 {
 		background-image: url("../images/sliderImages/q2.jpg");
 		grid-column: 1 / span 2;
 		grid-row: 100 / 150;
@@ -91,7 +91,7 @@
 		margin-top: -107px;
 	}
 
-	.standard-item-6 {
+	.comic-grid__item--6 {
 		background-image: url("../images/sliderImages/picnic2.jpg");
 		grid-column: 1 / span 1;
 		grid-row: 150 / 200;
@@ -100,7 +100,7 @@
 		margin-top: -73px;
 	}
 
-	.standard-item-7 {
+	.comic-grid__item--7 {
 		background-image: url("../images/sliderImages/dc1.jpg");
 		grid-column: 2 / span 1;
 		grid-row: 150 / 200;
@@ -111,7 +111,7 @@
 		margin-bottom: 18px;
 	}
 
-	.standard-item-8 {
+	.comic-grid__item--8 {
 		background-image: url("../images/sliderImages/sanclem1.jpg");
 		grid-column: 1 / span 2;
 		grid-row: 200 / 250;
@@ -120,7 +120,6 @@
 		margin-top: -107px;
 	}
 }
-
 
 @media only screen and (min-width: 851px) {
 	.site-body-section {
@@ -141,7 +140,6 @@
 		}
 	}
 }
-
 
 @media only screen and (min-width: 851px) {
 	.site-body-section .bio-block {
