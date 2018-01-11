@@ -3,9 +3,8 @@ body {
   margin: 0px;
   background: rgba(153, 204, 255, 0.4);
   overflow-x: hidden; }
-
-a {
-  text-decoration: none; }
+  body a {
+    text-decoration: none; }
 
 /* NAV STYLES */
 .header {
@@ -14,20 +13,20 @@ a {
   color: #ffffff;
   text-align: center;
   width: 100%; }
-  .header h1,
-  .header .home-header {
+  .header .header__home-link {
     color: #ffffff;
     cursor: pointer;
-    font-family: 'Amatica SC', cursive;
+    font-family: 'Amatica SC', cursive; }
+  .header .header__home-link--large {
     font-size: 100px;
     line-height: 80px;
     margin-bottom: 40px;
     margin-top: 0px; }
-  .header .main-nav {
+  .header .header__nav {
     height: 40px;
     margin: 0px auto;
     padding-bottom: 15px; }
-  .header .link {
+  .header .header__link {
     font-size: 24px;
     color: #ffffff;
     border-top: 1px solid #ffffff;
@@ -35,72 +34,35 @@ a {
     display: inline-block;
     padding: 0px 5px;
     margin: 0px 8px; }
-    .header .link a {
+    .header .header__link a {
       color: #ffffff;
       text-decoration: none;
       font-family: 'Oswald', sans-serif; }
 
-.mini-header {
-  background: #0059b3;
-  /*#0066cc;*/
-  color: #ffffff;
-  text-align: center;
-  width: 100%;
+.header--mini-nav {
   height: 0px;
   opacity: 0;
   position: fixed;
   top: 0px;
   overflow: hidden; }
-  .mini-header .home-header {
-    color: #ffffff;
-    cursor: pointer;
-    font-family: 'Amatica SC', cursive;
-    font-size: 100px;
-    line-height: 80px;
-    margin-bottom: 40px;
-    margin-top: 0px; }
-  .mini-header .link {
-    font-size: 24px;
-    color: #ffffff;
-    border-top: 1px solid #ffffff;
-    border-bottom: 1px solid #ffffff;
-    display: inline-block;
-    padding: 0px 5px;
-    line-height: 25px;
-    margin: 0px 8px; }
-    .mini-header .link a {
-      color: #ffffff;
-      text-decoration: none;
-      font-family: 'Oswald', sans-serif; }
-  .mini-header .in-view {
-    height: 0px;
-    overflow: hidden; }
-  .mini-header h2 {
-    color: #ffffff;
-    cursor: pointer;
-    font-family: 'Amatica SC', cursive;
+  .header--mini-nav .header__home-link--small {
     float: left;
     font-size: 35px;
     line-height: 44px;
     margin: 0px 10px; }
-  .mini-header .main-nav {
+  .header--mini-nav .header__nav {
     float: right;
     line-height: 63px;
-    margin: 0px 10px; }
+    margin: 0px 10px;
+    padding: 0px; }
+  .header--mini-nav .header__link {
+    line-height: 25px; }
 
 .current-page {
   color: #99ccff;
   border-color: #99ccff; }
   .current-page a {
     color: #99ccff; }
-
-/* FOOTER STYLES */
-.site-footer {
-  background: #0059b3;
-  color: #ffffff;
-  height: 120px;
-  bottom: 0px;
-  width: 100%; }
 
 /* BASIC BODY STYLES */
 .site-body {
@@ -113,7 +75,7 @@ a {
   font-size: 17px;
   letter-spacing: .7px; }
 
-.site-section {
+.bio-section {
   width: 80%;
   margin: 0 auto;
   border: 5px solid #0059b3;
@@ -127,20 +89,28 @@ a {
   line-height: 26px;
   padding: 5px 10px; }
 
-.section-body {
+.bio-section__text {
   background: #ffffff;
   color: #0059b3;
   font-family: 'Oswald', sans-serif;
   font-size: 15px;
   letter-spacing: .7px; }
 
+/* FOOTER STYLES */
+.site-footer {
+  background: #0059b3;
+  color: #ffffff;
+  height: 120px;
+  bottom: 0px;
+  width: 100%; }
+
 /*MQ OVERRIDES*/
 @media only screen and (min-width: 448px) {
-  .header h1 {
+  .header .header__home-link--large {
     margin-bottom: 25px;
     line-height: 100px; }
 
-  .mini-header.in-view {
+  .header--in-view {
     height: 50px;
     opacity: 0.95;
     transition: all .2s ease .1s;

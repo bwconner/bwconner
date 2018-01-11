@@ -5,9 +5,9 @@ function miniNavSetup() {
 	//show mini nav
 	$window.scroll(function() {
 		if ($window.scrollTop() > headerHeight ) {
-			$(".mini-header").addClass("in-view");
+			$(".header--mini-nav").addClass("header--in-view");
 		} else if ( $window.scrollTop() <= headerHeight ) {
-			$(".mini-header").removeClass("in-view");
+			$(".header--mini-nav").removeClass("header--in-view");
 		}
 	});
 }

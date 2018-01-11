@@ -102,20 +102,20 @@
     clip-path: polygon(45% 0, 100% 15%, 100% 90%, 0 90%, 0 calc(100% - 55px), 0 5%);
     margin-top: -107px; } }
 @media only screen and (min-width: 851px) {
-  .site-body-section .bio-block {
+  .bio-section .bio-section__text {
     display: inline-block;
     margin: 25px 25px;
     font-size: 20px;
     text-align: center;
     width: calc(100% - 350px);
     vertical-align: top; }
-  .site-body-section .bio-image {
+  .bio-section .bio-section__image {
     width: 40%;
     display: inline-block;
     min-width: 300px;
     max-width: 500px; } }
 @media only screen and (min-width: 851px) {
-  .site-body-section .bio-block {
+  .bio-section .bio-section__text {
     font-size: 22px;
     margin: 25px 5%;
     width: 50%; } }
