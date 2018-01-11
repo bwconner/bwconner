@@ -1,17 +1,20 @@
 .project-section {
-	color: #0059b3;
-	font-family: 'Oswald', sans-serif;
 	background: #ffffff;
 	border: 5px solid #0059b3;
-	width: 90%;
-	max-width: 1000px;
-	margin: 25px auto;
-	min-width: 300px;
+	box-shadow: 0px 0px 60px 5px;
+	color: #0059b3;
+	font-family: 'Oswald', sans-serif;
 	letter-spacing: 0.6px;
+	margin: 25px auto;
+	max-width: 1000px;
+	min-width: 300px;
+	width: 90%;
 
 	.bwconner {
 		background: #0059b3;
+		border-right: 5px solid #0059b3;
 		color: #ffffff;
+		display: inline-block;
 		font-family: 'Amatica SC', cursive;
 		font-size: 75px;
 		height: 100%;
@@ -19,16 +22,14 @@
 		max-width: 320px;
 		text-align: center;
 		width: 100%;
-		display: inline-block;
-		border-right: 5px solid #0059b3;
 	}
 
 	img {
+		background: #0059b3;
+		border-right: 5px solid #0059b3;
+		display: inline-block;
 		max-width: 320px;
 		width: 100%;
-		display: inline-block;
-		border-right: 5px solid #0059b3;
-		background: #0059b3;
 	}
 
 	.project-details {
@@ -49,22 +50,23 @@
 }
 
 .project-section-header {
+	background: #0059b3;
 	color: #ffffff;
 	font-family: 'Oswald', sans-serif;
-	text-align: center;
 	font-size: 18px;
-	width: 50%;
-	max-width: 1000px;
 	margin: 25px auto;
+	max-width: 1000px;
 	min-width: 300px;
-	background: #0059b3;
 	padding: 3px 0px;
+	text-align: center;
+	width: 50%;
 }
 
 @media only screen and (max-width: 600px) {
 	.project-section {
 		width: 320px;
 	}
+
 	.project-details {
 		display: block;
 		float: none;
