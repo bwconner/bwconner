@@ -18,14 +18,26 @@ module.exports = function(grunt) {
         }
       }
     },
+    uglify: {
+      my_target: {
+        files: {
+          'bwconner/scripts/main.min.js': ['bwconner/scripts/main.js']
+        }
+      }
+    },
     watch: {
       css: {
         files: '**/*.scss',
         tasks: ['sass']
+      },
+      scripts: {
+        files: ['**/main.js'],
+        tasks: ['uglify']
       }
     }
   });
   grunt.loadNpmTasks('grunt-contrib-sass');
-  grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-watch');  
   grunt.registerTask('default',['watch']);
 }

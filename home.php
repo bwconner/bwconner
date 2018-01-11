@@ -7,7 +7,6 @@
 		<link rel="stylesheet" type="text/css" href="bwconner/css/index.css">
 		<script type="text/javascript" src="bwconner/libs/jquery-3.1.0.min.js"></script>
 		<script type="text/javascript" src="bwconner/scripts/main.min.js"></script>
-		<script type="text/javascript" src="bwconner/scripts/main.js"></script>
 	</head>
 	<body lang="en">
 		<div class="header">

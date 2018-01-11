@@ -4,11 +4,13 @@
   "description": "bwconner.com",
   "main": "index.js",
   "dependencies": {
+    "grunt-minified": "0.0.6",
     "npm": "^5.5.1"
   },
   "devDependencies": {
     "grunt": "^1.0.1",
     "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^3.3.0",
     "grunt-contrib-watch": "^1.0.0"
   },
   "scripts": {

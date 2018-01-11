@@ -3,4 +3,3 @@
 <link rel="stylesheet" type="text/css" href="../css/base.css">
 <script type="text/javascript" src="../libs/jquery-3.1.0.min.js"></script>
 <script type="text/javascript" src="../scripts/main.min.js"></script>
-<script type="text/javascript" src="../scripts/main.js"></script>
