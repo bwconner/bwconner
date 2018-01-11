@@ -27,11 +27,6 @@
 	}
 }
 
-.footer {
-	position: fixed;
-	bottom: 0px;
-}
-
 .grid-wrapper {
 	display: grid;
 	grid-gap: 10px;
@@ -39,7 +34,7 @@
 	grid-auto-rows: 1fr;
 	max-width: 100%;
 	font-size: 0;
-	padding: 30px 0px 80px;
+	padding: 30px 0px 0px;
 }
 
 .photo-item {
