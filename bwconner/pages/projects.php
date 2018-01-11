@@ -37,20 +37,6 @@
 			</div>	
 		</div>
 		<div class="project">
-			<a href="https://www.shitpay.com"><img class="project__image" src="../images/projectImages/shitpaylogo.jpg"/></a>
-			<div class="project__details">
-				<a href="https://www.shitpay.com"><div class="project__title">ShitPay.com</div></a>
-				<div class="project__desc">The best place to calculate how much you earn on the shitter.</div>
-			</div>	
-		</div>
-		<div class="project">
-			<a href=""><img class="project__image" src="../images/projectImages/h3h3.jpg"/></a>
-			<div class="project__details">
-				<div class="project__title">h3h3Soundboard.com</div>
-				<div class="project__desc">A soundboard I created in August of 2016 inspired by Ethan Klein's beautiful cough.</div>
-			</div>
-		</div>
-		<div class="project">
 			<img class="project__image" src="../images/projectImages/barnstormlogo.jpg"/>
 			<div class="project__details">
 				<div class="project__title">Barnstorm Sports</div>
