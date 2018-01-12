@@ -101,7 +101,7 @@ function processResults(data) {
 		var resultTitle = resultData[0].title,
 			resultId = resultData[0].id;
 
-		var markup = buildResultMarkup(resultTitle, resultImage, resultSeries, resultIssueNumber, resultDescription, featuredCharacters, resultCreators, resultId);
+		var markup = buildResultMarkup(resultTitle, resultImage, resultId);
 
 
 		$(".results").append(markup);
@@ -119,8 +119,8 @@ function buildResultMarkup(resultTitle, resultImage, resultId) {
 			comicId: resultId
 		};
 
-		var template = $("#result-template").html();
-		var html = Mustache.render(template, data);
+		var template = $("#result-template").html(),
+			html = Mustache.render(template, data);
 
 		return html;
 }

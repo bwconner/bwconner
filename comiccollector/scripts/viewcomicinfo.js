@@ -6,9 +6,8 @@ function getComicInfo(comicId) {
 }
 
 function processComicInfo(data) {
-	console.log(data);
 	var resultData = data.data.results[0];
-	console.log(resultData);
+
 	if (resultData.images[0] !== undefined && resultData.images[0].path !== undefined) {
 		var resultImage = resultData.images[0].path + "." + resultData.images[0].extension;
 	} else {
@@ -16,69 +15,43 @@ function processComicInfo(data) {
 		var resultImage = "http://bwconner.com/comiccollector/images/noimage.png";
 	}
 
-	var resultTitle = resultData.title;
-	var resultSeries = resultData.series.name;
-	var resultIssueNumber = resultData.issueNumber;
-	var resultDescription = resultData.description;
-	var resultId = resultData.id;
+	var resultTitle = resultData.title,
+		resultSeries = resultData.series.name,
+		resultIssueNumber = resultData.issueNumber,
+		resultDescription = resultData.description,
+		resultId = resultData.id;
 
-	var featuredCharacters = [];
-	var resultCreators = "";
+	var featuredCharacters = [],
+		resultCreatorList = "";
 
 	$(resultData.characters.items).each(function(index) {
 		featuredCharacters[index] = $(this)[0].name;
 	});
 
 	$(resultData.creators.items).each(function(index) {
-		resultCreators = resultCreators + "<div class='creator'>" + $(this)[0].name + " - " + $(this)[0].role + "</div>";
+		resultCreatorList = resultCreatorList + "<div class='creator'>" + $(this)[0].name + " - " + $(this)[0].role + "</div>";
 	});
 
-	var markup = buildResultMarkup(resultTitle, resultImage, resultSeries, resultIssueNumber, resultDescription, featuredCharacters, resultCreators, resultId);
-
+	var markup = buildComicMarkup(resultTitle, resultImage, resultSeries, resultIssueNumber, resultDescription, featuredCharacters, resultCreatorList, resultId);
 
 	$(".site-body-wrapper").append(markup);
-
-	if (totalPages > 1) {
-		$(".pagination").removeClass("hide");
-	}
 }
 
-function outputResults(resultsList) {
-	$(resultsList).each(function(result) {
-		var resultData = $(this);
-		var resultImage = resultData[0].images[0].path + "." + resultData[0].images[0].extension;
-		var resultTitle = resultData[0].title;
-		var markup = buildResultMarkup(resultTitle, resultImage);
+function buildComicMarkup(resultTitle, resultImage, resultSeries, resultIssueNumber, resultDescription, featuredCharacters, resultCreatorList, resultId) {
 
+		var data = { 
+			image: resultImage,
+			title: resultTitle,
+			comicId: resultId,
+			creators: resultCreatorList,
+			characters: featuredCharacters,
+			description: resultDescription
+		};
 
-		$(".results").append(markup);
-	});
+		var template = $("#comic-template").html(),
+			html = Mustache.render(template, data);
 
-}
-
-function buildResultMarkup(resultTitle, resultImage, resultSeries, resultIssueNumber, resultDescription, featuredCharacters, resultCreators, resultId) {
-		var markup = "<div class='search-result'>" +
-		"<img class='result-img' src='" + resultImage + "'/>" +
-		"<div class='result-information'>" +
-		"<div class='result-title'>" + resultTitle + "</div>";
-
-		//sanitize data function
-		if(resultCreators !== null && resultCreators.length > 0) {
-			markup = markup + "<div class='result-creators'> Creators: " + resultCreators + "</div>";
-		}
-		
-		if(resultDescription !== null && resultDescription.length > 0) {
-			markup = markup + "<div class='result-description'>" + resultDescription + "</div>";
-		}
-
-		if(featuredCharacters !== null && featuredCharacters.length > 0) {
-			markup = markup + "<div class='result-characters'> Featured Characters: " + featuredCharacters + "</div>";
-		}
-
-		markup = markup + "</div></div>";
-		
-
-		return markup;
+		return html;
 }
 
 $(document).ready(function() {

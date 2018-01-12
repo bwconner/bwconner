@@ -15,7 +15,7 @@
 				<div class="result-creators">
 				</div>
 				<div class="button add-to-collection" data-comicid="{{comicId}}">Add to Collection</div>
-				<div class="hide">Added Successfully!</div>
+				<div class="result__added-succesfully hide">Added Successfully!</div>
 				<a href="/comiccollector/pages/viewcomicinfo?&comicId={{comicId}}">View Full Information</a>
 			</div>
 		</div>
