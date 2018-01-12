@@ -57,7 +57,7 @@ function buildComicMarkup(resultTitle, resultImage, resultSeries, resultIssueNum
 $(document).ready(function() {
 	var pageUrl = window.location.href;
 	var comicId = pageUrl.split("comicId=");
-	console.log(comicId[1]);
+
 	getComicInfo(comicId[1]);
 });
 
