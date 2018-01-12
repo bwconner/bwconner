@@ -85,6 +85,7 @@ function createCharacterIdList(data) {
 function processResults(data) {
 	var totalResults = data.data.total,
 		resultsList = data.data.results;
+
 	totalPages = Math.ceil(totalResults/resultLimit);
 
 	$(".spinner").addClass("hide"); //remove spinner
@@ -98,27 +99,7 @@ function processResults(data) {
 		}
 
 		var resultTitle = resultData[0].title,
-			resultSeries = resultData[0].series.name,
-			resultIssueNumber = resultData[0].issueNumber,
-			resultDescription = resultData[0].description,
 			resultId = resultData[0].id;
-	
-		var featuredCharacters = [],
-			resultCreators = "";
-
-		$(resultData[0].characters.items).each(function(index) {
-			featuredCharacters[index] = $(this)[0].name;
-		});
-
-		$(resultData[0].creators.items).each(function(index) {
-			if (index < 3) {
-				resultCreators = resultCreators + "<div class='creator'>" + $(this)[0].name + " - " + $(this)[0].role + "</div>";
-			}
-
-			if (index === 4) {
-				resultCreators = resultCreators + "<div class='creator'>More...</div>";
-			}
-		});
 
 		var markup = buildResultMarkup(resultTitle, resultImage, resultSeries, resultIssueNumber, resultDescription, featuredCharacters, resultCreators, resultId);
 
@@ -131,40 +112,17 @@ function processResults(data) {
 	}
 }
 
-function buildResultMarkup(resultTitle, resultImage, resultSeries, resultIssueNumber, resultDescription, featuredCharacters, resultCreators, resultId) {
-		var markup = "<div class='search-result comic-"+ resultId +"' data-title='" + resultTitle + "' data-image='" + resultImage + "' data-character='' data-date=''>" +
-		"<img class='result-img' src='" + resultImage + "'/>" +
-		"<div class='result-information'>" +
-		"<div class='result-title'>" + resultTitle + "</div>";
+function buildResultMarkup(resultTitle, resultImage, resultId) {
+		var data = { 
+			image: resultImage,
+			title: resultTitle,
+			comicId: resultId
+		};
 
-		//sanitize data function
-		if(resultCreators !== null && resultCreators.length > 0) {
-			markup = markup + "<div class='result-creators'> Creators: " + resultCreators + "</div>";
-		}
-		
-		if(resultDescription !== null && resultDescription.length > 0) {
-			if (resultDescription.length > 100) {
-				resultDescription = resultDescription.substring(0, 100) + "...";
-			}
+		var template = $("#result-template").html();
+		var html = Mustache.render(template, data);
 
-			//markup = markup + "<div class='result-description'>" + resultDescription + "</div>";
-		}
-
-		if(featuredCharacters !== null && featuredCharacters.length > 0) {
-			if (featuredCharacters.length > 100) {
-				featuredCharacters = featuredCharacters.substring(0, 100) + "...";
-			}
-
-			//markup = markup + "<div class='result-characters'> Featured Characters: " + featuredCharacters + "</div>";
-		}
-
-		var addToCollection = "<div class='button add-to-collection' data-comicid=" + resultId + ">Add to Collection</div>",
-			addedSuccess = "<div class='hide'>Added Successfully!</div>",
-			viewFullInfoLink = "<a href='/comiccollector/pages/viewcomicinfo?&comicId=" + resultId + "'>View Full Information</a>";
-
-		markup = markup + addToCollection + addedSuccess + viewFullInfoLink + "</div></div>";
-		
-		return markup;
+		return html;
 }
 
 function gotoPage(newPage) {

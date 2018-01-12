@@ -165,10 +165,10 @@ a {
   background-image: url("../images/collectorPixelArt.png");
   background-repeat: no-repeat;
   background-size: cover;
+  border: 16px solid #f78f3f;
   border-bottom: 16px solid #518cca;
   border-radius: 50%;
   border-top: 16px solid #518cca;
-  border: 16px solid #f78f3f;
   height: 80px;
   margin: 0px auto;
   width: 80px; }
