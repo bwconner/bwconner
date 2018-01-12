@@ -17,8 +17,8 @@ a {
 	text-align: center;
 	width: 100%;
 
-	.header-logo,
-	.home-header {
+	.header__logo,
+	.header__home-link {
 		color: #ffffff;
 		cursor: pointer;
 		font-family: 'Amatica SC', cursive;
@@ -28,7 +28,7 @@ a {
 		padding: 0px;
 	}
 
-	.header-logo {
+	.header__logo {
 		background-image: url("../images/collectorPixelArt.png");
 		background-position: center;
 		background-repeat: no-repeat;
@@ -37,13 +37,13 @@ a {
 		text-shadow: 4px 4px 8px #000;
 	}
 
-	.main-nav {
+	.header__main-nav {
 		height: 40px;
 		position: absolute;
 		right: 0px;
 	}
 
-	.link {
+	.header__link {
 		border-bottom: 1px solid #ffffff;
 		color: #ffffff;
 		display: inline-block;
@@ -176,7 +176,7 @@ a {
 		}
 	}
 
-	.account-link {
+	.header__link-account {
 		background-image: url("../images/icons/account.png");
 
 		&.selected {
@@ -186,7 +186,7 @@ a {
 		}
 	}
 
-	.search-link {
+	.header__link-search {
 		background-image: url("../images/icons/search.png");
 
 		&.selected {
