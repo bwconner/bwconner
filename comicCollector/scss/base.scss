@@ -86,7 +86,7 @@ a {
 }
 
 .mini-header {
-	background: #e23636; /*#0066cc;*/
+	background: #e23636;
 	box-shadow: 4px 4px 15px #000;
 	color: #ffffff;
 	height: 0px;
@@ -97,7 +97,7 @@ a {
 	top: 0px;
 	width: 100%;
 
-	.home-header {
+	.header__home-link {
 		color: #ffffff;
 		cursor: pointer;
 		font-family: 'Amatica SC', cursive;
@@ -107,7 +107,7 @@ a {
 		margin-top: 0px;
 	}
 
-	.link {
+	.header__link {
 		border-bottom: 1px solid #ffffff;
 		color: #ffffff;
 		display: inline-block;
@@ -150,15 +150,15 @@ a {
 		}
 	}
 
-	.main-nav {
+	.header__main-nav {
 		float: right;
 		line-height: 63px;
 		margin: 0px 10px;
 	}
 }
 
-.main-nav {
-	.link {
+.header__main-nav {
+	.header__link {
 		border-bottom: 0px;
 		text-decoration: none;
 

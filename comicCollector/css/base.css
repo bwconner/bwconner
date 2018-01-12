@@ -66,7 +66,6 @@ a {
 
 .mini-header {
   background: #e23636;
-  /*#0066cc;*/
   box-shadow: 4px 4px 15px #000;
   color: #ffffff;
   height: 0px;
@@ -76,7 +75,7 @@ a {
   text-align: center;
   top: 0px;
   width: 100%; }
-  .mini-header .home-header {
+  .mini-header .header__home-link {
     color: #ffffff;
     cursor: pointer;
     font-family: 'Amatica SC', cursive;
@@ -84,7 +83,7 @@ a {
     line-height: 80px;
     margin-bottom: 40px;
     margin-top: 0px; }
-  .mini-header .link {
+  .mini-header .header__link {
     border-bottom: 1px solid #ffffff;
     color: #ffffff;
     display: inline-block;
@@ -92,7 +91,7 @@ a {
     line-height: 25px;
     margin: 0px 8px;
     padding: 0px 5px; }
-    .mini-header .link a {
+    .mini-header .header__link a {
       color: #ffffff;
       font-family: 'Oswald', sans-serif;
       text-decoration: none; }
@@ -117,32 +116,32 @@ a {
       left: 8px;
       position: absolute;
       width: 23px; }
-  .mini-header .main-nav {
+  .mini-header .header__main-nav {
     float: right;
     line-height: 63px;
     margin: 0px 10px; }
 
-.main-nav .link {
+.header__main-nav .header__link {
   border-bottom: 0px;
   text-decoration: none; }
-  .main-nav .link.selected {
+  .header__main-nav .header__link.selected {
     background: #000; }
-  .main-nav .link a {
+  .header__main-nav .header__link a {
     background-size: cover;
     display: block;
     height: 30px;
     line-height: 30px;
     margin-top: 10px;
     width: 30px; }
-.main-nav .header__link-account {
+.header__main-nav .header__link-account {
   background-image: url("../images/icons/account.png"); }
-  .main-nav .header__link-account.selected {
+  .header__main-nav .header__link-account.selected {
     background-image: url("../images/icons/account_selected.png");
     background-size: cover;
     background: #000; }
-.main-nav .header__link-search {
+.header__main-nav .header__link-search {
   background-image: url("../images/icons/search.png"); }
-  .main-nav .header__link-search.selected {
+  .header__main-nav .header__link-search.selected {
     background-image: url("../images/icons/search_selected.png");
     background-size: cover;
     background: #000; }
