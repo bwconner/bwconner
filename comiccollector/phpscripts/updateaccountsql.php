@@ -15,7 +15,6 @@
 	$post_profileText= $_POST["profileText"];
 	$post_favoriteCharacter= $_POST["favoriteCharacter"];
 
-
 	//Insert the new profile into the user profiles table in DB
 	$link = mysqli_connect($hostname,$username, $password, $dbname);
 	$sql = "UPDATE user_profiles SET `firstName` = '".$post_firstName."', `favoriteCharacter` = '".$post_favoriteCharacter."', `profileText` = '".$post_profileText."' WHERE `userName` = '".$post_username."' AND `userID` = '".$post_userID."'";

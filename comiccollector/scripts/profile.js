@@ -29,22 +29,22 @@ function parseUserData (userData) {
 }
 
 function buildProfileMarkup (username, firstname, character, description, imageSrc) {
-	$(".username").html(username);
-	$(".first-name").html(firstname);
-	$(".favorite-character").html(character);
-	$(".user-description").html(description);
-	$(".profile-image").attr("src", imageSrc);
+	$(".profile__username").html(username);
+	$(".profile__first-name").html(firstname);
+	$(".profile__favorite-character").html(character);
+	$(".profile__user-description").html(description);
+	$(".profile__profile-image").attr("src", imageSrc);
 }
 
 function displayEditProfile () {
-	$(".profile-information input.hide").removeClass("hide");
-	$(".profile-information .submit-edit.hide").removeClass("hide");
+	$(".profile__information input.hide").removeClass("hide");
+	$(".profile__information .submit-edit.hide").removeClass("hide");
 	$(".edit-profile").addClass("hide");
 
 	//Add in existing text placeholders if they are filled in already
-	$(".first-name-field").val($(".firstname").text());
-	$(".favorite-character-field").val($(".favorite-character").text());
-	$(".user-description-field").val($(".user-description").text());
+	$(".profile__first-name-field").val($(".profile__firstname").text());
+	$(".profile__favorite-character-field").val($(".profile__favorite-character").text());
+	$(".profile__user-description-field").val($(".profile__user-description").text());
 
 }
 
@@ -85,21 +85,21 @@ function verifyAccountCookie (cookieValue) {
 
 function updateAccount (newUserID) {
 	var userCookieID = createNewToken(),
-		data = "username=" + $(".username").text() + "&userID=" + $("body").attr("data-userid") + "&firstname=" + $(".firstname-field").val() + "&favoriteCharacter=" + $(".favorite-character-field").val() + "&profileText=" + $(".user-description-field").val();
-
+		data = "username=" + $(".profile__username").text() + "&userID=" + $("body").attr("data-userid") + "&firstname=" + $(".profile__first-name-field").val() + "&favoriteCharacter=" + $(".profile__favorite-character-field").val() + "&profileText=" + $(".profile__user-description-field").val();
+console.log(data);
 	$.ajax({
 		data: data,
 		type: "post",
 		url: "../phpscripts/updateaccountsql.php",
 		success: function(data){
-			$(".first-name").html($(".firstname-field").val());
-			$(".favorite-character").html($(".favorite-character-field").val());
-			$(".user-description").html($(".user-description-field").val());
+			$(".profile__first-name").html($(".profile__first-name-field").val());
+			$(".profile__favorite-character").html($(".profile__favorite-character-field").val());
+			$(".profile__user-description").html($(".profile__user-description-field").val());
 
-			$(".profile-information input").addClass("hide");
-			$(".profile-information .submit-edit").addClass("hide");
+			$(".profile__information input").addClass("hide");
+			$(".profile__information .submit-edit").addClass("hide");
 			$(".edit-profile").removeClass("hide");
-			$(".profile-information .edit-success").removeClass("hide");
+			$(".profile__information .edit-success").removeClass("hide");
 		}
 	});
 }

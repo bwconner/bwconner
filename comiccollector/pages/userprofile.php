@@ -8,21 +8,21 @@
 	<body class="user-profile">
 		<?php include '../snippets/header.html';?>
 		<div class="site-body-wrapper">
-			<div class="profile-wrapper">
-				<div class="profile-image-wrapper">
-					<img class="profile-image" src="" alt=""/>
+			<div class="profile">
+				<div class="profile__image-wrapper">
+					<img class="profile__image" src="" alt=""/>
 				</div>
-				<div class="profile-information">
-					<p class="username"></p>
+				<div class="profile__information">
+					<p class="profile__username"></p>
 
-					<p class="profile-label">First Name:</p>
-					<p class="first-name"></p>
+					<p class="profile__label">First Name:</p>
+					<p class="profile__first-name"></p>
 
-					<p class="profile-label">Favorite Character:</p>
-					<p class="favorite-character"></p>
+					<p class="profile__label">Favorite Character:</p>
+					<p class="profile__favorite-character"></p>
 
-					<p class="profile-label"></p>
-					<p class="user-description"></p>
+					<p class="profile__label"></p>
+					<p class="profile__user-description"></p>
 				</div>
 			</div>
 		</div>

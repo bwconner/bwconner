@@ -1,12 +1,12 @@
-.profile-wrapper .button {
+.profile .button {
   display: block;
   margin-top: 15px;
   width: 200px; }
-  .profile-wrapper .button.hide {
+  .profile .button.hide {
     display: none; }
-  .profile-wrapper .button.edit-image {
+  .profile .button.edit-image {
     width: 120px; }
-.profile-wrapper input {
+.profile input {
   -moz-transition: all 1s ease-in-out;
   -ms-transition: all  1s ease-in-out;
   -o-transition: all  1s ease-in-out;
@@ -17,16 +17,16 @@
   overflow-y: hidden;
   transition: all  1s ease-in-out;
   width: 200px; }
-  .profile-wrapper input.hide {
+  .profile input.hide {
     display: block;
     height: 0px;
     max-height: 0;
     opacity: 0; }
-.profile-wrapper .username {
+.profile .username {
   margin: 10px 0px 0px; }
-.profile-wrapper .profile-field {
+.profile .profile__field {
   display: block; }
-  .profile-wrapper .profile-field p {
+  .profile .profile__field p {
     display: inline-block;
     margin-bottom: 0px; }
 
