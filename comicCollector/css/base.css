@@ -35,17 +35,30 @@ a {
     position: absolute;
     right: 0px; }
   .header .header__link {
-    border-bottom: 1px solid #ffffff;
-    color: #ffffff;
     display: inline-block;
-    font-size: 24px;
     margin: 0px 8px;
     padding: 0px 5px; }
+    .header .header__link.selected {
+      background: #000; }
     .header .header__link a {
-      color: #ffffff;
-      font-family: 'Oswald', sans-serif;
-      line-height: 25px;
-      text-decoration: none; }
+      background-size: cover;
+      display: block;
+      height: 30px;
+      line-height: 30px;
+      margin-top: 10px;
+      width: 30px; }
+  .header .header__link-account {
+    background-image: url("../images/icons/account.png"); }
+    .header .header__link-account.selected {
+      background-image: url("../images/icons/account_selected.png");
+      background-size: cover;
+      background: #000; }
+  .header .header__link-search {
+    background-image: url("../images/icons/search.png"); }
+    .header .header__link-search.selected {
+      background-image: url("../images/icons/search_selected.png");
+      background-size: cover;
+      background: #000; }
   .header .login-wrapper {
     background: #000;
     display: none;
@@ -64,41 +77,22 @@ a {
     .header .login-wrapper .button {
       width: 150px; }
 
-.mini-header {
-  background: #e23636;
+.header--mini {
   box-shadow: 4px 4px 15px #000;
-  color: #ffffff;
   height: 0px;
   opacity: 0;
   overflow: hidden;
   position: fixed;
-  text-align: center;
-  top: 0px;
-  width: 100%; }
-  .mini-header .header__home-link {
-    color: #ffffff;
-    cursor: pointer;
-    font-family: 'Amatica SC', cursive;
-    font-size: 100px;
-    line-height: 80px;
+  top: 0px; }
+  .header--mini .header__home-link {
     margin-bottom: 40px;
     margin-top: 0px; }
-  .mini-header .header__link {
-    border-bottom: 1px solid #ffffff;
-    color: #ffffff;
-    display: inline-block;
-    font-size: 24px;
-    line-height: 25px;
-    margin: 0px 8px;
-    padding: 0px 5px; }
-    .mini-header .header__link a {
-      color: #ffffff;
-      font-family: 'Oswald', sans-serif;
-      text-decoration: none; }
-  .mini-header .in-view {
+  .header--mini .header__link {
+    line-height: 25px; }
+  .header--mini .in-view {
     height: 0px;
     overflow: hidden; }
-  .mini-header h2 {
+  .header--mini .header__mini-logo {
     color: #ffffff;
     cursor: pointer;
     float: left;
@@ -106,7 +100,7 @@ a {
     font-size: 35px;
     line-height: 44px;
     margin: 0px 35px; }
-    .mini-header h2:before {
+    .header--mini .header__mini-logo:before {
       background-image: url("../images/collectorPixelArt.png");
       background-position: center;
       background-repeat: no-repeat;
@@ -116,35 +110,10 @@ a {
       left: 8px;
       position: absolute;
       width: 23px; }
-  .mini-header .header__main-nav {
+  .header--mini .header__main-nav {
     float: right;
     line-height: 63px;
     margin: 0px 10px; }
-
-.header__main-nav .header__link {
-  border-bottom: 0px;
-  text-decoration: none; }
-  .header__main-nav .header__link.selected {
-    background: #000; }
-  .header__main-nav .header__link a {
-    background-size: cover;
-    display: block;
-    height: 30px;
-    line-height: 30px;
-    margin-top: 10px;
-    width: 30px; }
-.header__main-nav .header__link-account {
-  background-image: url("../images/icons/account.png"); }
-  .header__main-nav .header__link-account.selected {
-    background-image: url("../images/icons/account_selected.png");
-    background-size: cover;
-    background: #000; }
-.header__main-nav .header__link-search {
-  background-image: url("../images/icons/search.png"); }
-  .header__main-nav .header__link-search.selected {
-    background-image: url("../images/icons/search_selected.png");
-    background-size: cover;
-    background: #000; }
 
 .current-page {
   border-color: #99ccff;
@@ -227,11 +196,11 @@ a {
 
 /*MQ OVERRIDES*/
 @media only screen and (min-width: 448px) {
-  .header h1 {
+  .header .header__home-link {
     line-height: 150px;
     margin-bottom: 25px; }
 
-  .mini-header.in-view {
+  .header--mini.in-view {
     height: 50px;
     opacity: 0.95;
     transition: all .2s ease .1s;

@@ -44,123 +44,9 @@ a {
 	}
 
 	.header__link {
-		border-bottom: 1px solid #ffffff;
-		color: #ffffff;
 		display: inline-block;
-		font-size: 24px;
 		margin: 0px 8px;
 		padding: 0px 5px;
-
-		a {
-			color: #ffffff;
-			font-family: 'Oswald', sans-serif;
-			line-height: 25px;
-			text-decoration: none;
-		}
-	}
-
-	.login-wrapper {
-		background: #000;
-		display: none;
-		height: 165px;
-		left: -122px;
-		margin-top: -5px;
-		position: absolute;
-		width: 170px;
-
-		.input-label {
-			margin: 0px;
-			padding: 5px 10px 5px;
-			text-align: left;
-		}
-
-		input {
-			line-height: 20px;
-			width: 150px;
-		}
-
-		.button {
-			width: 150px;
-		}
-	}
-}
-
-.mini-header {
-	background: #e23636;
-	box-shadow: 4px 4px 15px #000;
-	color: #ffffff;
-	height: 0px;
-	opacity: 0;
-	overflow: hidden;
-	position: fixed;
-	text-align: center;
-	top: 0px;
-	width: 100%;
-
-	.header__home-link {
-		color: #ffffff;
-		cursor: pointer;
-		font-family: 'Amatica SC', cursive;
-		font-size: 100px;
-		line-height: 80px;
-		margin-bottom: 40px;
-		margin-top: 0px;
-	}
-
-	.header__link {
-		border-bottom: 1px solid #ffffff;
-		color: #ffffff;
-		display: inline-block;
-		font-size: 24px;
-		line-height: 25px;
-		margin: 0px 8px;
-		padding: 0px 5px;
-
-		a {
-			color: #ffffff;
-			font-family: 'Oswald', sans-serif;
-			text-decoration: none;
-		}
-	}
-
-	.in-view {
-		height: 0px;
-		overflow: hidden;
-	}
-
-	h2 {
-		color: #ffffff;
-		cursor: pointer;
-		float: left;
-		font-family: 'Amatica SC', cursive;
-		font-size: 35px;
-		line-height: 44px;
-		margin: 0px 35px;
-
-		&:before {
-			background-image: url("../images/collectorPixelArt.png");
-			background-position: center;
-			background-repeat: no-repeat;
-			background-size: contain;
-			content: "";
-			height: 45px;
-			left: 8px;
-			position: absolute;
-			width: 23px;
-		}
-	}
-
-	.header__main-nav {
-		float: right;
-		line-height: 63px;
-		margin: 0px 10px;
-	}
-}
-
-.header__main-nav {
-	.header__link {
-		border-bottom: 0px;
-		text-decoration: none;
 
 		&.selected {
 			background: #000;
@@ -194,6 +80,82 @@ a {
 			background-size: cover;
 			background: #000;
 		}
+	}
+
+	.login-wrapper {
+		background: #000;
+		display: none;
+		height: 165px;
+		left: -122px;
+		margin-top: -5px;
+		position: absolute;
+		width: 170px;
+
+		.input-label {
+			margin: 0px;
+			padding: 5px 10px 5px;
+			text-align: left;
+		}
+
+		input {
+			line-height: 20px;
+			width: 150px;
+		}
+
+		.button {
+			width: 150px;
+		}
+	}
+}
+
+.header--mini {
+	box-shadow: 4px 4px 15px #000;
+	height: 0px;
+	opacity: 0;
+	overflow: hidden;
+	position: fixed;
+	top: 0px;
+
+	.header__home-link {
+		margin-bottom: 40px;
+		margin-top: 0px;
+	}
+
+	.header__link {
+		line-height: 25px;
+	}
+
+	.in-view {
+		height: 0px;
+		overflow: hidden;
+	}
+
+	.header__mini-logo {
+		color: #ffffff;
+		cursor: pointer;
+		float: left;
+		font-family: 'Amatica SC', cursive;
+		font-size: 35px;
+		line-height: 44px;
+		margin: 0px 35px;
+
+		&:before {
+			background-image: url("../images/collectorPixelArt.png");
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: contain;
+			content: "";
+			height: 45px;
+			left: 8px;
+			position: absolute;
+			width: 23px;
+		}
+	}
+
+	.header__main-nav {
+		float: right;
+		line-height: 63px;
+		margin: 0px 10px;
 	}
 }
 
@@ -294,11 +256,11 @@ a {
 
 /*MQ OVERRIDES*/
 @media only screen and (min-width: 448px) {
-	.header h1 {
+	.header .header__home-link {
 		line-height: 150px;
 		margin-bottom: 25px;
 	}
-	.mini-header.in-view {
+	.header--mini.in-view {
 		height: 50px;
 		opacity: 0.95;
 		transition: all .2s ease .1s;

@@ -2,17 +2,12 @@ function miniNavSetup() {
 	var headerHeight = $('.header').height(),
 		$window = $(window);
 
-	//show mini nav
+	//show/hide mini nav
 	$window.scroll(function() {
 		if ($window.scrollTop() > headerHeight ) {
-			$(".mini-header").addClass("in-view");
-		}
-	});
-
-	//show full nav
-	$window.scroll(function() {
-		if ( $window.scrollTop() <= headerHeight ) {
-			$(".mini-header").removeClass("in-view");
+			$(".header--mini").addClass("in-view");
+		} else if ($window.scrollTop() <= headerHeight ) {
+			$(".header--mini").removeClass("in-view");
 		}
 	});
 }
