@@ -14,7 +14,7 @@
 				<div class="comic__title">{{title}}</div>
 				<div class="comic__creators">{{creators}}</div>
 				<div class="comic__add-to-collection button" data-comicid="{{comicId}}">Add to Collection</div>
-				<div class="comic__add-to-wishlist button" data-comicid="{{comicId}}">Add to Collection</div>
+				<div class="comic__add-to-wishlist button" data-comicid="{{comicId}}">Add to Wishlist</div>
 				<div class="comic__added-succesfully hide">Added Successfully!</div>
 				<div class="comic__characters">{{characters}}</div>
 				<div class="comic__description">{{description}}</div>

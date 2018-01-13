@@ -1,3 +1,50 @@
+.comic {
+  margin: 0px auto;
+  width: 100%; }
+  .comic .comic__image {
+    width: 100%; }
+  .comic .comic-information {
+    vertical-align: top; }
+  .comic .comic__title,
+  .comic .comic__creators,
+  .comic .comic__characters,
+  .comic .comic__description {
+    padding-top: 25px; }
+  .comic .comic__add-to-collection,
+  .comic .comic__add-to-wishlist {
+    display: block;
+    margin-top: 25px;
+    text-align: center;
+    width: 125px; }
 
+@media only screen and (min-width: 650px) {
+  .comic .comic__image {
+    display: inline-block;
+    margin-left: 10%;
+    width: 30%; }
+  .comic .comic-information {
+    display: inline-block;
+    margin-left: 2.5%;
+    width: 56%; }
+  .comic .comic__add-to-collection,
+  .comic .comic__add-to-wishlist {
+    display: inline-block; }
+  .comic .comic__add-to-wishlist {
+    margin-left: 10px; } }
+@media only screen and (min-width: 900px) {
+  .comic {
+    width: 75%; }
+    .comic .comic__image {
+      margin-left: 10%;
+      width: 30%; }
+    .comic .comic-information {
+      display: inline-block;
+      margin-left: 2.5%; }
+    .comic .comic__add-to-collection,
+    .comic .comic__add-to-wishlist {
+      display: inline-block;
+      width: 150px; }
+    .comic .comic__add-to-wishlist {
+      margin-left: 10px; } }
 
 /*# sourceMappingURL=comicInfoPage.css.map */

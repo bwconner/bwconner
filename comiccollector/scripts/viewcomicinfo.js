@@ -29,7 +29,7 @@ function processComicInfo(data) {
 	});
 
 	$(resultData.creators.items).each(function(index) {
-		resultCreatorList = resultCreatorList + "<div class='creator'>" + $(this)[0].name + " - " + $(this)[0].role + "</div>";
+		resultCreatorList = resultCreatorList + $(this)[0].name + " - " + $(this)[0].role + ", ";
 	});
 
 	var markup = buildComicMarkup(resultTitle, resultImage, resultSeries, resultIssueNumber, resultDescription, featuredCharacters, resultCreatorList, resultId);
