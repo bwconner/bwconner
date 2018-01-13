@@ -41,19 +41,19 @@
 				</div>
 			</div>
 			<p class="">Collection: </p>
-			<div class="profile-collection-preview">
-				<div  class="profile-comic">
+			<div class="profile__collection-preview">
+				<div  class="profile__comic">
 					No comics added yet.
 				</div>
 			</div>
-			<a href="" class="">View full collection...</a>
+			<a class="profile__collection-link" href="/comiccollector/pages/wishlist&userid=" class="">View full collection...</a>
 			<p class="">Wishlist: </p>
-			<div class="profile-wishlist-preview">
-				<div class="profile-comic">
+			<div class="profile__wishlist-preview">
+				<div class="profile__comic">
 					No comics added yet.
 				</div>
 			</div>
-			<a href="" class="">View full wishlist...</a>
+			<a class="profile__wishlist-link" href="/comiccollector/pages/wishlist&userid=" class="">View full wishlist...</a>
 		</div>
 	</body>
 </html>

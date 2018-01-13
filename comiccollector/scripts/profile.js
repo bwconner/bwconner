@@ -110,6 +110,9 @@ $(document).ready(function() {
 		if ($("body").hasClass("my-account")) {
 			var userID = $("body").attr("data-userid");
 			retriveUserData(userID);
+
+			$(".profile__collection-link").attr("href". "/comiccollector/pages/collection&userid=" + userID);
+			$(".profile__wishlist-link").attr("href". "/comiccollector/pages/wishlist&userid=" + userID);
 		}
 	});
 
@@ -117,7 +120,11 @@ $(document).ready(function() {
 	if ($("body").hasClass("user-profile")) {
 		var pageUrl = window.location.href,
 			profileID = pageUrl.split("profileId=");
+
 		retriveUserData(profileID[1]);
+
+		$(".profile__collection-link").attr("href". "/comiccollector/pages/collection&userid=" + profileID[1]);
+		$(".profile__wishlist-link").attr("href". "/comiccollector/pages/wishlist&userid=" + profileID[1]);
 	}
 
 	$(".edit-profile").on("click", function() {

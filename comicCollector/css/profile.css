@@ -30,8 +30,8 @@
     display: inline-block;
     margin-bottom: 0px; }
 
-.profile-collection-preview,
-.profile-wishlist-preview {
+.profile__collection-preview,
+.profile__wishlist-preview {
   margin-top: 35px; }
 
 /*# sourceMappingURL=profile.css.map */
