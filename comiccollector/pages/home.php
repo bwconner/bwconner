@@ -3,6 +3,7 @@
 		<title>bwconner.com | Comic Collector</title>
 		<?php include '../snippets/global.html';?>
 		<script type="text/javascript" src="../scripts/search.js"></script>
+		<script type="text/javascript" src="../scripts/login.js"></script>
 	</head>
 
 	<body lang="en">

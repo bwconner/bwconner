@@ -22,4 +22,10 @@ $(document).ready(function() {
 			$(".login-wrapper").addClass("show");
 		}
 	});*/
+
+	$(document).on('login-verified', function(){
+		if ($("body").hasClass("logged-in")) {
+			$(".header__link-account").attr("href", "/comiccollector/pages/myaccount.php");
+		}
+	});
 });

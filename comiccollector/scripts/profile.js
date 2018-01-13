@@ -86,7 +86,7 @@ function verifyAccountCookie (cookieValue) {
 function updateAccount (newUserID) {
 	var userCookieID = createNewToken(),
 		data = "username=" + $(".profile__username").text() + "&userID=" + $("body").attr("data-userid") + "&firstname=" + $(".profile__first-name-field").val() + "&favoriteCharacter=" + $(".profile__favorite-character-field").val() + "&profileText=" + $(".profile__user-description-field").val();
-console.log(data);
+
 	$.ajax({
 		data: data,
 		type: "post",
