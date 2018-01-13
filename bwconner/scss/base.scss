@@ -36,18 +36,18 @@ body {
 	}
 
 	.header__link {
-		font-size: 24px;
-		color: #ffffff;
-		border-top: 1px solid #ffffff;
 		border-bottom: 1px solid #ffffff;
+		border-top: 1px solid #ffffff;
+		color: #ffffff;
 		display: inline-block;
-		padding: 0px 5px;
+		font-size: 24px;
 		margin: 0px 8px;
+		padding: 0px 5px;
 
 		a {
 			color: #ffffff;
-			text-decoration: none;
 			font-family: 'Oswald', sans-serif;
+			text-decoration: none;
 		}
 	}
 }
@@ -55,9 +55,9 @@ body {
 .header--mini-nav {
 	height: 0px;
 	opacity: 0;
+	overflow: hidden;
 	position: fixed;
 	top: 0px;
-	overflow: hidden;
 
 	.header__home-link--small {
 		float: left;
@@ -79,8 +79,9 @@ body {
 }
 
 .current-page {
-	color: #99ccff;
 	border-color: #99ccff;
+	color: #99ccff;
+
 	a {
 		color: #99ccff;
 	}
@@ -123,6 +124,7 @@ body {
 		margin-bottom: 25px;
 		line-height: 100px;
 	}
+
 	.header--in-view {
 		height: 50px;
 		opacity: 0.95;

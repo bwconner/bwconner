@@ -27,24 +27,24 @@ body {
     margin: 0px auto;
     padding-bottom: 15px; }
   .header .header__link {
-    font-size: 24px;
-    color: #ffffff;
-    border-top: 1px solid #ffffff;
     border-bottom: 1px solid #ffffff;
+    border-top: 1px solid #ffffff;
+    color: #ffffff;
     display: inline-block;
-    padding: 0px 5px;
-    margin: 0px 8px; }
+    font-size: 24px;
+    margin: 0px 8px;
+    padding: 0px 5px; }
     .header .header__link a {
       color: #ffffff;
-      text-decoration: none;
-      font-family: 'Oswald', sans-serif; }
+      font-family: 'Oswald', sans-serif;
+      text-decoration: none; }
 
 .header--mini-nav {
   height: 0px;
   opacity: 0;
+  overflow: hidden;
   position: fixed;
-  top: 0px;
-  overflow: hidden; }
+  top: 0px; }
   .header--mini-nav .header__home-link--small {
     float: left;
     font-size: 35px;
@@ -59,8 +59,8 @@ body {
     line-height: 25px; }
 
 .current-page {
-  color: #99ccff;
-  border-color: #99ccff; }
+  border-color: #99ccff;
+  color: #99ccff; }
   .current-page a {
     color: #99ccff; }
 
@@ -75,12 +75,6 @@ body {
   font-size: 17px;
   letter-spacing: .7px; }
 
-.bio-section {
-  width: 80%;
-  margin: 0 auto;
-  border: 5px solid #0059b3;
-  border-top: 0px; }
-
 .section-head {
   color: #ffffff;
   background: #0059b3;
@@ -88,13 +82,6 @@ body {
   font-size: 18px;
   line-height: 26px;
   padding: 5px 10px; }
-
-.bio-section__text {
-  background: #ffffff;
-  color: #0059b3;
-  font-family: 'Oswald', sans-serif;
-  font-size: 15px;
-  letter-spacing: .7px; }
 
 /* FOOTER STYLES */
 .site-footer {
