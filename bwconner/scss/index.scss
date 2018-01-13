@@ -7,15 +7,16 @@
 }
 
 .bio-section {
-	display: table;
-	width: 100%;
-	box-shadow: 0px 0px 60px 5px;
 	background: #ffffff;
+	border: 5px solid #0059b3;
+	box-shadow: 0px 0px 60px 5px;
+	display: table;
 	margin: 0px auto;
+	width: 100%;
 
 	.bio-section__image {
-		width: 100%;
 		display: block;
+		width: 100%;
 	}
 
 	.bio-section__text {
