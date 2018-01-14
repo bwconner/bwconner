@@ -17,12 +17,12 @@
 
 	$json = array();
 	while($row = mysqli_fetch_array ($collectionResults)) {
-		$bus = array(
+		$dataSet = array(
 			'comicTitle' => $row['comicTitle'],
 			'comicID' => $row['comicID'],
 			'comicImage' => $row['comicImage'],
 		);
-		array_push($json, $bus);
+		array_push($json, $dataSet);
 	}
 
 	$jsonstring = json_encode($json);
