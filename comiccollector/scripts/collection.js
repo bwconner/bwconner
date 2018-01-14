@@ -7,33 +7,29 @@ function retrieveComicCollection () {
 		type: "post",
 		url: "../phpscripts/retrievecollectionsql.php",
 		success: function(data){
-			var obj = $.parseJSON(data)
-			buildComicMarkup(obj);
+			processCollection($.parseJSON(data));
 		}
 	});
 }
 
-function buildComicMarkup(data) {
-
-	console.log(data);
-	console.log(data.length);
-
+function processCollection(data) {
 	for (i = 0; i < data.length; i++) {
-		console.log(data[i].comicTitle);
+		buildComicMarkup(data[i].comicID, data[i].comicTitle, data[i].comicImage);
 	}
-
-	//var data = { 
-	//	image: resultImage,
-	//	title: resultTitle,
-	//	comicId: resultId
-	//};
-
-	//var template = $("#result-template").html(),
-	//	html = Mustache.render(template, data);
-
-	//return html;
 }
 
+function buildComicMarkup(comicID, comicTitle, comicImage) {
+	var data = {
+		comicId: comicID,
+		image: comicImage,
+		title: comicTitle
+	};
+
+	var template = $("#comic-template").html(),
+		html = Mustache.render(template, data);
+
+	$(".collection").append(html);
+}
 
 $(document).ready(function() {
 	retrieveComicCollection();

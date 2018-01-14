@@ -3,16 +3,23 @@
 		<title>bwconner.com | Comic Collector</title>
 		<?php include '../snippets/global.html';?>
 		<link rel="stylesheet" type="text/css" href="../css/collection.css">
+		<script type="text/javascript" src="../libs/mustache.min.js"></script>
 		<script type="text/javascript" src="../scripts/collection.js"></script>
 	</head>
-	<body class="wishlist">
+	<script type="text/html" id="comic-template">
+		<div class="comic comic-{{comicId}}" data-title="{{title}}" data-image="{{image}}">
+			<img class="comic__image" src="{{image}}">
+			<div class="comic__information">
+				<div class="comic__title">{{title}}</div>
+				<div class="comic__remove-from-collection button" data-comicid="{{comicId}}">Remove from Wishlist</div>
+			</div>
+		</div>
+	</script>
+	<body>
 		<?php include '../snippets/header.html';?>
 		<div class="site-body-wrapper">
-			<p class="">Wishlist: </p>
-			<div class="profile__wishlist-preview">
-				<div class="profile__comic">
-					No comics added yet.
-				</div>
+			<p class="wishlist-header">Wishlist: </p>
+			<div class="collection">
 			</div>
 		</div>
 	</body>
