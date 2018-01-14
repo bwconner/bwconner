@@ -46,14 +46,14 @@
 					No comics added yet.
 				</div>
 			</div>
-			<a class="profile__collection-link" href="/comiccollector/pages/wishlist&userid=" class="">View full collection...</a>
+			<a class="profile__collection-link" href="/comiccollector/pages/wishlist?userid=" class="">View full collection...</a>
 			<p class="">Wishlist: </p>
 			<div class="profile__wishlist-preview">
 				<div class="profile__comic">
 					No comics added yet.
 				</div>
 			</div>
-			<a class="profile__wishlist-link" href="/comiccollector/pages/wishlist&userid=" class="">View full wishlist...</a>
+			<a class="profile__wishlist-link" href="/comiccollector/pages/wishlist?userid=" class="">View full wishlist...</a>
 		</div>
 	</body>
 </html>

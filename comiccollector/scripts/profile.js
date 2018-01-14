@@ -111,8 +111,10 @@ $(document).ready(function() {
 			var userID = $("body").attr("data-userid");
 			retriveUserData(userID);
 
-			$(".profile__collection-link").attr("href". "/comiccollector/pages/collection&userid=" + userID);
-			$(".profile__wishlist-link").attr("href". "/comiccollector/pages/wishlist&userid=" + userID);
+			alert(userID);
+
+			$(".profile__collection-link").attr("href", "/comiccollector/pages/collection?userid=" + userID);
+			$(".profile__wishlist-link").attr("href", "/comiccollector/pages/wishlist?userid=" + userID);
 		}
 	});
 
@@ -123,8 +125,10 @@ $(document).ready(function() {
 
 		retriveUserData(profileID[1]);
 
-		$(".profile__collection-link").attr("href". "/comiccollector/pages/collection&userid=" + profileID[1]);
-		$(".profile__wishlist-link").attr("href". "/comiccollector/pages/wishlist&userid=" + profileID[1]);
+		alert(profileID[1]);
+
+		$(".profile__collection-link").attr("href", "/comiccollector/pages/collection?userid=" + profileID[1]);
+		$(".profile__wishlist-link").attr("href", "/comiccollector/pages/wishlist?userid=" + profileID[1]);
 	}
 
 	$(".edit-profile").on("click", function() {
