@@ -16,9 +16,9 @@
 			</div>	
 		</div>
 		<div class="project">
-			<div class="project__live-type">Comic Collector</div>
+			<a href="http://bwconner.com/comiccollector/pages/home"><div class="project__live-type">Comic Collector</div></a>
 			<div class="project__details">
-				<div class="project__title">Comic Collector DB</div>
+				<a href="http://bwconner.com/comiccollector/pages/home"><div class="project__title">Comic Collector DB</div></a>
 				<div class="project__desc">This is a passion project that I have begun development on and am currently hosting on a subdomain of this site. Cataloging and documenting my comic collection and creating a social experience around it to compare collections and wishlists with friends is something I have wanted to do for awhile. After finding no satisfactory solution out there I have decided to make one myself.</div>
 			</div>	
 		</div>
