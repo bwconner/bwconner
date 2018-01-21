@@ -38,6 +38,8 @@ body {
       color: #ffffff;
       font-family: 'Oswald', sans-serif;
       text-decoration: none; }
+  .header .hide {
+    display: none; }
 
 .header--mini-nav {
   height: 0px;

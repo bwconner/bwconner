@@ -4,7 +4,7 @@
 		<div class="header__link">
 			<a href="../pages/projects">MY PROJECTS</a>
 		</div>
-		<div class="header__link">
+		<div class="header__link hide">
 			<a href="../pages/media">MEDIA</a>
 		</div>
 		<div class="header__link">
@@ -18,7 +18,7 @@
 		<div class="header__link">
 			<a href="../pages/projects">MY PROJECTS</a>
 		</div>
-		<div class="header__link">
+		<div class="header__link hide">
 			<a href="../pages/media">MEDIA</a>
 		</div>
 		<div class="header__link">
