@@ -5,6 +5,7 @@
 		<link rel="stylesheet" type="text/css" href="../css/collection.css">
 		<script type="text/javascript" src="../libs/mustache.min.js"></script>
 		<script type="text/javascript" src="../scripts/collection.js"></script>
+		<script type="text/javascript" src="../scripts/comic.js"></script>
 	</head>
 	<script type="text/html" id="comic-template">
 		<div class="comic comic-{{comicId}}" data-title="{{title}}" data-image="{{image}}">
