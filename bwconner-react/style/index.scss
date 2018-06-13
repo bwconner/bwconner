@@ -1,15 +1,13 @@
 .site-body {
-	background: transparent;
-	border: 0px;
+	background: #ffffff;
+	border: 5px solid #0059b3;
+	box-shadow: 0px 0px 60px 5px;
 	color: #00264d;
 	margin: 30px auto;
 	width: 90%;
 }
 
 .bio-section {
-	background: #ffffff;
-	border: 5px solid #0059b3;
-	box-shadow: 0px 0px 60px 5px;
 	display: table;
 	margin: 0px auto;
 	width: 100%;
@@ -26,22 +24,6 @@
 		margin: 5%;
 		text-align: center;
 		width: 90%;
-	}
-}
-
-.comic-grid {
-	display: grid;
-	font-size: 0;
-	grid-auto-rows: 1fr;
-	grid-gap: 10px;
-	grid-template-columns: repeat(2, 1fr);
-	max-width: 100%;
-	padding: 30px 0px 0px;
-
-	.comic-grid__item {
-		background-position: center center;
-		background-repeat: no-repeat;
-		background-size: cover;
 	}
 }
 
