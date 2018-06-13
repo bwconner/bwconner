@@ -1,0 +1,138 @@
+/*GLOBAL STYLES*/
+body {
+	margin: 0px;
+	background: rgba(153, 204, 255, 0.4);
+	overflow-x: hidden;
+
+	a {
+		text-decoration: none;
+	}
+}
+
+/* NAV STYLES */
+.header {
+	background: #0059b3; /*#0066cc;*/
+	color: #ffffff;
+	text-align: center;
+	width: 100%;
+
+	.header__home-link {
+		color: #ffffff;
+		cursor: pointer;
+		font-family: 'Amatica SC', cursive;
+	}
+
+	.header__home-link--large {
+		font-size: 100px;
+		line-height: 80px;
+		margin-bottom: 40px;
+		margin-top: 0px;
+	}
+
+	.header__nav {
+		height: 40px;
+		margin: 0px auto;
+		padding-bottom: 15px;
+	}
+
+	.header__link {
+		border-bottom: 1px solid #ffffff;
+		border-top: 1px solid #ffffff;
+		color: #ffffff;
+		display: inline-block;
+		font-size: 24px;
+		margin: 0px 8px;
+		padding: 0px 5px;
+
+		a {
+			color: #ffffff;
+			font-family: 'Oswald', sans-serif;
+			text-decoration: none;
+		}
+	}
+
+	.hide {
+		display: none;
+	}
+}
+
+.header--mini-nav {
+	height: 0px;
+	opacity: 0;
+	overflow: hidden;
+	position: fixed;
+	top: 0px;
+
+	.header__home-link--small {
+		float: left;
+		font-size: 35px;
+		line-height: 44px;
+		margin: 0px 10px;
+	}
+
+	.header__nav {
+		float: right;
+		line-height: 63px;
+		margin: 0px 10px;
+		padding: 0px;
+	}
+
+	.header__link {;
+		line-height: 25px;
+	}
+}
+
+.current-page {
+	border-color: #99ccff;
+	color: #99ccff;
+
+	a {
+		color: #99ccff;
+	}
+}
+
+/* BASIC BODY STYLES */
+.site-body {
+	background: #ffffff;
+	border: 10px solid #0059b3;
+	color: #00264d;
+	margin: 30px auto;
+	width: 90%;
+	font-family: 'Oswald', sans-serif;
+	font-size: 17px;
+	letter-spacing: .7px;
+}
+
+.section-head {
+	color: #ffffff;
+	background: #0059b3;
+	font-family: 'Oswald', sans-serif;
+	font-size: 18px;
+	line-height: 26px;
+	padding: 5px 10px;
+}
+
+/* FOOTER STYLES */
+.site-footer {
+	background: #0059b3;
+	color: #ffffff;
+	height: 120px;
+	bottom: 0px;
+	width: 100%;
+}
+
+
+/*MQ OVERRIDES*/
+@media only screen and (min-width: 448px) {
+	.header .header__home-link--large {
+		margin-bottom: 25px;
+		line-height: 100px;
+	}
+
+	.header--in-view {
+		height: 50px;
+		opacity: 0.95;
+		transition: all .2s ease .1s;
+		z-index: 1000;
+	}
+}
