@@ -1,14 +1,5 @@
-.site-body {
-	background: #ffffff;
-	border: 5px solid #0059b3;
-	box-shadow: 0px 0px 60px 5px;
-	color: #00264d;
-	margin: 30px auto;
-	width: 90%;
-}
-
 .bio-section {
-	display: table;
+	display: block;
 	margin: 0px auto;
 	width: 100%;
 
@@ -21,7 +12,7 @@
 		color: #0059b3;
 		display: block;
 		font-size: 20px;
-		margin: 5%;
+		padding: 5%;
 		text-align: center;
 		width: 90%;
 	}
@@ -31,11 +22,12 @@
 	.bio-section {
 		.bio-section__text {
 			display: inline-block;
-			font-size: 20px;
-			margin: 25px 25px;
+			font-size: 22px;
+			margin: 25px 5%;
+			padding: 0%;
 			text-align: center;
 			vertical-align: top;
-			width: calc(100% - 350px);
+			width: 50%;
 		}
 
 		.bio-section__image {
@@ -44,13 +36,5 @@
 			min-width: 300px;
 			width: 40%;
 		}
-	}
-}
-
-@media only screen and (min-width: 851px) {
-	.bio-section .bio-section__text {
-		font-size: 22px;
-		margin: 25px 5%;
-		width: 50%;
 	}
 }

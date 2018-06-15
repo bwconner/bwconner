@@ -94,13 +94,11 @@ body {
 /* BASIC BODY STYLES */
 .site-body {
 	background: #ffffff;
-	border: 10px solid #0059b3;
+	box-shadow: 0px 0px 60px 5px;
 	color: #00264d;
-	margin: 30px auto;
-	width: 90%;
 	font-family: 'Oswald', sans-serif;
-	font-size: 17px;
-	letter-spacing: .7px;
+	margin: 20px auto;
+	width: 90%;
 }
 
 .section-head {
