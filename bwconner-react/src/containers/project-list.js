@@ -28,12 +28,9 @@ class ProjectList extends Component {
 }
 
 function mapStateToProps(state) {
-	//Return as props to PictureList
 	return {
 		projects: state.projects
 	};
 }
-
-
 
 export default connect(mapStateToProps)(ProjectList);
