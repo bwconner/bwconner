@@ -24,7 +24,7 @@
 			display: inline-block;
 			font-size: 22px;
 			margin: 25px 5%;
-			padding: 0%;
+			padding: 0;
 			text-align: center;
 			vertical-align: top;
 			width: 50%;
@@ -32,10 +32,10 @@
 
 		.bio-section__image {
 			display: inline-block;
-			margin-bottom: -5px;
 			max-width: 500px;
 			min-width: 300px;
-			width: 40%;
+			width: 39%;
+			padding: 1% 0 0 1%;
 		}
 	}
 }
