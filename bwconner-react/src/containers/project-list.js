@@ -6,18 +6,14 @@ import {bindActionCreators} from "redux";
 class ProjectList extends Component {
 
 	renderProjectList() {
-		return this.props.pictures.map(picture => {
-			var searchTerm = this.props.term.toLowerCase();
+		return this.props.projects.map(project => {
 			return (
-				<div 
-					key={picture.id} 
-					onClick={() => this.props.selectImage(picture)}
-					className="search-result-item">
-					<Link to={`/picture/${picture.id}`} >
-						<img src={picture.filepath} />
-						<p>{picture.title} - {picture.year}</p>
-					</Link>
-				</div>
+				<Project 
+					projectTitle={project.projectTitle}
+					projectDescription={project.projectDescription} 
+					projectUrl={project.projectUrl}
+					projectImage={project.projectImage}
+				/>
 			);
 		});
 	}
@@ -25,7 +21,7 @@ class ProjectList extends Component {
 	render() {
 		return(
 			<div className="work-projects">
-				{this.retrieveProjectInformation()}
+				{this.renderProjectList()}
 			</div>
 		);
 	}
@@ -34,15 +30,10 @@ class ProjectList extends Component {
 function mapStateToProps(state) {
 	//Return as props to PictureList
 	return {
-		pictures: state.pictures,
-		term: state.term
+		projects: state.projects
 	};
 }
 
 
-function mapDispatchToProps(dispatch) {
-	return bindActionCreators({selectImage: selectImage}, dispatch);
-}
 
-
-export default connect(mapStateToProps, mapDispatchToProps)(ProjectList);
+export default connect(mapStateToProps)(ProjectList);
