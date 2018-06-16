@@ -20,7 +20,7 @@ class ProjectList extends Component {
 
 	render() {
 		return(
-			<div className="work-projects">
+			<div className="project-list">
 				{this.renderProjectList()}
 			</div>
 		);

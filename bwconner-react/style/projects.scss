@@ -1,3 +1,7 @@
+.project-list {
+	padding-bottom: 15px;
+}
+
 .project {
 	background: #ffffff;
 	border: 5px solid #0059b3;
@@ -28,6 +32,7 @@
 		background: #0059b3;
 		border-right: 5px solid #0059b3;
 		display: inline-block;
+		margin-bottom: -5px;
 		max-width: 320px;
 		width: 100%;
 	}
