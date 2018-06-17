@@ -82,15 +82,6 @@ body {
 	}
 }
 
-.current-page {
-	border-color: #99ccff;
-	color: #99ccff;
-
-	a {
-		color: #99ccff;
-	}
-}
-
 /* BASIC BODY STYLES */
 .site-body {
 	background: #ffffff;
@@ -100,25 +91,6 @@ body {
 	margin: 20px auto;
 	width: 90%;
 }
-
-.section-head {
-	color: #ffffff;
-	background: #0059b3;
-	font-family: 'Oswald', sans-serif;
-	font-size: 18px;
-	line-height: 26px;
-	padding: 5px 10px;
-}
-
-/* FOOTER STYLES */
-.site-footer {
-	background: #0059b3;
-	color: #ffffff;
-	height: 120px;
-	bottom: 0px;
-	width: 100%;
-}
-
 
 /*MQ OVERRIDES*/
 @media only screen and (min-width: 448px) {
