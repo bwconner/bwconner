@@ -8,13 +8,13 @@ export default class Contact extends Component {
 					E-Mail me at <a href="mailto:bruce.conner.ii@gmail.com">bruce.conner.ii@gmail.com</a>
 				</div>
 				<div className="contact-section">
-					Follow me on twitter <a href="https://twitter.com/thebruceconner">@TheBruceCconner</a>
+					Connect with me on <a target="blank" href="https://www.linkedin.com/in/bruce-conner-94585a9a/">LinkedIn</a>
 				</div>
 				<div className="contact-section">
-					Connect with me on <a href="https://www.linkedin.com/in/bruce-conner-94585a9a/">LinkedIn</a>
+					Collaborate with me on <a target="blank" href="https://github.com/bwconner">GitHub</a>
 				</div>
 				<div className="contact-section">
-					Collaborate with me on <a href="https://github.com/bwconner">GitHub</a>
+					Follow me on twitter <a target="blank" href="https://twitter.com/thebruceconner">@TheBruceCconner</a>
 				</div>
 				<div className="contact-section">
 					Download a copy of my <a target="blank" href="Bruce_Conner.pdf">Résumé</a>
