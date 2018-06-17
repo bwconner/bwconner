@@ -1,4 +1,4 @@
-/*GLOBAL STYLES*/
+/* BASIC BODY STYLES */
 body {
 	margin: 0px;
 	background: rgba(153, 204, 255, 0.4);
@@ -9,7 +9,16 @@ body {
 	}
 }
 
-/* NAV STYLES */
+.site-body {
+	background: #ffffff;
+	box-shadow: 0px 0px 40px 0px;
+	color: #00264d;
+	font-family: 'Oswald', sans-serif;
+	margin: 20px auto;
+	width: 90%;
+}
+
+/* HEADER STYLES */
 .header {
 	background: #0059b3; /*#0066cc;*/
 	color: #ffffff;
@@ -56,6 +65,7 @@ body {
 	}
 }
 
+/* HEADER MINI-NAV STYLES */
 .header--mini-nav {
 	height: 0px;
 	opacity: 0;
@@ -82,15 +92,7 @@ body {
 	}
 }
 
-/* BASIC BODY STYLES */
-.site-body {
-	background: #ffffff;
-	box-shadow: 0px 0px 40px 0px;
-	color: #00264d;
-	font-family: 'Oswald', sans-serif;
-	margin: 20px auto;
-	width: 90%;
-}
+
 
 /*MQ OVERRIDES*/
 @media only screen and (min-width: 448px) {
