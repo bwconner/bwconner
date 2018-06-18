@@ -21,11 +21,11 @@ export default class Header extends Component {
 	}
 
 	handleScroll() {
-		console.log("scroll");
+
 		let headerHeight = document.getElementById('main-header').clientHeight,
 			scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop;
-console.log(headerHeight); console.log(scrollTop);
-		//show mini nav
+
+		//show and hide mini nav mini nav
 		if (scrollTop > headerHeight ) {
 			this.setState({
 				headerClass: "header--in-view"
