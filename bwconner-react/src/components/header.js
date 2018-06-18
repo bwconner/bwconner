@@ -44,10 +44,10 @@ export default class Header extends Component {
 					<a href="../pages/home"><h1 className="header__home-link header__home-link--large">Bruce Conner</h1></a>
 					<div className="header__nav">
 						<div className="header__link">
-							<a>MY PROJECTS</a>
+							<a>ABOUT ME</a>
 						</div>
 						<div className="header__link">
-							<a>MEDIA</a>
+							<a>MY PROJECTS</a>
 						</div>
 						<div className="header__link">
 							<a>CONTACT ME</a>
@@ -58,10 +58,10 @@ export default class Header extends Component {
 					<a href="../pages/home"><h2 className="header__home-link header__home-link--small">Bruce Conner</h2></a>
 					<div className="header__nav">
 						<div className="header__link">
-							<a>MY PROJECTS</a>
+							<a>ABOUT ME</a>
 						</div>
 						<div className="header__link">
-							<a>MEDIA</a>
+							<a>MY PROJECTS</a>
 						</div>
 						<div className="header__link">
 							<a>CONTACT ME</a>
