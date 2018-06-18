@@ -37,9 +37,6 @@ export default class Header extends Component {
 		}
 	}
 
-	miniNavSetup() {
-	}
-
 	render() {
 		return (
 			<div>
